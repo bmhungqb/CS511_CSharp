@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FUPq9wKoiXmi7Y/7dVwTLeJ+79asuR/+jNR+i5lHd18w8AA4TodKQZXRHR+a0V/cNN6ebeXjXGBrwBBIQ4rsdg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bmhun\\Documents\\TaiLieuHocTapDaiHoc\\Year2\\HK_II\\UIT\\C-Sharp\\ThucHanh\\21522110_ThucHanh01\\BookShop\\BookShop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bmhun\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.4\\guna.ui2.winforms.2.0.4.4.nupkg.sha512",
+    "C:\\Users\\bmhun\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\bmhun\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

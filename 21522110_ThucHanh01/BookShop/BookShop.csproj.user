@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Components\UCComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\UCitem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\UCItemDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormBookPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormDetailItem9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormLoginSignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormOMAllOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormOMCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormOMDone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormOMPaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormOMProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormOMTransport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormOrderManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormSouvenir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormChild\FormVPP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
