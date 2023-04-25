@@ -62,12 +62,13 @@ namespace Housekeeping.FormChild
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.LI_ForgetPassword = new System.Windows.Forms.LinkLabel();
+            this.LI_Username = new Guna.UI2.WinForms.Guna2TextBox();
+            this.LI_Password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.LI_btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.LI_SaveAccount = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.SU_noti = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.pnl_Signup.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
@@ -88,12 +89,13 @@ namespace Housekeeping.FormChild
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(457, 700);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(450, 670);
             this.guna2GradientPanel1.TabIndex = 1;
             this.guna2GradientPanel1.UseTransparentBackground = true;
             // 
             // pnl_Signup
             // 
+            this.pnl_Signup.Controls.Add(this.SU_noti);
             this.pnl_Signup.Controls.Add(this.SU_Gmail);
             this.pnl_Signup.Controls.Add(this.guna2HtmlLabel9);
             this.pnl_Signup.Controls.Add(this.SU_Phonenumber);
@@ -111,9 +113,9 @@ namespace Housekeeping.FormChild
             this.pnl_Signup.Controls.Add(this.guna2HtmlLabel3);
             this.pnl_Signup.Controls.Add(this.SU_Name);
             this.pnl_Signup.Controls.Add(this.SU_btnSignup);
-            this.pnl_Signup.Location = new System.Drawing.Point(34, 68);
+            this.pnl_Signup.Location = new System.Drawing.Point(24, 71);
             this.pnl_Signup.Name = "pnl_Signup";
-            this.pnl_Signup.Size = new System.Drawing.Size(403, 500);
+            this.pnl_Signup.Size = new System.Drawing.Size(403, 533);
             this.pnl_Signup.TabIndex = 10;
             this.pnl_Signup.Visible = false;
             // 
@@ -387,7 +389,7 @@ namespace Housekeeping.FormChild
             this.SU_btnSignup.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
             this.SU_btnSignup.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.SU_btnSignup.ForeColor = System.Drawing.Color.White;
-            this.SU_btnSignup.Location = new System.Drawing.Point(119, 387);
+            this.SU_btnSignup.Location = new System.Drawing.Point(119, 420);
             this.SU_btnSignup.Name = "SU_btnSignup";
             this.SU_btnSignup.Size = new System.Drawing.Size(154, 39);
             this.SU_btnSignup.TabIndex = 4;
@@ -403,7 +405,7 @@ namespace Housekeeping.FormChild
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(457, 62);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(450, 62);
             this.guna2ContainerControl1.TabIndex = 7;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             this.guna2ContainerControl1.UseTransparentBackground = true;
@@ -425,7 +427,7 @@ namespace Housekeeping.FormChild
             this.btn_FormSignup.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_FormSignup.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_FormSignup.ForeColor = System.Drawing.Color.White;
-            this.btn_FormSignup.Location = new System.Drawing.Point(233, 23);
+            this.btn_FormSignup.Location = new System.Drawing.Point(219, 23);
             this.btn_FormSignup.Name = "btn_FormSignup";
             this.btn_FormSignup.Size = new System.Drawing.Size(204, 39);
             this.btn_FormSignup.TabIndex = 1;
@@ -454,7 +456,7 @@ namespace Housekeeping.FormChild
             this.btn_FormLogin.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_FormLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_FormLogin.ForeColor = System.Drawing.Color.White;
-            this.btn_FormLogin.Location = new System.Drawing.Point(34, 23);
+            this.btn_FormLogin.Location = new System.Drawing.Point(20, 23);
             this.btn_FormLogin.Name = "btn_FormLogin";
             this.btn_FormLogin.Size = new System.Drawing.Size(193, 39);
             this.btn_FormLogin.TabIndex = 0;
@@ -467,12 +469,12 @@ namespace Housekeeping.FormChild
             this.pnl_Login.Controls.Add(this.guna2CirclePictureBox2);
             this.pnl_Login.Controls.Add(this.guna2CirclePictureBox1);
             this.pnl_Login.Controls.Add(this.guna2HtmlLabel2);
-            this.pnl_Login.Controls.Add(this.linkLabel1);
-            this.pnl_Login.Controls.Add(this.guna2TextBox1);
-            this.pnl_Login.Controls.Add(this.guna2TextBox2);
-            this.pnl_Login.Controls.Add(this.guna2GradientButton1);
+            this.pnl_Login.Controls.Add(this.LI_ForgetPassword);
+            this.pnl_Login.Controls.Add(this.LI_Username);
+            this.pnl_Login.Controls.Add(this.LI_Password);
+            this.pnl_Login.Controls.Add(this.LI_btnLogin);
             this.pnl_Login.Controls.Add(this.guna2HtmlLabel1);
-            this.pnl_Login.Controls.Add(this.guna2ToggleSwitch1);
+            this.pnl_Login.Controls.Add(this.LI_SaveAccount);
             this.pnl_Login.Location = new System.Drawing.Point(34, 68);
             this.pnl_Login.Name = "pnl_Login";
             this.pnl_Login.Size = new System.Drawing.Size(386, 446);
@@ -518,86 +520,87 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(58, 292);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(26, 298);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(328, 22);
             this.guna2HtmlLabel2.TabIndex = 6;
             this.guna2HtmlLabel2.Text = "--------------- Hoặc tiếp tục bằng ----------------";
             // 
-            // linkLabel1
+            // LI_ForgetPassword
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.LightGray;
-            this.linkLabel1.Location = new System.Drawing.Point(251, 150);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(86, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Quên mật khẩu?";
+            this.LI_ForgetPassword.AutoSize = true;
+            this.LI_ForgetPassword.LinkColor = System.Drawing.Color.LightGray;
+            this.LI_ForgetPassword.Location = new System.Drawing.Point(251, 150);
+            this.LI_ForgetPassword.Name = "LI_ForgetPassword";
+            this.LI_ForgetPassword.Size = new System.Drawing.Size(86, 13);
+            this.LI_ForgetPassword.TabIndex = 5;
+            this.LI_ForgetPassword.TabStop = true;
+            this.LI_ForgetPassword.Text = "Quên mật khẩu?";
             // 
-            // guna2TextBox1
+            // LI_Username
             // 
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(32, 32);
-            this.guna2TextBox1.Location = new System.Drawing.Point(48, 37);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Tên tài khoản";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(284, 44);
-            this.guna2TextBox1.TabIndex = 0;
+            this.LI_Username.BorderRadius = 10;
+            this.LI_Username.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LI_Username.DefaultText = "";
+            this.LI_Username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.LI_Username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.LI_Username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LI_Username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LI_Username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LI_Username.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LI_Username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LI_Username.IconLeftSize = new System.Drawing.Size(32, 32);
+            this.LI_Username.Location = new System.Drawing.Point(48, 37);
+            this.LI_Username.Name = "LI_Username";
+            this.LI_Username.PasswordChar = '\0';
+            this.LI_Username.PlaceholderText = "Tên tài khoản";
+            this.LI_Username.SelectedText = "";
+            this.LI_Username.Size = new System.Drawing.Size(284, 44);
+            this.LI_Username.TabIndex = 0;
             // 
-            // guna2TextBox2
+            // LI_Password
             // 
-            this.guna2TextBox2.BorderRadius = 10;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(32, 32);
-            this.guna2TextBox2.IconRightSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox2.Location = new System.Drawing.Point(48, 103);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '●';
-            this.guna2TextBox2.PlaceholderText = "Mật khẩu";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(284, 44);
-            this.guna2TextBox2.TabIndex = 1;
-            this.guna2TextBox2.UseSystemPasswordChar = true;
+            this.LI_Password.BorderRadius = 10;
+            this.LI_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LI_Password.DefaultText = "";
+            this.LI_Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.LI_Password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.LI_Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LI_Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.LI_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LI_Password.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LI_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LI_Password.IconLeftSize = new System.Drawing.Size(32, 32);
+            this.LI_Password.IconRightSize = new System.Drawing.Size(25, 25);
+            this.LI_Password.Location = new System.Drawing.Point(48, 103);
+            this.LI_Password.Name = "LI_Password";
+            this.LI_Password.PasswordChar = '●';
+            this.LI_Password.PlaceholderText = "Mật khẩu";
+            this.LI_Password.SelectedText = "";
+            this.LI_Password.Size = new System.Drawing.Size(284, 44);
+            this.LI_Password.TabIndex = 1;
+            this.LI_Password.UseSystemPasswordChar = true;
             // 
-            // guna2GradientButton1
+            // LI_btnLogin
             // 
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(155)))));
-            this.guna2GradientButton1.BorderRadius = 5;
-            this.guna2GradientButton1.BorderThickness = 1;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(155)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(119, 219);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(154, 39);
-            this.guna2GradientButton1.TabIndex = 4;
-            this.guna2GradientButton1.Text = "Đăng nhập";
+            this.LI_btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(155)))));
+            this.LI_btnLogin.BorderRadius = 5;
+            this.LI_btnLogin.BorderThickness = 1;
+            this.LI_btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LI_btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LI_btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LI_btnLogin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LI_btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LI_btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(155)))));
+            this.LI_btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
+            this.LI_btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LI_btnLogin.ForeColor = System.Drawing.Color.White;
+            this.LI_btnLogin.Location = new System.Drawing.Point(119, 219);
+            this.LI_btnLogin.Name = "LI_btnLogin";
+            this.LI_btnLogin.Size = new System.Drawing.Size(154, 39);
+            this.LI_btnLogin.TabIndex = 4;
+            this.LI_btnLogin.Text = "Đăng nhập";
+            this.LI_btnLogin.Click += new System.EventHandler(this.LI_btnLogin_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -609,26 +612,37 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel1.TabIndex = 3;
             this.guna2HtmlLabel1.Text = "Nhớ tài khoản";
             // 
-            // guna2ToggleSwitch1
+            // LI_SaveAccount
             // 
-            this.guna2ToggleSwitch1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(48, 164);
-            this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
-            this.guna2ToggleSwitch1.Size = new System.Drawing.Size(30, 17);
-            this.guna2ToggleSwitch1.TabIndex = 2;
-            this.guna2ToggleSwitch1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
-            this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.LI_SaveAccount.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LI_SaveAccount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.LI_SaveAccount.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.LI_SaveAccount.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.LI_SaveAccount.Location = new System.Drawing.Point(48, 164);
+            this.LI_SaveAccount.Name = "LI_SaveAccount";
+            this.LI_SaveAccount.Size = new System.Drawing.Size(30, 17);
+            this.LI_SaveAccount.TabIndex = 2;
+            this.LI_SaveAccount.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.LI_SaveAccount.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.LI_SaveAccount.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.LI_SaveAccount.UncheckedState.InnerColor = System.Drawing.Color.White;
+            // 
+            // SU_noti
+            // 
+            this.SU_noti.AutoSize = true;
+            this.SU_noti.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SU_noti.ForeColor = System.Drawing.Color.Red;
+            this.SU_noti.Location = new System.Drawing.Point(119, 377);
+            this.SU_noti.Name = "SU_noti";
+            this.SU_noti.Size = new System.Drawing.Size(154, 17);
+            this.SU_noti.TabIndex = 23;
+            this.SU_noti.Text = "Please enter Username..";
             // 
             // LoginSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 700);
+            this.ClientSize = new System.Drawing.Size(450, 670);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginSignup";
@@ -672,14 +686,15 @@ namespace Housekeeping.FormChild
         private Guna.UI2.WinForms.Guna2TextBox SU_Name;
         private Guna.UI2.WinForms.Guna2GradientButton SU_btnSignup;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private LinkLabel linkLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private LinkLabel LI_ForgetPassword;
+        private Guna.UI2.WinForms.Guna2TextBox LI_Username;
+        private Guna.UI2.WinForms.Guna2TextBox LI_Password;
+        private Guna.UI2.WinForms.Guna2GradientButton LI_btnLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch LI_SaveAccount;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Label SU_noti;
     }
 }
