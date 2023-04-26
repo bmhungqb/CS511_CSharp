@@ -36,7 +36,9 @@
             this.btn_Service = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Home = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.message1 = new Housekeeping.Message();
             this.pnl_function.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_function
@@ -173,11 +175,19 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.message1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(450, 600);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // message1
+            // 
+            this.message1.Location = new System.Drawing.Point(0, 0);
+            this.message1.Name = "message1";
+            this.message1.Size = new System.Drawing.Size(450, 600);
+            this.message1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -188,8 +198,10 @@
             this.Controls.Add(this.pnl_function);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pnl_function.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -203,6 +215,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btn_Service;
         private Guna.UI2.WinForms.Guna2GradientButton btn_Home;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Message message1;
     }
 }
 

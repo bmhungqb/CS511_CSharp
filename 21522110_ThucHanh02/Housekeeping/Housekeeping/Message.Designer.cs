@@ -36,8 +36,8 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl_containerMessage = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.AdminMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.UserMessage = new Guna.UI2.WinForms.Guna2TextBox();
+            this.AdminMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.MS_btnSendText = new Guna.UI2.WinForms.Guna2Button();
             this.MS_noti_error = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl_containerMessage.SuspendLayout();
@@ -126,12 +126,45 @@
             this.pnl_containerMessage.Size = new System.Drawing.Size(450, 378);
             this.pnl_containerMessage.TabIndex = 8;
             // 
+            // UserMessage
+            // 
+            this.UserMessage.AutoSize = true;
+            this.UserMessage.BackColor = System.Drawing.Color.Transparent;
+            this.UserMessage.BorderColor = System.Drawing.Color.Blue;
+            this.UserMessage.BorderRadius = 20;
+            this.UserMessage.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.UserMessage.DefaultText = "1111111111111111111111111111111111";
+            this.UserMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.UserMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.UserMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UserMessage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.UserMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.UserMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UserMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic);
+            this.UserMessage.ForeColor = System.Drawing.Color.White;
+            this.UserMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UserMessage.IconLeftSize = new System.Drawing.Size(40, 40);
+            this.UserMessage.IconRight = ((System.Drawing.Image)(resources.GetObject("UserMessage.IconRight")));
+            this.UserMessage.IconRightOffset = new System.Drawing.Point(-4, 0);
+            this.UserMessage.IconRightSize = new System.Drawing.Size(40, 40);
+            this.UserMessage.Location = new System.Drawing.Point(29, 70);
+            this.UserMessage.Multiline = true;
+            this.UserMessage.Name = "UserMessage";
+            this.UserMessage.PasswordChar = '\0';
+            this.UserMessage.PlaceholderText = "";
+            this.UserMessage.ReadOnly = true;
+            this.UserMessage.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.UserMessage.SelectedText = "";
+            this.UserMessage.Size = new System.Drawing.Size(403, 43);
+            this.UserMessage.TabIndex = 1;
+            this.UserMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // AdminMessage
             // 
             this.AdminMessage.BackColor = System.Drawing.Color.Transparent;
             this.AdminMessage.BorderColor = System.Drawing.Color.Blue;
             this.AdminMessage.BorderRadius = 20;
-            this.AdminMessage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AdminMessage.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.AdminMessage.DefaultText = "Hello, how may i help you ?";
             this.AdminMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.AdminMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -150,37 +183,10 @@
             this.AdminMessage.Name = "AdminMessage";
             this.AdminMessage.PasswordChar = '\0';
             this.AdminMessage.PlaceholderText = "";
+            this.AdminMessage.ReadOnly = true;
             this.AdminMessage.SelectedText = "";
             this.AdminMessage.Size = new System.Drawing.Size(210, 40);
             this.AdminMessage.TabIndex = 0;
-            // 
-            // UserMessage
-            // 
-            this.UserMessage.BackColor = System.Drawing.Color.Transparent;
-            this.UserMessage.BorderColor = System.Drawing.Color.Blue;
-            this.UserMessage.BorderRadius = 20;
-            this.UserMessage.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.UserMessage.DefaultText = "Can i checkout by Smartbanking ?";
-            this.UserMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.UserMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.UserMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UserMessage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UserMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.UserMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UserMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserMessage.ForeColor = System.Drawing.Color.White;
-            this.UserMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UserMessage.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.UserMessage.IconRight = ((System.Drawing.Image)(resources.GetObject("UserMessage.IconRight")));
-            this.UserMessage.IconRightOffset = new System.Drawing.Point(-4, 0);
-            this.UserMessage.IconRightSize = new System.Drawing.Size(40, 40);
-            this.UserMessage.Location = new System.Drawing.Point(195, 70);
-            this.UserMessage.Name = "UserMessage";
-            this.UserMessage.PasswordChar = '\0';
-            this.UserMessage.PlaceholderText = "";
-            this.UserMessage.SelectedText = "";
-            this.UserMessage.Size = new System.Drawing.Size(253, 40);
-            this.UserMessage.TabIndex = 1;
             // 
             // MS_btnSendText
             // 
@@ -226,6 +232,7 @@
             this.Name = "Message";
             this.Size = new System.Drawing.Size(450, 600);
             this.pnl_containerMessage.ResumeLayout(false);
+            this.pnl_containerMessage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
