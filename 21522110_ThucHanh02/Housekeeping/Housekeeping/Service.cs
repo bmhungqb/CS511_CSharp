@@ -20,26 +20,26 @@ namespace Housekeeping
         #region DataService
         public Dictionary<string, string> dataService = new Dictionary<string, string>()
         {
-            {"c1","150,000" },
-            {"c2","200,000" },
-            {"c3","300,000" },
-            {"c4","200,000" },
-            {"c5","200,000" },
-            {"c6","300,000" },
-            {"c7","300,000" },
-            {"c8","200,000" },
+            {"c1","150000" },
+            {"c2","200000" },
+            {"c3","300000" },
+            {"c4","200000" },
+            {"c5","200000" },
+            {"c6","300000" },
+            {"c7","300000" },
+            {"c8","200000" },
 
-            {"l1","200,000" },
-            {"l2","100,000" },
-            {"l3","300,000" },
-            {"l4","200,000" },
-            {"l5","100,000" },
+            {"l1","200000" },
+            {"l2","100000" },
+            {"l3","300000" },
+            {"l4","200000" },
+            {"l5","100000" },
 
-            {"cl1","150,000" },
-            {"cl2","200,000" },
-            {"cl3","500,000" },
-            {"cl4","300,000" },
-            {"cl5","300,000" },
+            {"cl1","150000" },
+            {"cl2","200000" },
+            {"cl3","500000" },
+            {"cl4","300000" },
+            {"cl5","300000" },
         };
         #endregion
         #region Handle Click Service
@@ -49,18 +49,19 @@ namespace Housekeeping
             string[] str = total.Split(' ');
             int currentMoney = Convert.ToInt32(str[2]);
             int newMoney = Convert.ToInt32(money);
-            if(isCheck == true)
+            if (isCheck == true)
             {
-                SV_TotalPrice.Text = "Order total: " + (currentMoney + newMoney).ToString() + " nvđ";
+                SV_TotalPrice.Text = "Order total: " + (currentMoney + newMoney).ToString() + " vnđ";
             }
             else
             {
-                SV_TotalPrice.Text = "Order total: " + (currentMoney - newMoney).ToString() + " nvđ";
+                SV_TotalPrice.Text = "Order total: " + (currentMoney - newMoney).ToString() + " vnđ";
             }
         }
         private void checkTick(object sender, EventArgs e)
         {
             Guna2CustomCheckBox check = sender as Guna2CustomCheckBox;
+            check.Checked = !check.Checked;
             string money = dataService[check.Name];
             if (check.Checked)
             {

@@ -39,6 +39,7 @@
             this.HomePage = new Housekeeping.Home();
             this.ServicePage = new Housekeeping.Service();
             this.MessagePage = new Housekeeping.Message();
+            this.AccountPage = new Housekeeping.Account();
             this.pnl_function.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -182,6 +183,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.AccountPage);
             this.guna2Panel1.Controls.Add(this.HomePage);
             this.guna2Panel1.Controls.Add(this.ServicePage);
             this.guna2Panel1.Controls.Add(this.MessagePage);
@@ -214,6 +216,13 @@
             this.MessagePage.Size = new System.Drawing.Size(450, 600);
             this.MessagePage.TabIndex = 0;
             // 
+            // AccountPage
+            // 
+            this.AccountPage.Location = new System.Drawing.Point(0, 0);
+            this.AccountPage.Name = "AccountPage";
+            this.AccountPage.Size = new System.Drawing.Size(450, 600);
+            this.AccountPage.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +252,7 @@
         private Message MessagePage;
         private Home HomePage;
         private Service ServicePage;
+        private Account AccountPage;
     }
 }
 

@@ -32,6 +32,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.A_btnStatistics = new Guna.UI2.WinForms.Guna2GradientButton();
             this.A_btnHistory = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -58,14 +62,22 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pnl_History = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AC_dataHistoryView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnl_Statistics = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.AC_ChartViewService = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.AC_ChartViewStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2GradientPanel1.SuspendLayout();
             this.pnl_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            this.guna2GradientPanel3.SuspendLayout();
+            this.pnl_History.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AC_dataHistoryView)).BeginInit();
+            this.pnl_Statistics.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewService)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -96,6 +108,7 @@
             this.A_btnStatistics.Size = new System.Drawing.Size(150, 40);
             this.A_btnStatistics.TabIndex = 3;
             this.A_btnStatistics.Text = "Statistics";
+            this.A_btnStatistics.Click += new System.EventHandler(this.btn_Click);
             // 
             // A_btnHistory
             // 
@@ -114,6 +127,7 @@
             this.A_btnHistory.Size = new System.Drawing.Size(150, 40);
             this.A_btnHistory.TabIndex = 2;
             this.A_btnHistory.Text = "History";
+            this.A_btnHistory.Click += new System.EventHandler(this.btn_Click);
             // 
             // A_btnAccount
             // 
@@ -158,7 +172,6 @@
             this.pnl_account.Controls.Add(this.guna2TextBox1);
             this.pnl_account.Controls.Add(this.guna2HtmlLabel1);
             this.pnl_account.Controls.Add(this.guna2CirclePictureBox1);
-            this.pnl_account.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_account.Location = new System.Drawing.Point(0, 40);
             this.pnl_account.Name = "pnl_account";
             this.pnl_account.Size = new System.Drawing.Size(450, 560);
@@ -322,7 +335,7 @@
             "Male",
             "Female",
             "Other.."});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(54, 212);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(47, 212);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(114, 36);
             this.guna2ComboBox1.StartIndex = 0;
@@ -463,14 +476,25 @@
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // guna2GradientPanel3
+            // pnl_History
             // 
-            this.guna2GradientPanel3.BackColor = System.Drawing.Color.RosyBrown;
-            this.guna2GradientPanel3.Controls.Add(this.AC_dataHistoryView);
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 40);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(450, 560);
-            this.guna2GradientPanel3.TabIndex = 2;
+            this.pnl_History.BackColor = System.Drawing.Color.RosyBrown;
+            this.pnl_History.Controls.Add(this.guna2HtmlLabel11);
+            this.pnl_History.Controls.Add(this.AC_dataHistoryView);
+            this.pnl_History.Location = new System.Drawing.Point(0, 40);
+            this.pnl_History.Name = "pnl_History";
+            this.pnl_History.Size = new System.Drawing.Size(450, 560);
+            this.pnl_History.TabIndex = 2;
+            // 
+            // guna2HtmlLabel11
+            // 
+            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(87, 23);
+            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(267, 26);
+            this.guna2HtmlLabel11.TabIndex = 1;
+            this.guna2HtmlLabel11.Text = "History of using our services";
             // 
             // AC_dataHistoryView
             // 
@@ -494,12 +518,12 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.AC_dataHistoryView.DefaultCellStyle = dataGridViewCellStyle6;
-            this.AC_dataHistoryView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AC_dataHistoryView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AC_dataHistoryView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.AC_dataHistoryView.Location = new System.Drawing.Point(0, 0);
+            this.AC_dataHistoryView.Location = new System.Drawing.Point(0, 72);
             this.AC_dataHistoryView.Name = "AC_dataHistoryView";
             this.AC_dataHistoryView.RowHeadersVisible = false;
-            this.AC_dataHistoryView.Size = new System.Drawing.Size(450, 560);
+            this.AC_dataHistoryView.Size = new System.Drawing.Size(450, 488);
             this.AC_dataHistoryView.TabIndex = 0;
             this.AC_dataHistoryView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.AC_dataHistoryView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -525,18 +549,89 @@
             // 
             // pnl_Statistics
             // 
+            this.pnl_Statistics.AutoScroll = true;
             this.pnl_Statistics.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnl_Statistics.Controls.Add(this.AC_ChartViewStatus);
+            this.pnl_Statistics.Controls.Add(this.guna2TextBox8);
+            this.pnl_Statistics.Controls.Add(this.AC_ChartViewService);
+            this.pnl_Statistics.Controls.Add(this.guna2TextBox7);
             this.pnl_Statistics.Location = new System.Drawing.Point(0, 40);
             this.pnl_Statistics.Name = "pnl_Statistics";
             this.pnl_Statistics.Size = new System.Drawing.Size(450, 560);
             this.pnl_Statistics.TabIndex = 3;
             // 
+            // guna2TextBox7
+            // 
+            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox7.DefaultText = "";
+            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox7.Location = new System.Drawing.Point(0, 0);
+            this.guna2TextBox7.Name = "guna2TextBox7";
+            this.guna2TextBox7.PasswordChar = '\0';
+            this.guna2TextBox7.PlaceholderText = "";
+            this.guna2TextBox7.SelectedText = "";
+            this.guna2TextBox7.Size = new System.Drawing.Size(433, 66);
+            this.guna2TextBox7.TabIndex = 1;
+            // 
+            // AC_ChartViewService
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.AC_ChartViewService.ChartAreas.Add(chartArea4);
+            this.AC_ChartViewService.Dock = System.Windows.Forms.DockStyle.Top;
+            legend4.Name = "Legend1";
+            this.AC_ChartViewService.Legends.Add(legend4);
+            this.AC_ChartViewService.Location = new System.Drawing.Point(0, 66);
+            this.AC_ChartViewService.Name = "AC_ChartViewService";
+            this.AC_ChartViewService.Size = new System.Drawing.Size(433, 364);
+            this.AC_ChartViewService.TabIndex = 3;
+            this.AC_ChartViewService.Text = "chart2";
+            // 
+            // guna2TextBox8
+            // 
+            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox8.DefaultText = "";
+            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.Location = new System.Drawing.Point(0, 430);
+            this.guna2TextBox8.Name = "guna2TextBox8";
+            this.guna2TextBox8.PasswordChar = '\0';
+            this.guna2TextBox8.PlaceholderText = "";
+            this.guna2TextBox8.SelectedText = "";
+            this.guna2TextBox8.Size = new System.Drawing.Size(433, 67);
+            this.guna2TextBox8.TabIndex = 4;
+            // 
+            // AC_ChartViewStatus
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.AC_ChartViewStatus.ChartAreas.Add(chartArea3);
+            this.AC_ChartViewStatus.Dock = System.Windows.Forms.DockStyle.Top;
+            legend3.Name = "Legend1";
+            this.AC_ChartViewStatus.Legends.Add(legend3);
+            this.AC_ChartViewStatus.Location = new System.Drawing.Point(0, 497);
+            this.AC_ChartViewStatus.Name = "AC_ChartViewStatus";
+            this.AC_ChartViewStatus.Size = new System.Drawing.Size(433, 364);
+            this.AC_ChartViewStatus.TabIndex = 5;
+            this.AC_ChartViewStatus.Text = "chart2";
+            // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pnl_History);
             this.Controls.Add(this.pnl_Statistics);
-            this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.pnl_account);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "Account";
@@ -545,8 +640,12 @@
             this.pnl_account.ResumeLayout(false);
             this.pnl_account.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            this.guna2GradientPanel3.ResumeLayout(false);
+            this.pnl_History.ResumeLayout(false);
+            this.pnl_History.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AC_dataHistoryView)).EndInit();
+            this.pnl_Statistics.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewService)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewStatus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -579,8 +678,13 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnl_History;
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_Statistics;
         private Guna.UI2.WinForms.Guna2DataGridView AC_dataHistoryView;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private System.Windows.Forms.DataVisualization.Charting.Chart AC_ChartViewStatus;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
+        private System.Windows.Forms.DataVisualization.Charting.Chart AC_ChartViewService;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
     }
 }

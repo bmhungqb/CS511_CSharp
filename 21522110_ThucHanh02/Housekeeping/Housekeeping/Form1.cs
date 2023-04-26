@@ -26,30 +26,38 @@ namespace Housekeeping
                 HomePage.Visible = true;
                 ServicePage.Visible = false;
                 MessagePage.Visible = false;
+                AccountPage.Visible = false;
             }
             else if (button.Name == "btn_Service")
             {
                 HomePage.Visible = false;
                 ServicePage.Visible = true;
                 MessagePage.Visible = false;
+                AccountPage.Visible = false;
             }
             else if (button.Name == "btn_Activity")
             {
                 HomePage.Visible = false;
                 ServicePage.Visible = false;
                 MessagePage.Visible = false;
+                AccountPage.Visible = false;
+
             }
             else if (button.Name == "btn_Message")
             {
                 HomePage.Visible = false;
                 ServicePage.Visible = false;
                 MessagePage.Visible = true;
+                AccountPage.Visible = false;
+
             }
             else if (button.Name == "btn_Account")
             {
                 HomePage.Visible = false;
                 ServicePage.Visible = false;
                 MessagePage.Visible = false;
+                AccountPage.Visible = true;
+
             }
         }
     }

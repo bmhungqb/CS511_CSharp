@@ -193,6 +193,7 @@
             this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(229)))), ((int)(((byte)(133)))));
             this.Title.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Title.Location = new System.Drawing.Point(0, 0);
+            this.Title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Title.Name = "Title";
             this.Title.PasswordChar = '\0';
             this.Title.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(11)))), ((int)(((byte)(54)))));
@@ -315,7 +316,7 @@
             // SV_TotalPrice
             // 
             this.SV_TotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SV_TotalPrice.DefaultText = "Order total :  0 vnđ";
+            this.SV_TotalPrice.DefaultText = "Order total: 0 vnđ";
             this.SV_TotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.SV_TotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.SV_TotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
