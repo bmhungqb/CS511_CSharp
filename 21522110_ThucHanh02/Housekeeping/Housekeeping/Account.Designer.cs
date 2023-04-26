@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.A_btnStatistics = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.A_btnHistory = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.A_btnAccount = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pnl_account = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,100 +59,110 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.AC_dataHistoryView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.pnl_Statistics = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GradientPanel1.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
+            this.pnl_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.guna2GradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AC_dataHistoryView)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2GradientButton3);
-            this.guna2GradientPanel1.Controls.Add(this.guna2GradientButton2);
-            this.guna2GradientPanel1.Controls.Add(this.guna2GradientButton1);
+            this.guna2GradientPanel1.Controls.Add(this.A_btnStatistics);
+            this.guna2GradientPanel1.Controls.Add(this.A_btnHistory);
+            this.guna2GradientPanel1.Controls.Add(this.A_btnAccount);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1365, 40);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(450, 40);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
-            // guna2GradientButton3
+            // A_btnStatistics
             // 
-            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(300, 0);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(150, 40);
-            this.guna2GradientButton3.TabIndex = 3;
-            this.guna2GradientButton3.Text = "Statistics";
+            this.A_btnStatistics.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.A_btnStatistics.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.A_btnStatistics.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.A_btnStatistics.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.A_btnStatistics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.A_btnStatistics.Dock = System.Windows.Forms.DockStyle.Left;
+            this.A_btnStatistics.FillColor = System.Drawing.Color.Silver;
+            this.A_btnStatistics.FillColor2 = System.Drawing.Color.Silver;
+            this.A_btnStatistics.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_btnStatistics.ForeColor = System.Drawing.Color.Black;
+            this.A_btnStatistics.Location = new System.Drawing.Point(300, 0);
+            this.A_btnStatistics.Name = "A_btnStatistics";
+            this.A_btnStatistics.Size = new System.Drawing.Size(150, 40);
+            this.A_btnStatistics.TabIndex = 3;
+            this.A_btnStatistics.Text = "Statistics";
             // 
-            // guna2GradientButton2
+            // A_btnHistory
             // 
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(150, 0);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(150, 40);
-            this.guna2GradientButton2.TabIndex = 2;
-            this.guna2GradientButton2.Text = "History";
+            this.A_btnHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.A_btnHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.A_btnHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.A_btnHistory.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.A_btnHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.A_btnHistory.Dock = System.Windows.Forms.DockStyle.Left;
+            this.A_btnHistory.FillColor = System.Drawing.Color.Silver;
+            this.A_btnHistory.FillColor2 = System.Drawing.Color.Silver;
+            this.A_btnHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_btnHistory.ForeColor = System.Drawing.Color.Black;
+            this.A_btnHistory.Location = new System.Drawing.Point(150, 0);
+            this.A_btnHistory.Name = "A_btnHistory";
+            this.A_btnHistory.Size = new System.Drawing.Size(150, 40);
+            this.A_btnHistory.TabIndex = 2;
+            this.A_btnHistory.Text = "History";
             // 
-            // guna2GradientButton1
+            // A_btnAccount
             // 
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(150, 40);
-            this.guna2GradientButton1.TabIndex = 1;
-            this.guna2GradientButton1.Text = "My account";
+            this.A_btnAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.A_btnAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.A_btnAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.A_btnAccount.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.A_btnAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.A_btnAccount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.A_btnAccount.FillColor = System.Drawing.Color.Silver;
+            this.A_btnAccount.FillColor2 = System.Drawing.Color.Silver;
+            this.A_btnAccount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A_btnAccount.ForeColor = System.Drawing.Color.Black;
+            this.A_btnAccount.Location = new System.Drawing.Point(0, 0);
+            this.A_btnAccount.Name = "A_btnAccount";
+            this.A_btnAccount.Size = new System.Drawing.Size(150, 40);
+            this.A_btnAccount.TabIndex = 1;
+            this.A_btnAccount.Text = "My account";
+            this.A_btnAccount.Click += new System.EventHandler(this.btn_Click);
             // 
-            // guna2GradientPanel2
+            // pnl_account
             // 
-            this.guna2GradientPanel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.guna2GradientPanel2.Controls.Add(this.guna2TextBox6);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel10);
-            this.guna2GradientPanel2.Controls.Add(this.guna2TextBox5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel9);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel8);
-            this.guna2GradientPanel2.Controls.Add(this.guna2GradientButton4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2TextBox4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel7);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2GradientPanel2.Controls.Add(this.guna2ComboBox2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2ComboBox1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2GradientPanel2.Controls.Add(this.guna2DateTimePicker1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel4);
-            this.guna2GradientPanel2.Controls.Add(this.guna2TextBox3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2GradientPanel2.Controls.Add(this.guna2TextBox2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GradientPanel2.Controls.Add(this.guna2TextBox1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2GradientPanel2.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 40);
-            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(450, 560);
-            this.guna2GradientPanel2.TabIndex = 1;
+            this.pnl_account.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnl_account.Controls.Add(this.guna2TextBox6);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel10);
+            this.pnl_account.Controls.Add(this.guna2TextBox5);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel9);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel8);
+            this.pnl_account.Controls.Add(this.guna2GradientButton4);
+            this.pnl_account.Controls.Add(this.guna2TextBox4);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel7);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel6);
+            this.pnl_account.Controls.Add(this.guna2ComboBox2);
+            this.pnl_account.Controls.Add(this.guna2ComboBox1);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel5);
+            this.pnl_account.Controls.Add(this.guna2DateTimePicker1);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel4);
+            this.pnl_account.Controls.Add(this.guna2TextBox3);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel3);
+            this.pnl_account.Controls.Add(this.guna2TextBox2);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel2);
+            this.pnl_account.Controls.Add(this.guna2TextBox1);
+            this.pnl_account.Controls.Add(this.guna2HtmlLabel1);
+            this.pnl_account.Controls.Add(this.guna2CirclePictureBox1);
+            this.pnl_account.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_account.Location = new System.Drawing.Point(0, 40);
+            this.pnl_account.Name = "pnl_account";
+            this.pnl_account.Size = new System.Drawing.Size(450, 560);
+            this.pnl_account.TabIndex = 1;
             // 
             // guna2TextBox6
             // 
@@ -162,7 +175,7 @@
             this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(140, 386);
+            this.guna2TextBox6.Location = new System.Drawing.Point(140, 399);
             this.guna2TextBox6.Name = "guna2TextBox6";
             this.guna2TextBox6.PasswordChar = '\0';
             this.guna2TextBox6.PlaceholderText = "";
@@ -174,7 +187,7 @@
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(47, 394);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(47, 407);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(92, 19);
             this.guna2HtmlLabel10.TabIndex = 19;
@@ -191,7 +204,7 @@
             this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(140, 340);
+            this.guna2TextBox5.Location = new System.Drawing.Point(140, 353);
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderText = "";
@@ -203,7 +216,7 @@
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(47, 347);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(47, 360);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(87, 19);
             this.guna2HtmlLabel9.TabIndex = 17;
@@ -213,7 +226,7 @@
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(13, 311);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(13, 315);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(131, 23);
             this.guna2HtmlLabel8.TabIndex = 16;
@@ -360,6 +373,7 @@
             this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.Location = new System.Drawing.Point(244, 108);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "";
@@ -389,6 +403,7 @@
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Location = new System.Drawing.Point(244, 66);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
@@ -418,6 +433,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(244, 24);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -449,36 +465,88 @@
             // 
             // guna2GradientPanel3
             // 
-            this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(450, 40);
+            this.guna2GradientPanel3.BackColor = System.Drawing.Color.RosyBrown;
+            this.guna2GradientPanel3.Controls.Add(this.AC_dataHistoryView);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 40);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(450, 560);
             this.guna2GradientPanel3.TabIndex = 2;
             // 
-            // guna2GradientPanel4
+            // AC_dataHistoryView
             // 
-            this.guna2GradientPanel4.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(900, 40);
-            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(450, 560);
-            this.guna2GradientPanel4.TabIndex = 3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.AC_dataHistoryView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AC_dataHistoryView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.AC_dataHistoryView.ColumnHeadersHeight = 4;
+            this.AC_dataHistoryView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AC_dataHistoryView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.AC_dataHistoryView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AC_dataHistoryView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.AC_dataHistoryView.Location = new System.Drawing.Point(0, 0);
+            this.AC_dataHistoryView.Name = "AC_dataHistoryView";
+            this.AC_dataHistoryView.RowHeadersVisible = false;
+            this.AC_dataHistoryView.Size = new System.Drawing.Size(450, 560);
+            this.AC_dataHistoryView.TabIndex = 0;
+            this.AC_dataHistoryView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.AC_dataHistoryView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.AC_dataHistoryView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.AC_dataHistoryView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.AC_dataHistoryView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.AC_dataHistoryView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.AC_dataHistoryView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.AC_dataHistoryView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.AC_dataHistoryView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.AC_dataHistoryView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AC_dataHistoryView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.AC_dataHistoryView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.AC_dataHistoryView.ThemeStyle.HeaderStyle.Height = 4;
+            this.AC_dataHistoryView.ThemeStyle.ReadOnly = false;
+            this.AC_dataHistoryView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.AC_dataHistoryView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.AC_dataHistoryView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AC_dataHistoryView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.AC_dataHistoryView.ThemeStyle.RowsStyle.Height = 22;
+            this.AC_dataHistoryView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.AC_dataHistoryView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // pnl_Statistics
+            // 
+            this.pnl_Statistics.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pnl_Statistics.Location = new System.Drawing.Point(0, 40);
+            this.pnl_Statistics.Name = "pnl_Statistics";
+            this.pnl_Statistics.Size = new System.Drawing.Size(450, 560);
+            this.pnl_Statistics.TabIndex = 3;
             // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.guna2GradientPanel4);
+            this.Controls.Add(this.pnl_Statistics);
             this.Controls.Add(this.guna2GradientPanel3);
-            this.Controls.Add(this.guna2GradientPanel2);
+            this.Controls.Add(this.pnl_account);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "Account";
-            this.Size = new System.Drawing.Size(1365, 600);
+            this.Size = new System.Drawing.Size(450, 600);
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel2.ResumeLayout(false);
-            this.guna2GradientPanel2.PerformLayout();
+            this.pnl_account.ResumeLayout(false);
+            this.pnl_account.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.guna2GradientPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AC_dataHistoryView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -486,10 +554,10 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private Guna.UI2.WinForms.Guna2GradientButton A_btnStatistics;
+        private Guna.UI2.WinForms.Guna2GradientButton A_btnHistory;
+        private Guna.UI2.WinForms.Guna2GradientButton A_btnAccount;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnl_account;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
@@ -512,6 +580,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
+        private Guna.UI2.WinForms.Guna2GradientPanel pnl_Statistics;
+        private Guna.UI2.WinForms.Guna2DataGridView AC_dataHistoryView;
     }
 }
