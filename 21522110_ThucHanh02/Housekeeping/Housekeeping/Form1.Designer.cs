@@ -36,7 +36,9 @@
             this.btn_Service = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Home = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.message1 = new Housekeeping.Message();
+            this.HomePage = new Housekeeping.Home();
+            this.ServicePage = new Housekeeping.Service();
+            this.MessagePage = new Housekeeping.Message();
             this.pnl_function.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -81,6 +83,7 @@
             this.btn_Account.Text = "Account";
             this.btn_Account.TextOffset = new System.Drawing.Point(0, 2);
             this.btn_Account.Tile = true;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Click);
             // 
             // btn_Message
             // 
@@ -104,6 +107,7 @@
             this.btn_Message.Text = "Message";
             this.btn_Message.TextOffset = new System.Drawing.Point(0, -4);
             this.btn_Message.Tile = true;
+            this.btn_Message.Click += new System.EventHandler(this.btn_Click);
             // 
             // btn_Activity
             // 
@@ -127,6 +131,7 @@
             this.btn_Activity.Text = "Activity";
             this.btn_Activity.TextOffset = new System.Drawing.Point(0, 2);
             this.btn_Activity.Tile = true;
+            this.btn_Activity.Click += new System.EventHandler(this.btn_Click);
             // 
             // btn_Service
             // 
@@ -149,6 +154,7 @@
             this.btn_Service.TabIndex = 1;
             this.btn_Service.Text = "Service";
             this.btn_Service.Tile = true;
+            this.btn_Service.Click += new System.EventHandler(this.btn_Click);
             // 
             // btn_Home
             // 
@@ -172,22 +178,41 @@
             this.btn_Home.TabIndex = 0;
             this.btn_Home.Text = "Home";
             this.btn_Home.Tile = true;
+            this.btn_Home.Click += new System.EventHandler(this.btn_Click);
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.message1);
+            this.guna2Panel1.Controls.Add(this.HomePage);
+            this.guna2Panel1.Controls.Add(this.ServicePage);
+            this.guna2Panel1.Controls.Add(this.MessagePage);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(450, 600);
             this.guna2Panel1.TabIndex = 1;
             // 
-            // message1
+            // HomePage
             // 
-            this.message1.Location = new System.Drawing.Point(0, 0);
-            this.message1.Name = "message1";
-            this.message1.Size = new System.Drawing.Size(450, 600);
-            this.message1.TabIndex = 0;
+            this.HomePage.AutoScroll = true;
+            this.HomePage.Location = new System.Drawing.Point(0, 0);
+            this.HomePage.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
+            this.HomePage.Name = "HomePage";
+            this.HomePage.Size = new System.Drawing.Size(450, 600);
+            this.HomePage.TabIndex = 5;
+            // 
+            // ServicePage
+            // 
+            this.ServicePage.Location = new System.Drawing.Point(0, 0);
+            this.ServicePage.Name = "ServicePage";
+            this.ServicePage.Size = new System.Drawing.Size(450, 600);
+            this.ServicePage.TabIndex = 1;
+            // 
+            // MessagePage
+            // 
+            this.MessagePage.Location = new System.Drawing.Point(0, 0);
+            this.MessagePage.Name = "MessagePage";
+            this.MessagePage.Size = new System.Drawing.Size(450, 600);
+            this.MessagePage.TabIndex = 0;
             // 
             // Form1
             // 
@@ -215,7 +240,9 @@
         private Guna.UI2.WinForms.Guna2GradientButton btn_Service;
         private Guna.UI2.WinForms.Guna2GradientButton btn_Home;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Message message1;
+        private Message MessagePage;
+        private Home HomePage;
+        private Service ServicePage;
     }
 }
 

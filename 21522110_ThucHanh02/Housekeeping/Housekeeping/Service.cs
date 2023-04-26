@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,7 +60,7 @@ namespace Housekeeping
         }
         private void checkTick(object sender, EventArgs e)
         {
-            CheckBox check = sender as CheckBox;
+            Guna2CustomCheckBox check = sender as Guna2CustomCheckBox;
             string money = dataService[check.Name];
             if (check.Checked)
             {
@@ -75,7 +76,7 @@ namespace Housekeeping
         #region Handle choose service-Cooking-Cleaning-Laundry
         private void btn_Service_Click(object sender, EventArgs e)
         {
-            Button btnService = sender as Button;
+            Guna2GradientButton btnService = sender as Guna2GradientButton;
             if(btnService.Name == "btn_Cooking")
             {
                 pnl_Cooking.Visible = true;
