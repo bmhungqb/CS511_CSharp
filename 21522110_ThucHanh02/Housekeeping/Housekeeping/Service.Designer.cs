@@ -179,22 +179,26 @@
             // 
             // Title
             // 
+            this.Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(11)))), ((int)(((byte)(54)))));
             this.Title.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Title.DefaultText = "";
+            this.Title.DefaultText = "Make your life easier..";
             this.Title.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Title.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Title.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Title.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Title.FillColor = System.Drawing.Color.WhiteSmoke;
             this.Title.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Title.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Title.Font = new System.Drawing.Font("Goudy Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(229)))), ((int)(((byte)(133)))));
             this.Title.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Title.Location = new System.Drawing.Point(0, 0);
             this.Title.Name = "Title";
             this.Title.PasswordChar = '\0';
+            this.Title.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(11)))), ((int)(((byte)(54)))));
             this.Title.PlaceholderText = "";
             this.Title.SelectedText = "";
-            this.Title.Size = new System.Drawing.Size(1457, 36);
+            this.Title.Size = new System.Drawing.Size(450, 36);
             this.Title.TabIndex = 5;
             // 
             // pnl_button
@@ -205,7 +209,7 @@
             this.pnl_button.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_button.Location = new System.Drawing.Point(0, 36);
             this.pnl_button.Name = "pnl_button";
-            this.pnl_button.Size = new System.Drawing.Size(1457, 101);
+            this.pnl_button.Size = new System.Drawing.Size(450, 101);
             this.pnl_button.TabIndex = 6;
             // 
             // btn_Laundry
@@ -216,8 +220,10 @@
             this.btn_Laundry.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Laundry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Laundry.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_Laundry.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Laundry.ForeColor = System.Drawing.Color.White;
+            this.btn_Laundry.FillColor = System.Drawing.Color.Empty;
+            this.btn_Laundry.FillColor2 = System.Drawing.Color.Empty;
+            this.btn_Laundry.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Laundry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.btn_Laundry.Image = ((System.Drawing.Image)(resources.GetObject("btn_Laundry.Image")));
             this.btn_Laundry.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Laundry.ImageSize = new System.Drawing.Size(64, 64);
@@ -238,8 +244,10 @@
             this.btn_Cleaning.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Cleaning.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Cleaning.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_Cleaning.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Cleaning.ForeColor = System.Drawing.Color.White;
+            this.btn_Cleaning.FillColor = System.Drawing.Color.Empty;
+            this.btn_Cleaning.FillColor2 = System.Drawing.Color.Empty;
+            this.btn_Cleaning.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cleaning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.btn_Cleaning.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cleaning.Image")));
             this.btn_Cleaning.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Cleaning.ImageSize = new System.Drawing.Size(64, 64);
@@ -260,8 +268,10 @@
             this.btn_Cooking.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Cooking.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Cooking.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_Cooking.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Cooking.ForeColor = System.Drawing.Color.White;
+            this.btn_Cooking.FillColor = System.Drawing.Color.Empty;
+            this.btn_Cooking.FillColor2 = System.Drawing.Color.Empty;
+            this.btn_Cooking.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cooking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.btn_Cooking.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cooking.Image")));
             this.btn_Cooking.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Cooking.ImageSize = new System.Drawing.Size(64, 64);
@@ -281,7 +291,7 @@
             this.guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(0, 553);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(1457, 47);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(450, 47);
             this.guna2CustomGradientPanel2.TabIndex = 8;
             // 
             // btn_Checkout
@@ -292,11 +302,13 @@
             this.btn_Checkout.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_Checkout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_Checkout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Checkout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
+            this.btn_Checkout.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.btn_Checkout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_Checkout.ForeColor = System.Drawing.Color.White;
             this.btn_Checkout.Location = new System.Drawing.Point(245, 0);
             this.btn_Checkout.Name = "btn_Checkout";
-            this.btn_Checkout.Size = new System.Drawing.Size(1212, 47);
+            this.btn_Checkout.Size = new System.Drawing.Size(205, 47);
             this.btn_Checkout.TabIndex = 0;
             this.btn_Checkout.Text = "Go to Checkout";
             // 
@@ -414,7 +426,7 @@
             this.SV_Container.Dock = System.Windows.Forms.DockStyle.Top;
             this.SV_Container.Location = new System.Drawing.Point(0, 137);
             this.SV_Container.Name = "SV_Container";
-            this.SV_Container.Size = new System.Drawing.Size(1457, 416);
+            this.SV_Container.Size = new System.Drawing.Size(450, 416);
             this.SV_Container.TabIndex = 7;
             // 
             // pnl_Cleaning
@@ -425,7 +437,7 @@
             this.pnl_Cleaning.Controls.Add(this.guna2ContainerControl19);
             this.pnl_Cleaning.Controls.Add(this.guna2ContainerControl20);
             this.pnl_Cleaning.Controls.Add(this.guna2ContainerControl21);
-            this.pnl_Cleaning.Location = new System.Drawing.Point(912, 0);
+            this.pnl_Cleaning.Location = new System.Drawing.Point(0, 0);
             this.pnl_Cleaning.Name = "pnl_Cleaning";
             this.pnl_Cleaning.Size = new System.Drawing.Size(450, 416);
             this.pnl_Cleaning.TabIndex = 11;
@@ -768,7 +780,7 @@
             this.pnl_Laundry.Controls.Add(this.guna2ContainerControl10);
             this.pnl_Laundry.Controls.Add(this.guna2ContainerControl11);
             this.pnl_Laundry.Controls.Add(this.guna2ContainerControl12);
-            this.pnl_Laundry.Location = new System.Drawing.Point(456, 0);
+            this.pnl_Laundry.Location = new System.Drawing.Point(0, 0);
             this.pnl_Laundry.Name = "pnl_Laundry";
             this.pnl_Laundry.Size = new System.Drawing.Size(450, 416);
             this.pnl_Laundry.TabIndex = 9;
@@ -1604,7 +1616,7 @@
             this.Controls.Add(this.pnl_button);
             this.Controls.Add(this.Title);
             this.Name = "Service";
-            this.Size = new System.Drawing.Size(1457, 600);
+            this.Size = new System.Drawing.Size(450, 600);
             this.pnl_button.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2ContainerControl2.ResumeLayout(false);

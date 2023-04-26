@@ -17,7 +17,7 @@ namespace Housekeeping
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1s());
+            Application.Run(new Form1());
         }
     }
 }
