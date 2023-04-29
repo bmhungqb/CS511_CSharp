@@ -3,11 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
+using System.Windows.Documents;
+using System.Windows.Controls.Primitives;
 
 namespace Housekeeping
 {
@@ -17,8 +21,8 @@ namespace Housekeeping
         {
             InitializeComponent();
         }
-        #region DataService
-        public Dictionary<string, string> dataService = new Dictionary<string, string>()
+        #region dataPrice
+        public Dictionary<string, string> dataPrice = new Dictionary<string, string>()
         {
             {"c1","150000" },
             {"c2","200000" },
@@ -41,6 +45,30 @@ namespace Housekeeping
             {"cl4","300000" },
             {"cl5","300000" },
         };
+        public Dictionary<string, string> dataPropertyService = new Dictionary<string, string>()
+        {
+            {"c1","2 Dishes" },
+            {"c2","3 Dishes" },
+            {"c3","4 Dishes" },
+            {"c4","3 Dishes" },
+            {"c5","3 Dishes" },
+            {"c6","4 Dishes" },
+            {"c7","4 Dishes" },
+            {"c8","3 Dishes" },
+
+            {"l1","Laundrying & Ironing" },
+            {"l2","Laundrying" },
+            {"l3","Laundrying & Ironing & Folding" },
+            {"l4","Laundrying & Ironing" },
+            {"l5","Laundrying" },
+
+            {"cl1","Living room" },
+            {"cl2","Living room" },
+            {"cl3","Living & Chicken room" },
+            {"cl4","Living room" },
+            {"cl5","Chicken room" },
+        };
+        List<string> elChecked = new List<string>();
         #endregion
         #region Handle Click Service
         private void updateTotalPrice(string money,bool isCheck)
@@ -62,14 +90,16 @@ namespace Housekeeping
         {
             Guna2CustomCheckBox check = sender as Guna2CustomCheckBox;
             check.Checked = !check.Checked;
-            string money = dataService[check.Name];
+            string money = dataPrice[check.Name];
             if (check.Checked)
             {
                 check.Checked = false;
+                elChecked.Remove(check.Name);
             }
             else
             {
                 check.Checked = true;
+                elChecked.Add(check.Name);
             }
             updateTotalPrice(money, check.Checked);
         }
@@ -99,5 +129,39 @@ namespace Housekeeping
         }
         #endregion
 
+        private void btn_Checkout_Click(object sender, EventArgs e)
+        {
+            if(elChecked.Count == 0)
+            {
+                MessageBox.Show("Please Order Any Our Services", "Empty Order",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            else
+            {
+                AboutBox1 Aboutbox= new AboutBox1();
+                Aboutbox.VisualizeData(elChecked, dataPrice, dataPropertyService);
+                DialogResult dialogResult = Aboutbox.ShowDialog();
+                if(dialogResult == DialogResult.OK)
+                {
+                    ClearChecked();
+                }
+            }
+        }
+        public void ClearChecked()
+        {
+            elChecked.Clear();
+            foreach (Control pnl in SV_Container.Controls)
+            {
+                foreach (Control container in pnl.Controls)
+                {
+                    foreach (Control c in container.Controls)
+                    {
+                        if (c is Guna2CustomCheckBox cb)
+                        {
+;                            cb.Checked = false;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

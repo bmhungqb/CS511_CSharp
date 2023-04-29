@@ -312,6 +312,7 @@
             this.btn_Checkout.Size = new System.Drawing.Size(205, 47);
             this.btn_Checkout.TabIndex = 0;
             this.btn_Checkout.Text = "Go to Checkout";
+            this.btn_Checkout.Click += new System.EventHandler(this.btn_Checkout_Click);
             // 
             // SV_TotalPrice
             // 

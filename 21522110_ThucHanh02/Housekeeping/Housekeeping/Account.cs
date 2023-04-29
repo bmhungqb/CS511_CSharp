@@ -86,7 +86,7 @@ namespace Housekeeping
             AC_ChartViewStatus.Series.Add("Status");
             AC_ChartViewStatus.Series["Status"].Points.AddXY("Done", dataC["Done"]);
             AC_ChartViewStatus.Series["Status"].Points.AddXY("Doing", dataC["Doing"]);
-            AC_ChartViewStatus.Series["Status"].Points.AddXY("Cooking", dataC["Cooking"]);
+            AC_ChartViewStatus.Series["Status"].Points.AddXY("Cancel", dataC["Cancel"]);
             AC_ChartViewStatus.Titles.Add("Status of your job");
 
 
