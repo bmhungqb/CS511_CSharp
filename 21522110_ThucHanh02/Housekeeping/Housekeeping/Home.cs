@@ -17,12 +17,13 @@ namespace Housekeeping
             InitializeComponent();
         }
 
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        public void updateHome(string name,string address)
         {
-
+            tb_Greeting.Text = "Welcom " + name;
+            tb_Address.Text = address;
         }
 
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
 
         }

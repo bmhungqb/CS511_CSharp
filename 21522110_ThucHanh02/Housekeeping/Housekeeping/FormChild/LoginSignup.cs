@@ -22,7 +22,7 @@ namespace Housekeeping.FormChild
         }
         #region Constants
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataUserInfor.txt";
-        public  string idUser;
+        public string idUser;
         #endregion
         #region Handle button
         private void btn_FormLogin_Click(object sender, EventArgs e)
@@ -113,7 +113,9 @@ namespace Housekeeping.FormChild
         private void saveDataToFile(Dictionary<string,string>InforUser)
         {
             Random rdn= new Random();
-            string inforUser = (rdn.Next()).ToString();
+            int random = rdn.Next();
+            idUser = random.ToString();
+            string inforUser = random.ToString();
             foreach(KeyValuePair<string,string> infor in InforUser)
             {
                 inforUser += "_";
@@ -192,11 +194,12 @@ namespace Housekeeping.FormChild
                     while((inforUser = reader.ReadLine()) != null)
                     {
                         string[] infor = inforUser.Split('_');
-                        if(Username == infor[0] && Password == infor[1]) 
+                        if(Username == infor[1] && Password == infor[2]) 
                         {
+                            idUser = infor[0];
                             return "1Login Success";
                         }
-                        if(Username == infor[0] && Password != infor[1])
+                        if(Username == infor[1] && Password != infor[2])
                         {
                             return "0Wrong Password";
                         }

@@ -65,6 +65,10 @@
             // 
             // btn_Account
             // 
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.btn_Account.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Account.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Account.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btn_Account.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Account.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Account.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -74,7 +78,9 @@
             this.btn_Account.FillColor = System.Drawing.Color.Transparent;
             this.btn_Account.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Account.ForeColor = System.Drawing.Color.Silver;
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.btn_Account.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.btn_Account.Image = ((System.Drawing.Image)(resources.GetObject("btn_Account.Image")));
             this.btn_Account.ImageOffset = new System.Drawing.Point(0, 10);
             this.btn_Account.ImageSize = new System.Drawing.Size(35, 35);
@@ -89,6 +95,10 @@
             // 
             // btn_Message
             // 
+            this.btn_Message.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.btn_Message.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Message.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Message.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btn_Message.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Message.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Message.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -98,7 +108,9 @@
             this.btn_Message.FillColor = System.Drawing.Color.Transparent;
             this.btn_Message.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_Message.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Message.ForeColor = System.Drawing.Color.Silver;
+            this.btn_Message.ForeColor = System.Drawing.Color.White;
+            this.btn_Message.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.btn_Message.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.btn_Message.Image = ((System.Drawing.Image)(resources.GetObject("btn_Message.Image")));
             this.btn_Message.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Message.ImageSize = new System.Drawing.Size(52, 52);
@@ -113,6 +125,10 @@
             // 
             // btn_Activity
             // 
+            this.btn_Activity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.btn_Activity.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Activity.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Activity.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btn_Activity.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Activity.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Activity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -122,7 +138,9 @@
             this.btn_Activity.FillColor = System.Drawing.Color.Transparent;
             this.btn_Activity.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_Activity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Activity.ForeColor = System.Drawing.Color.Silver;
+            this.btn_Activity.ForeColor = System.Drawing.Color.White;
+            this.btn_Activity.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.btn_Activity.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.btn_Activity.Image = ((System.Drawing.Image)(resources.GetObject("btn_Activity.Image")));
             this.btn_Activity.ImageOffset = new System.Drawing.Point(0, 8);
             this.btn_Activity.ImageSize = new System.Drawing.Size(35, 35);
@@ -137,6 +155,10 @@
             // 
             // btn_Service
             // 
+            this.btn_Service.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.btn_Service.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Service.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Service.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btn_Service.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Service.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Service.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -146,7 +168,9 @@
             this.btn_Service.FillColor = System.Drawing.Color.Transparent;
             this.btn_Service.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_Service.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Service.ForeColor = System.Drawing.Color.Silver;
+            this.btn_Service.ForeColor = System.Drawing.Color.White;
+            this.btn_Service.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.btn_Service.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.btn_Service.Image = ((System.Drawing.Image)(resources.GetObject("btn_Service.Image")));
             this.btn_Service.ImageOffset = new System.Drawing.Point(0, 10);
             this.btn_Service.ImageSize = new System.Drawing.Size(37, 37);
@@ -160,6 +184,10 @@
             // 
             // btn_Home
             // 
+            this.btn_Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.btn_Home.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Home.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.btn_Home.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btn_Home.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Home.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Home.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -169,7 +197,9 @@
             this.btn_Home.FillColor = System.Drawing.Color.Transparent;
             this.btn_Home.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_Home.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Home.ForeColor = System.Drawing.Color.Silver;
+            this.btn_Home.ForeColor = System.Drawing.Color.White;
+            this.btn_Home.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.btn_Home.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.btn_Home.Image = ((System.Drawing.Image)(resources.GetObject("btn_Home.Image")));
             this.btn_Home.ImageOffset = new System.Drawing.Point(0, 10);
             this.btn_Home.ImageSize = new System.Drawing.Size(40, 40);

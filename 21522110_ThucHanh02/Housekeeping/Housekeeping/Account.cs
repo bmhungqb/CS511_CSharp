@@ -21,6 +21,9 @@ namespace Housekeeping
             pnl_account.Visible = true;
             pnl_History.Visible = false;
             pnl_Statistics.Visible = false;
+            A_btnAccount.Checked = true;
+            A_btnHistory.Checked = false;
+            A_btnStatistics.Checked = false;
         }
         #region declare constant variable 
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataCart.txt";
@@ -120,12 +123,18 @@ namespace Housekeeping
                 pnl_account.Visible = true;
                 pnl_History.Visible = false;
                 pnl_Statistics.Visible  = false;
+                A_btnAccount.Checked = true;
+                A_btnHistory.Checked = false;
+                A_btnStatistics.Checked = false; 
             }
             else if(button.Name == "A_btnHistory")
             {
                 pnl_account.Visible = false;
                 pnl_History.Visible = true;
                 pnl_Statistics.Visible = false;
+                A_btnAccount.Checked = false;
+                A_btnHistory.Checked = true;
+                A_btnStatistics.Checked = false;
                 Load_history();
             }
             else if(button.Name == "A_btnStatistics")
@@ -133,6 +142,9 @@ namespace Housekeeping
                 pnl_account.Visible = false;
                 pnl_History.Visible = false;
                 pnl_Statistics.Visible = true;
+                A_btnAccount.Checked = false;
+                A_btnHistory.Checked = false;
+                A_btnStatistics.Checked = true;
                 Load_Statistics_Service();
             }
 

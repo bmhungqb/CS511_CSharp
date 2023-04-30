@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.A_btnStatistics = new Guna.UI2.WinForms.Guna2GradientButton();
             this.A_btnHistory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.A_btnAccount = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnl_account = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -70,7 +71,6 @@
             this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
             this.AC_ChartViewService = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1.SuspendLayout();
             this.pnl_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
@@ -94,16 +94,21 @@
             // 
             // A_btnStatistics
             // 
+            this.A_btnStatistics.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.A_btnStatistics.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.A_btnStatistics.CheckedState.ForeColor = System.Drawing.Color.White;
             this.A_btnStatistics.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.A_btnStatistics.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.A_btnStatistics.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.A_btnStatistics.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.A_btnStatistics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.A_btnStatistics.Dock = System.Windows.Forms.DockStyle.Left;
-            this.A_btnStatistics.FillColor = System.Drawing.Color.Silver;
-            this.A_btnStatistics.FillColor2 = System.Drawing.Color.Silver;
+            this.A_btnStatistics.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.A_btnStatistics.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
             this.A_btnStatistics.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.A_btnStatistics.ForeColor = System.Drawing.Color.Black;
+            this.A_btnStatistics.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.A_btnStatistics.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.A_btnStatistics.Location = new System.Drawing.Point(300, 0);
             this.A_btnStatistics.Name = "A_btnStatistics";
             this.A_btnStatistics.Size = new System.Drawing.Size(150, 40);
@@ -113,16 +118,21 @@
             // 
             // A_btnHistory
             // 
+            this.A_btnHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.A_btnHistory.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.A_btnHistory.CheckedState.ForeColor = System.Drawing.Color.White;
             this.A_btnHistory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.A_btnHistory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.A_btnHistory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.A_btnHistory.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.A_btnHistory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.A_btnHistory.Dock = System.Windows.Forms.DockStyle.Left;
-            this.A_btnHistory.FillColor = System.Drawing.Color.Silver;
-            this.A_btnHistory.FillColor2 = System.Drawing.Color.Silver;
+            this.A_btnHistory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.A_btnHistory.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
             this.A_btnHistory.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.A_btnHistory.ForeColor = System.Drawing.Color.Black;
+            this.A_btnHistory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.A_btnHistory.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.A_btnHistory.Location = new System.Drawing.Point(150, 0);
             this.A_btnHistory.Name = "A_btnHistory";
             this.A_btnHistory.Size = new System.Drawing.Size(150, 40);
@@ -132,16 +142,21 @@
             // 
             // A_btnAccount
             // 
+            this.A_btnAccount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.A_btnAccount.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(74)))), ((int)(((byte)(125)))));
+            this.A_btnAccount.CheckedState.ForeColor = System.Drawing.Color.White;
             this.A_btnAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.A_btnAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.A_btnAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.A_btnAccount.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.A_btnAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.A_btnAccount.Dock = System.Windows.Forms.DockStyle.Left;
-            this.A_btnAccount.FillColor = System.Drawing.Color.Silver;
-            this.A_btnAccount.FillColor2 = System.Drawing.Color.Silver;
+            this.A_btnAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
+            this.A_btnAccount.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(77)))), ((int)(((byte)(80)))));
             this.A_btnAccount.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.A_btnAccount.ForeColor = System.Drawing.Color.Black;
+            this.A_btnAccount.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
+            this.A_btnAccount.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(65)))), ((int)(((byte)(106)))));
             this.A_btnAccount.Location = new System.Drawing.Point(0, 0);
             this.A_btnAccount.Name = "A_btnAccount";
             this.A_btnAccount.Size = new System.Drawing.Size(150, 40);
@@ -178,6 +193,22 @@
             this.pnl_account.Name = "pnl_account";
             this.pnl_account.Size = new System.Drawing.Size(450, 560);
             this.pnl_account.TabIndex = 0;
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(19, 123);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.Size = new System.Drawing.Size(107, 21);
+            this.guna2GradientButton1.TabIndex = 21;
+            this.guna2GradientButton1.Text = "Change image";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.btn_Click_ChangeImage);
             // 
             // guna2TextBox6
             // 
@@ -505,25 +536,25 @@
             this.AC_dataHistoryView.AllowUserToDeleteRows = false;
             this.AC_dataHistoryView.AllowUserToResizeColumns = false;
             this.AC_dataHistoryView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.AC_dataHistoryView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AC_dataHistoryView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.AC_dataHistoryView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AC_dataHistoryView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.AC_dataHistoryView.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.AC_dataHistoryView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AC_dataHistoryView.DefaultCellStyle = dataGridViewCellStyle3;
             this.AC_dataHistoryView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AC_dataHistoryView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.AC_dataHistoryView.Location = new System.Drawing.Point(0, 72);
@@ -569,11 +600,11 @@
             // 
             // AC_ChartViewStatus
             // 
-            chartArea3.Name = "ChartArea1";
-            this.AC_ChartViewStatus.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.AC_ChartViewStatus.ChartAreas.Add(chartArea1);
             this.AC_ChartViewStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            legend3.Name = "Legend1";
-            this.AC_ChartViewStatus.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.AC_ChartViewStatus.Legends.Add(legend1);
             this.AC_ChartViewStatus.Location = new System.Drawing.Point(0, 497);
             this.AC_ChartViewStatus.Name = "AC_ChartViewStatus";
             this.AC_ChartViewStatus.Size = new System.Drawing.Size(433, 364);
@@ -602,11 +633,11 @@
             // 
             // AC_ChartViewService
             // 
-            chartArea4.Name = "ChartArea1";
-            this.AC_ChartViewService.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.AC_ChartViewService.ChartAreas.Add(chartArea2);
             this.AC_ChartViewService.Dock = System.Windows.Forms.DockStyle.Top;
-            legend4.Name = "Legend1";
-            this.AC_ChartViewService.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.AC_ChartViewService.Legends.Add(legend2);
             this.AC_ChartViewService.Location = new System.Drawing.Point(0, 66);
             this.AC_ChartViewService.Name = "AC_ChartViewService";
             this.AC_ChartViewService.Size = new System.Drawing.Size(433, 364);
@@ -632,22 +663,6 @@
             this.guna2TextBox7.SelectedText = "";
             this.guna2TextBox7.Size = new System.Drawing.Size(433, 66);
             this.guna2TextBox7.TabIndex = 1;
-            // 
-            // guna2GradientButton1
-            // 
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(19, 123);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(107, 21);
-            this.guna2GradientButton1.TabIndex = 21;
-            this.guna2GradientButton1.Text = "Change image";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.btn_Click_ChangeImage);
             // 
             // Account
             // 

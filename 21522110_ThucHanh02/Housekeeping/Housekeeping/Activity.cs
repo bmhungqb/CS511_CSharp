@@ -17,10 +17,12 @@ namespace Housekeeping
         public Activity()
         {
             InitializeComponent();
-            pnl_Active.Visible = true;
-            pnl_Order.Visible = false;
             LoadSelectOrderId();
             visualizeDataActive();
+            pnl_Active.Visible = true;
+            pnl_Order.Visible = false;
+            btn_Active.Checked = true;
+            btn_Order.Checked = false;
         }
         #region Define pathfile txt store data
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataCart.txt";
@@ -144,12 +146,16 @@ namespace Housekeeping
                 visualizeDataActive();
                 pnl_Active.Visible = true;
                 pnl_Order.Visible = false;
+                btn_Active.Checked = true;
+                btn_Order.Checked = false;
             }
             else
             {
                 LoadSelectOrderId();
                 pnl_Active.Visible = false;
                 pnl_Order.Visible = true;
+                btn_Active.Checked = false;
+                btn_Order.Checked = true;
             }
         }
 

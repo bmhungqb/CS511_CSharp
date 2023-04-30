@@ -5,10 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Configuration;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Housekeeping
 {
@@ -22,8 +25,37 @@ namespace Housekeeping
             MessagePage.Visible = false;
             AccountPage.Visible = false;
             ActivityPage.Visible = false;
+            btn_Home.Checked = true;
+            btn_Account.Checked = false;
+            btn_Activity.Checked = false;
+            btn_Message.Checked = false;
+            btn_Service.Checked = false;
             LoginSignup login = new LoginSignup();
             login.ShowDialog();
+            updateInfor(login.idUser);
+        }
+        private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataUserInfor.txt";
+        public void updateInfor(string id)
+        {
+            using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
+            {
+                string inforUser;
+                Dictionary<string, string> User = new Dictionary<string, string>();
+                while ((inforUser = reader.ReadLine()) != null)
+                {
+                    string[] infor = inforUser.Split('_');
+                    if (infor[0] == id)
+                    {
+                        User.Add("Username", infor[3]);
+                        User.Add("Address", infor[6]);
+                        //User.Add("Username", infor[3]);
+                        HomePage.updateHome(User["Username"], User["Address"]);
+                        break;
+                    }
+                }
+            }
+            //string name = up
+            
         }
         private void btn_Click(object sender, EventArgs e)
         {
@@ -35,6 +67,11 @@ namespace Housekeeping
                 MessagePage.Visible = false;
                 AccountPage.Visible = false;
                 ActivityPage.Visible = false;
+                btn_Home.Checked = true;
+                btn_Account.Checked = false;
+                btn_Activity.Checked = false;
+                btn_Message.Checked = false;
+                btn_Service.Checked = false;
             }
             else if (button.Name == "btn_Service")
             {
@@ -43,6 +80,11 @@ namespace Housekeeping
                 MessagePage.Visible = false;
                 AccountPage.Visible = false;
                 ActivityPage.Visible = false;
+                btn_Home.Checked = false;
+                btn_Account.Checked = false;
+                btn_Activity.Checked = false;
+                btn_Message.Checked = false;
+                btn_Service.Checked = true;
             }
             else if (button.Name == "btn_Activity")
             {
@@ -51,6 +93,11 @@ namespace Housekeeping
                 MessagePage.Visible = false;
                 AccountPage.Visible = false;
                 ActivityPage.Visible = true;
+                btn_Home.Checked = false;
+                btn_Account.Checked = false;
+                btn_Activity.Checked = true;
+                btn_Message.Checked = false;
+                btn_Service.Checked = false;
 
             }
             else if (button.Name == "btn_Message")
@@ -61,6 +108,12 @@ namespace Housekeeping
                 AccountPage.Visible = false;
                 ActivityPage.Visible = false;
 
+                btn_Home.Checked = false;
+                btn_Account.Checked = false;
+                btn_Activity.Checked = false;
+                btn_Message.Checked = true;
+                btn_Service.Checked = false;
+
             }
             else if (button.Name == "btn_Account")
             {
@@ -69,6 +122,12 @@ namespace Housekeeping
                 MessagePage.Visible = false;
                 AccountPage.Visible = true;
                 ActivityPage.Visible = false;
+
+                btn_Home.Checked = false;
+                btn_Account.Checked = true;
+                btn_Activity.Checked = false;
+                btn_Message.Checked = false;
+                btn_Service.Checked = false;
             }
         }
     }
