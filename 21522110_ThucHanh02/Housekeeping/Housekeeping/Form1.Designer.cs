@@ -36,10 +36,11 @@
             this.btn_Service = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Home = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ActivityPage = new Housekeeping.Activity();
+            this.AccountPage = new Housekeeping.Account();
             this.HomePage = new Housekeeping.Home();
             this.ServicePage = new Housekeeping.Service();
             this.MessagePage = new Housekeeping.Message();
-            this.AccountPage = new Housekeeping.Account();
             this.pnl_function.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -183,6 +184,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.ActivityPage);
             this.guna2Panel1.Controls.Add(this.AccountPage);
             this.guna2Panel1.Controls.Add(this.HomePage);
             this.guna2Panel1.Controls.Add(this.ServicePage);
@@ -192,6 +194,20 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(450, 600);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // ActivityPage
+            // 
+            this.ActivityPage.Location = new System.Drawing.Point(0, 0);
+            this.ActivityPage.Name = "ActivityPage";
+            this.ActivityPage.Size = new System.Drawing.Size(900, 600);
+            this.ActivityPage.TabIndex = 6;
+            // 
+            // AccountPage
+            // 
+            this.AccountPage.Location = new System.Drawing.Point(0, 0);
+            this.AccountPage.Name = "AccountPage";
+            this.AccountPage.Size = new System.Drawing.Size(450, 600);
+            this.AccountPage.TabIndex = 5;
             // 
             // HomePage
             // 
@@ -215,13 +231,6 @@
             this.MessagePage.Name = "MessagePage";
             this.MessagePage.Size = new System.Drawing.Size(450, 600);
             this.MessagePage.TabIndex = 0;
-            // 
-            // AccountPage
-            // 
-            this.AccountPage.Location = new System.Drawing.Point(0, 0);
-            this.AccountPage.Name = "AccountPage";
-            this.AccountPage.Size = new System.Drawing.Size(450, 600);
-            this.AccountPage.TabIndex = 5;
             // 
             // Form1
             // 
@@ -253,6 +262,7 @@
         private Home HomePage;
         private Service ServicePage;
         private Account AccountPage;
+        private Activity ActivityPage;
     }
 }
 

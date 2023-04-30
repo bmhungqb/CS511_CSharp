@@ -17,6 +17,10 @@ namespace Housekeeping
         {
             InitializeComponent();
             HomePage.Visible = true;
+            ServicePage.Visible = false;
+            MessagePage.Visible = false;
+            AccountPage.Visible = false;
+            ActivityPage.Visible = false;
         }
         private void btn_Click(object sender, EventArgs e)
         {
@@ -27,6 +31,7 @@ namespace Housekeeping
                 ServicePage.Visible = false;
                 MessagePage.Visible = false;
                 AccountPage.Visible = false;
+                ActivityPage.Visible = false;
             }
             else if (button.Name == "btn_Service")
             {
@@ -34,6 +39,7 @@ namespace Housekeeping
                 ServicePage.Visible = true;
                 MessagePage.Visible = false;
                 AccountPage.Visible = false;
+                ActivityPage.Visible = false;
             }
             else if (button.Name == "btn_Activity")
             {
@@ -41,6 +47,7 @@ namespace Housekeeping
                 ServicePage.Visible = false;
                 MessagePage.Visible = false;
                 AccountPage.Visible = false;
+                ActivityPage.Visible = true;
 
             }
             else if (button.Name == "btn_Message")
@@ -49,6 +56,7 @@ namespace Housekeeping
                 ServicePage.Visible = false;
                 MessagePage.Visible = true;
                 AccountPage.Visible = false;
+                ActivityPage.Visible = false;
 
             }
             else if (button.Name == "btn_Account")
@@ -57,6 +65,7 @@ namespace Housekeeping
                 ServicePage.Visible = false;
                 MessagePage.Visible = false;
                 AccountPage.Visible = true;
+                ActivityPage.Visible = false;
 
             }
         }
