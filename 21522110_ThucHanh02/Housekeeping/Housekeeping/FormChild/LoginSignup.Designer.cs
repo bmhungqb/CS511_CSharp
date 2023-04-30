@@ -179,7 +179,7 @@ namespace Housekeeping.FormChild
             this.SU_Phonenumber.Location = new System.Drawing.Point(26, 326);
             this.SU_Phonenumber.Name = "SU_Phonenumber";
             this.SU_Phonenumber.PasswordChar = '\0';
-            this.SU_Phonenumber.PlaceholderText = "Nhập số điện thoại";
+            this.SU_Phonenumber.PlaceholderText = "Input your phonenumber";
             this.SU_Phonenumber.SelectedText = "";
             this.SU_Phonenumber.Size = new System.Drawing.Size(117, 35);
             this.SU_Phonenumber.TabIndex = 19;
@@ -200,7 +200,7 @@ namespace Housekeeping.FormChild
             this.SU_Password.Location = new System.Drawing.Point(228, 47);
             this.SU_Password.Name = "SU_Password";
             this.SU_Password.PasswordChar = '●';
-            this.SU_Password.PlaceholderText = "Nhập mật khẩu";
+            this.SU_Password.PlaceholderText = "Password";
             this.SU_Password.SelectedText = "";
             this.SU_Password.Size = new System.Drawing.Size(141, 35);
             this.SU_Password.TabIndex = 18;
@@ -215,7 +215,7 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(53, 17);
             this.guna2HtmlLabel8.TabIndex = 17;
-            this.guna2HtmlLabel8.Text = "Mật khẩu";
+            this.guna2HtmlLabel8.Text = "Password";
             // 
             // guna2HtmlLabel10
             // 
@@ -224,9 +224,9 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(26, 27);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(83, 17);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(56, 17);
             this.guna2HtmlLabel10.TabIndex = 14;
-            this.guna2HtmlLabel10.Text = "Tên đăng nhập";
+            this.guna2HtmlLabel10.Text = "Username";
             // 
             // SU_Username
             // 
@@ -244,7 +244,7 @@ namespace Housekeeping.FormChild
             this.SU_Username.Location = new System.Drawing.Point(26, 47);
             this.SU_Username.Name = "SU_Username";
             this.SU_Username.PasswordChar = '\0';
-            this.SU_Username.PlaceholderText = "Tên đăng nhập";
+            this.SU_Username.PlaceholderText = "Username";
             this.SU_Username.SelectedText = "";
             this.SU_Username.Size = new System.Drawing.Size(189, 35);
             this.SU_Username.TabIndex = 13;
@@ -265,12 +265,12 @@ namespace Housekeeping.FormChild
             this.SU_Sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.SU_Sex.ItemHeight = 35;
             this.SU_Sex.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Khác"});
+            "Male",
+            "Female",
+            "Orther"});
             this.SU_Sex.Location = new System.Drawing.Point(267, 180);
             this.SU_Sex.Name = "SU_Sex";
-            this.SU_Sex.Size = new System.Drawing.Size(84, 41);
+            this.SU_Sex.Size = new System.Drawing.Size(102, 41);
             this.SU_Sex.StartIndex = 0;
             this.SU_Sex.TabIndex = 8;
             // 
@@ -281,9 +281,9 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(266, 162);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(48, 17);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(22, 17);
             this.guna2HtmlLabel7.TabIndex = 12;
-            this.guna2HtmlLabel7.Text = "Giới tính";
+            this.guna2HtmlLabel7.Text = "Sex";
             // 
             // guna2HtmlLabel6
             // 
@@ -292,9 +292,9 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(26, 299);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(73, 17);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(79, 17);
             this.guna2HtmlLabel6.TabIndex = 11;
-            this.guna2HtmlLabel6.Text = "Số điện thoại";
+            this.guna2HtmlLabel6.Text = "Phonenumber";
             // 
             // SU_Address
             // 
@@ -312,7 +312,7 @@ namespace Housekeeping.FormChild
             this.SU_Address.Location = new System.Drawing.Point(26, 254);
             this.SU_Address.Name = "SU_Address";
             this.SU_Address.PasswordChar = '\0';
-            this.SU_Address.PlaceholderText = "Nhập địa chỉ";
+            this.SU_Address.PlaceholderText = "Input your address";
             this.SU_Address.SelectedText = "";
             this.SU_Address.Size = new System.Drawing.Size(343, 35);
             this.SU_Address.TabIndex = 10;
@@ -324,9 +324,9 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(26, 234);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(40, 17);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(45, 17);
             this.guna2HtmlLabel5.TabIndex = 9;
-            this.guna2HtmlLabel5.Text = "Địa chỉ";
+            this.guna2HtmlLabel5.Text = "Address";
             // 
             // SU_Birthday
             // 
@@ -350,9 +350,9 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(26, 164);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(56, 17);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(47, 17);
             this.guna2HtmlLabel4.TabIndex = 7;
-            this.guna2HtmlLabel4.Text = "Ngày sinh";
+            this.guna2HtmlLabel4.Text = "Birthday";
             // 
             // guna2HtmlLabel3
             // 
@@ -361,9 +361,9 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(26, 95);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(54, 17);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(94, 17);
             this.guna2HtmlLabel3.TabIndex = 5;
-            this.guna2HtmlLabel3.Text = "Họ và tên";
+            this.guna2HtmlLabel3.Text = "Last & First name";
             // 
             // SU_Name
             // 
@@ -381,7 +381,7 @@ namespace Housekeeping.FormChild
             this.SU_Name.Location = new System.Drawing.Point(26, 115);
             this.SU_Name.Name = "SU_Name";
             this.SU_Name.PasswordChar = '\0';
-            this.SU_Name.PlaceholderText = "Nhập họ tên";
+            this.SU_Name.PlaceholderText = "Input your name";
             this.SU_Name.SelectedText = "";
             this.SU_Name.Size = new System.Drawing.Size(343, 35);
             this.SU_Name.TabIndex = 0;
@@ -399,13 +399,13 @@ namespace Housekeeping.FormChild
             this.SU_btnSignup.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.SU_btnSignup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(155)))));
             this.SU_btnSignup.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.SU_btnSignup.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SU_btnSignup.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SU_btnSignup.ForeColor = System.Drawing.Color.White;
             this.SU_btnSignup.Location = new System.Drawing.Point(119, 420);
             this.SU_btnSignup.Name = "SU_btnSignup";
             this.SU_btnSignup.Size = new System.Drawing.Size(154, 39);
             this.SU_btnSignup.TabIndex = 4;
-            this.SU_btnSignup.Text = "Đăng ký";
+            this.SU_btnSignup.Text = "Sign Up";
             this.SU_btnSignup.Click += new System.EventHandler(this.SU_btnSignup_Click);
             // 
             // guna2ContainerControl1
@@ -430,6 +430,7 @@ namespace Housekeeping.FormChild
             this.btn_FormSignup.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_FormSignup.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(83)))), ((int)(((byte)(51)))));
             this.btn_FormSignup.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(77)))));
+            this.btn_FormSignup.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btn_FormSignup.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_FormSignup.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_FormSignup.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -437,13 +438,13 @@ namespace Housekeeping.FormChild
             this.btn_FormSignup.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_FormSignup.FillColor = System.Drawing.Color.Transparent;
             this.btn_FormSignup.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_FormSignup.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_FormSignup.ForeColor = System.Drawing.Color.White;
+            this.btn_FormSignup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_FormSignup.ForeColor = System.Drawing.Color.Black;
             this.btn_FormSignup.Location = new System.Drawing.Point(219, 23);
             this.btn_FormSignup.Name = "btn_FormSignup";
             this.btn_FormSignup.Size = new System.Drawing.Size(204, 39);
             this.btn_FormSignup.TabIndex = 1;
-            this.btn_FormSignup.Text = "Đăng ký";
+            this.btn_FormSignup.Text = "Sign Up";
             this.btn_FormSignup.Click += new System.EventHandler(this.btn_FormSignup_Click);
             // 
             // btn_FormLogin
@@ -455,6 +456,7 @@ namespace Housekeeping.FormChild
             this.btn_FormLogin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_FormLogin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(83)))), ((int)(((byte)(51)))));
             this.btn_FormLogin.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(7)))), ((int)(((byte)(77)))));
+            this.btn_FormLogin.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btn_FormLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_FormLogin.CustomizableEdges.BottomLeft = false;
             this.btn_FormLogin.CustomizableEdges.BottomRight = false;
@@ -466,8 +468,8 @@ namespace Housekeeping.FormChild
             this.btn_FormLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_FormLogin.FillColor = System.Drawing.Color.Transparent;
             this.btn_FormLogin.FillColor2 = System.Drawing.Color.Transparent;
-            this.btn_FormLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_FormLogin.ForeColor = System.Drawing.Color.White;
+            this.btn_FormLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_FormLogin.ForeColor = System.Drawing.Color.Black;
             this.btn_FormLogin.Location = new System.Drawing.Point(20, 23);
             this.btn_FormLogin.Name = "btn_FormLogin";
             this.btn_FormLogin.Size = new System.Drawing.Size(193, 39);
@@ -509,7 +511,7 @@ namespace Housekeeping.FormChild
             this.guna2CirclePictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(161, 335);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(166, 335);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.Size = new System.Drawing.Size(48, 48);
@@ -522,7 +524,7 @@ namespace Housekeeping.FormChild
             this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(60, 322);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(64, 322);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(75, 75);
@@ -535,11 +537,11 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(26, 298);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(47, 298);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(328, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(288, 22);
             this.guna2HtmlLabel2.TabIndex = 6;
-            this.guna2HtmlLabel2.Text = "--------------- Hoặc tiếp tục bằng ----------------";
+            this.guna2HtmlLabel2.Text = "--------------- Or login with ----------------";
             // 
             // LI_ForgetPassword
             // 
@@ -547,10 +549,10 @@ namespace Housekeeping.FormChild
             this.LI_ForgetPassword.LinkColor = System.Drawing.Color.LightGray;
             this.LI_ForgetPassword.Location = new System.Drawing.Point(251, 150);
             this.LI_ForgetPassword.Name = "LI_ForgetPassword";
-            this.LI_ForgetPassword.Size = new System.Drawing.Size(86, 13);
+            this.LI_ForgetPassword.Size = new System.Drawing.Size(91, 13);
             this.LI_ForgetPassword.TabIndex = 5;
             this.LI_ForgetPassword.TabStop = true;
-            this.LI_ForgetPassword.Text = "Quên mật khẩu?";
+            this.LI_ForgetPassword.Text = "Forget password?";
             // 
             // LI_Username
             // 
@@ -568,7 +570,7 @@ namespace Housekeeping.FormChild
             this.LI_Username.Location = new System.Drawing.Point(48, 37);
             this.LI_Username.Name = "LI_Username";
             this.LI_Username.PasswordChar = '\0';
-            this.LI_Username.PlaceholderText = "Tên tài khoản";
+            this.LI_Username.PlaceholderText = "Username";
             this.LI_Username.SelectedText = "";
             this.LI_Username.Size = new System.Drawing.Size(284, 44);
             this.LI_Username.TabIndex = 0;
@@ -590,7 +592,7 @@ namespace Housekeeping.FormChild
             this.LI_Password.Location = new System.Drawing.Point(48, 103);
             this.LI_Password.Name = "LI_Password";
             this.LI_Password.PasswordChar = '●';
-            this.LI_Password.PlaceholderText = "Mật khẩu";
+            this.LI_Password.PlaceholderText = "Password";
             this.LI_Password.SelectedText = "";
             this.LI_Password.Size = new System.Drawing.Size(284, 44);
             this.LI_Password.TabIndex = 1;
@@ -608,13 +610,13 @@ namespace Housekeeping.FormChild
             this.LI_btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.LI_btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(155)))));
             this.LI_btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(43)))), ((int)(((byte)(99)))));
-            this.LI_btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LI_btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LI_btnLogin.ForeColor = System.Drawing.Color.White;
             this.LI_btnLogin.Location = new System.Drawing.Point(119, 219);
             this.LI_btnLogin.Name = "LI_btnLogin";
             this.LI_btnLogin.Size = new System.Drawing.Size(154, 39);
             this.LI_btnLogin.TabIndex = 4;
-            this.LI_btnLogin.Text = "Đăng nhập";
+            this.LI_btnLogin.Text = "Sign Up";
             this.LI_btnLogin.Click += new System.EventHandler(this.LI_btnLogin_Click);
             // 
             // guna2HtmlLabel1
@@ -623,9 +625,9 @@ namespace Housekeeping.FormChild
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(83, 164);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(70, 15);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(71, 15);
             this.guna2HtmlLabel1.TabIndex = 3;
-            this.guna2HtmlLabel1.Text = "Nhớ tài khoản";
+            this.guna2HtmlLabel1.Text = "Remember me";
             // 
             // LI_SaveAccount
             // 

@@ -27,6 +27,8 @@ namespace Housekeeping
         }
         #region declare constant variable 
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataCart.txt";
+        private const string filePathData = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataUserInfor.txt";
+        private string UserId = "";
         Dictionary<string, int> dataC = new Dictionary<string, int>()
         {
             {"Cleaning", 0},
@@ -37,6 +39,15 @@ namespace Housekeeping
             {"Doing", 0},
         };
         #endregion
+        public void UpdateAcount(string name,string phone,string gmail,string sex,string address,string Userid)
+        {
+            tb_Name.Text = name;
+            tb_Phone.Text = phone;
+            tb_Gmail.Text = gmail;
+            tb_Sex.SelectedValue = sex;
+            tb_Address.Text = address;
+            UserId = Userid;
+        }
         // Format store data
         //OrderId_Id_NameService_DetailService_Price_DayOrder_Status_Adress_ModePayment
         DataTable table = new DataTable();
@@ -157,6 +168,34 @@ namespace Housekeeping
             {
                 avatar.Image = Image.FromFile(openFileDialog.FileName);
             }
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            string lineReplace="";
+            int lineNumber = 0;
+            using (StreamReader reader = new StreamReader(filePathData, Encoding.UTF8))
+            {
+                string inforUser;
+                while ((inforUser = reader.ReadLine()) != null)
+                {
+                    string[] infor = inforUser.Split('_');
+                    if(UserId == infor[0])
+                    {
+                        lineReplace = UserId + "_" + infor[1]+"_"+infor[2]+"_"+tb_Name.Text.ToString()+"_"+tb_Birthday.Text.ToString()+"_"+tb_Sex.Text.ToString()+"_"+tb_Address.Text.ToString()+"_"+tb_Phone.Text.ToString()+"_"+tb_Gmail.Text.ToString();
+                        
+                        break;
+                    }
+                    else
+                    {
+                        lineNumber++;
+                    }
+                }
+            }
+            string[] lines = File.ReadAllLines(filePathData);
+            lines[lineNumber] = lineReplace;
+            File.WriteAllLines(filePathData, lines);
+            MessageBox.Show("Save infor success", "Noti", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
     }
 }

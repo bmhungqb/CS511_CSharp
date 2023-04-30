@@ -48,13 +48,16 @@ namespace Housekeeping
                     {
                         User.Add("Username", infor[3]);
                         User.Add("Address", infor[6]);
+                        User.Add("Phone", infor[7]);
+                        User.Add("Email", infor[8]);
+                        User.Add("Sex", infor[5]);
                         //User.Add("Username", infor[3]);
                         HomePage.updateHome(User["Username"], User["Address"]);
+                        AccountPage.UpdateAcount(User["Username"], User["Phone"], User["Email"], User["Sex"], User["Address"], id);
                         break;
                     }
                 }
             }
-            //string name = up
             
         }
         private void btn_Click(object sender, EventArgs e)
