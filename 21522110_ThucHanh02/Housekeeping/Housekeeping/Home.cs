@@ -19,7 +19,7 @@ namespace Housekeeping
 
         public void updateHome(string name,string address)
         {
-            tb_Greeting.Text = "Welcom " + name;
+            tb_Greeting.Text = "Welcome " + name;
             tb_Address.Text = address;
         }
 

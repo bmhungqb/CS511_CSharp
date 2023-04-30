@@ -10,6 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Housekeeping.FormChild
@@ -19,18 +20,43 @@ namespace Housekeeping.FormChild
         public LoginSignup()
         {
             InitializeComponent();
+            HandleRemember(1);
         }
         #region Constants
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataUserInfor.txt";
+        private const string filePathDataRemember = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataRemember.txt";
         public string idUser;
         #endregion
         #region Handle button
+        public void HandleRemember(int i)
+        {
+            string inforUser = File.ReadAllText(filePathDataRemember);
+            if(inforUser != "" && i == 1)
+            {
+                string[] infor = inforUser.Split('_');
+                LI_Username.Text = infor[0];
+                LI_Password.Text = infor[1];
+            }
+            if(i == 0)
+            {
+                if (LI_SaveAccount.Checked)
+                {
+                    string lineReplace = LI_Username.Text.ToString() + "_" + LI_Password.Text.ToString();
+                    File.WriteAllText(filePathDataRemember, lineReplace);
+                }
+                else
+                {
+                    File.WriteAllText(filePathDataRemember, String.Empty);
+                }
+            }
+        }
         private void btn_FormLogin_Click(object sender, EventArgs e)
         {
             pnl_Signup.Visible = false;
             pnl_Login.Visible = true;
             btn_FormLogin.Checked = true;
-            btn_FormSignup.Checked = false; 
+            btn_FormSignup.Checked = false;
+            HandleRemember(1);
         }
 
         private void btn_FormSignup_Click(object sender, EventArgs e)
@@ -221,6 +247,7 @@ namespace Housekeeping.FormChild
             string res = checkInforLogin(LI_Username.Text, LI_Password.Text);
             if (res.Substring(0,1) == "1")
             {
+                HandleRemember(0);
                 this.Close();
             }
             else

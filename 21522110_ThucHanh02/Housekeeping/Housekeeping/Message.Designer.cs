@@ -36,7 +36,6 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnl_containerMessage = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.UserMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.AdminMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.MS_btnSendText = new Guna.UI2.WinForms.Guna2Button();
             this.MS_noti_error = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -46,7 +45,7 @@
             // MS_InputText
             // 
             this.MS_InputText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.MS_InputText.DefaultText = "Send your comment...";
+            this.MS_InputText.DefaultText = "";
             this.MS_InputText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.MS_InputText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.MS_InputText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -57,7 +56,7 @@
             this.MS_InputText.Location = new System.Drawing.Point(0, 153);
             this.MS_InputText.Name = "MS_InputText";
             this.MS_InputText.PasswordChar = '\0';
-            this.MS_InputText.PlaceholderText = "";
+            this.MS_InputText.PlaceholderText = "Send your comment...";
             this.MS_InputText.SelectedText = "";
             this.MS_InputText.Size = new System.Drawing.Size(357, 41);
             this.MS_InputText.TabIndex = 0;
@@ -65,99 +64,67 @@
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(29, 15);
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(45, 9);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(301, 20);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(369, 26);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Rubikk company - make your life easier";
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(29, 41);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(348, 17);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(375, 18);
             this.guna2HtmlLabel4.TabIndex = 4;
             this.guna2HtmlLabel4.Text = "Address: 128, Tran Khai,P. Tan Dinh, TP.Ho Chi Minh, Viet Nam";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(29, 64);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(60, 17);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(85, 20);
             this.guna2HtmlLabel5.TabIndex = 5;
             this.guna2HtmlLabel5.Text = "Contact us";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(29, 87);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(158, 17);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(163, 18);
             this.guna2HtmlLabel2.TabIndex = 6;
             this.guna2HtmlLabel2.Text = "Phonenumber: 0902312495";
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(29, 110);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(192, 17);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(209, 18);
             this.guna2HtmlLabel3.TabIndex = 7;
             this.guna2HtmlLabel3.Text = "Gmail: rubikk@housekeeping.com";
             // 
             // pnl_containerMessage
             // 
             this.pnl_containerMessage.AutoScroll = true;
-            this.pnl_containerMessage.Controls.Add(this.UserMessage);
             this.pnl_containerMessage.Controls.Add(this.AdminMessage);
             this.pnl_containerMessage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_containerMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(0)))), ((int)(((byte)(255)))));
-            this.pnl_containerMessage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(219)))), ((int)(((byte)(222)))));
+            this.pnl_containerMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(36)))), ((int)(((byte)(37)))));
+            this.pnl_containerMessage.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(203)))), ((int)(((byte)(53)))));
             this.pnl_containerMessage.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.pnl_containerMessage.Location = new System.Drawing.Point(0, 222);
             this.pnl_containerMessage.Name = "pnl_containerMessage";
             this.pnl_containerMessage.Size = new System.Drawing.Size(450, 378);
             this.pnl_containerMessage.TabIndex = 8;
-            // 
-            // UserMessage
-            // 
-            this.UserMessage.AutoSize = true;
-            this.UserMessage.BackColor = System.Drawing.Color.Transparent;
-            this.UserMessage.BorderColor = System.Drawing.Color.Blue;
-            this.UserMessage.BorderRadius = 20;
-            this.UserMessage.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.UserMessage.DefaultText = "1111111111111111111111111111111111";
-            this.UserMessage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.UserMessage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.UserMessage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UserMessage.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.UserMessage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.UserMessage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UserMessage.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic);
-            this.UserMessage.ForeColor = System.Drawing.Color.White;
-            this.UserMessage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.UserMessage.IconLeftSize = new System.Drawing.Size(40, 40);
-            this.UserMessage.IconRight = ((System.Drawing.Image)(resources.GetObject("UserMessage.IconRight")));
-            this.UserMessage.IconRightOffset = new System.Drawing.Point(-4, 0);
-            this.UserMessage.IconRightSize = new System.Drawing.Size(40, 40);
-            this.UserMessage.Location = new System.Drawing.Point(29, 70);
-            this.UserMessage.Multiline = true;
-            this.UserMessage.Name = "UserMessage";
-            this.UserMessage.PasswordChar = '\0';
-            this.UserMessage.PlaceholderText = "";
-            this.UserMessage.ReadOnly = true;
-            this.UserMessage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UserMessage.SelectedText = "";
-            this.UserMessage.Size = new System.Drawing.Size(403, 43);
-            this.UserMessage.TabIndex = 1;
-            this.UserMessage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // AdminMessage
             // 
@@ -215,6 +182,7 @@
             this.MS_noti_error.Size = new System.Drawing.Size(160, 17);
             this.MS_noti_error.TabIndex = 10;
             this.MS_noti_error.Text = "Please type your comment...";
+            this.MS_noti_error.Visible = false;
             // 
             // Message
             // 
@@ -232,7 +200,6 @@
             this.Name = "Message";
             this.Size = new System.Drawing.Size(450, 600);
             this.pnl_containerMessage.ResumeLayout(false);
-            this.pnl_containerMessage.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,7 +214,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_containerMessage;
-        private Guna.UI2.WinForms.Guna2TextBox UserMessage;
         private Guna.UI2.WinForms.Guna2TextBox AdminMessage;
         private Guna.UI2.WinForms.Guna2Button MS_btnSendText;
         private Guna.UI2.WinForms.Guna2HtmlLabel MS_noti_error;

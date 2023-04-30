@@ -27,6 +27,11 @@ namespace Housekeeping
             btn_Laundry.Checked = false;
             btn_Cleaning.Checked = false;
         }
+        public string CurrentAddress;
+        public void GetCurrentAddress(string addrress)
+        {
+            CurrentAddress = addrress;
+        }
         #region dataPrice
         public Dictionary<string, string> dataPrice = new Dictionary<string, string>()
         {
@@ -153,7 +158,7 @@ namespace Housekeeping
             else
             {
                 AboutBox1 Aboutbox= new AboutBox1();
-                Aboutbox.VisualizeData(elChecked, dataPrice, dataPropertyService);
+                Aboutbox.VisualizeData(elChecked, dataPrice, dataPropertyService,CurrentAddress);
                 DialogResult dialogResult = Aboutbox.ShowDialog();
                 if(dialogResult == DialogResult.OK)
                 {

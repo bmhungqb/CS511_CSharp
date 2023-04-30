@@ -631,6 +631,7 @@ namespace Housekeeping.FormChild
             // 
             // LI_SaveAccount
             // 
+            this.LI_SaveAccount.Checked = true;
             this.LI_SaveAccount.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LI_SaveAccount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LI_SaveAccount.CheckedState.InnerBorderColor = System.Drawing.Color.White;

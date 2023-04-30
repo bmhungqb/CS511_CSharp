@@ -54,6 +54,7 @@ namespace Housekeeping
                         //User.Add("Username", infor[3]);
                         HomePage.updateHome(User["Username"], User["Address"]);
                         AccountPage.UpdateAcount(User["Username"], User["Phone"], User["Email"], User["Sex"], User["Address"], id);
+                        ServicePage.GetCurrentAddress(User["Address"]);
                         break;
                     }
                 }

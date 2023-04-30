@@ -72,12 +72,15 @@ namespace Housekeeping
                     //After confirm the order => Clear box checked of service
                     this.DialogResult = DialogResult.OK;
                     this.Close();
-            }
+                }
             }
         }
         DataTable table = new DataTable();
-        public void VisualizeData(List<string> elChecked, Dictionary<string, string> dataPrice, Dictionary<string, string> dataPropertyService)
+        public void VisualizeData(List<string> elChecked, Dictionary<string, string> dataPrice, Dictionary<string, string> dataPropertyService,string address)
         {
+            txt_CurrentAddress.Text = address;
+            table.Columns.Clear();
+            table.Rows.Clear();
             table.Columns.Add("ID", typeof(string));
             table.Columns.Add("Service", typeof(string));
             table.Columns.Add("Service Detail", typeof(string));

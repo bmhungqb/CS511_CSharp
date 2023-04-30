@@ -22,7 +22,7 @@ namespace Housekeeping
         }
         #region Declare constant variable
         int Pos_x = 132;
-        int Pos_y = 120;
+        int Pos_y = 70;
         int Pos_x_Ad = 4;
         #endregion
         #region handle Send Message
@@ -37,6 +37,14 @@ namespace Housekeeping
             if(content == "Thanks" || content == "thank")
             {
                 textBox.DefaultText = "You're Welcome <3";
+            }
+            else if(content == "Ana")
+            {
+                textBox.DefaultText = "Hello, What's up";
+            }
+            else if(content == "oke")
+            {
+                textBox.DefaultText = "Hihihi";
             }
             else
             {
@@ -95,7 +103,7 @@ namespace Housekeeping
                 textBox.ForeColor = System.Drawing.Color.White;
                 textBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
                 textBox.IconLeftSize = new System.Drawing.Size(40, 40);
-                textBox.IconRight = ((System.Drawing.Image)(resources.GetObject("UserMessage.IconRight")));
+                textBox.IconRight = Image.FromFile(@"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\Resources\icon\5296515_bird_tweet_twitter_twitter logo_icon.png");
                 textBox.IconRightOffset = new System.Drawing.Point(-4, 0);
                 textBox.IconRightSize = new System.Drawing.Size(40, 40);
                 textBox.ReadOnly = true;
@@ -117,6 +125,7 @@ namespace Housekeeping
                 pnl_containerMessage.Controls.Add(textBox);
                 pnl_containerMessage.Show();
                 ResponseMessage(MS_InputText.Text);
+                MS_InputText.Text = "";
             }
         }
         #endregion
