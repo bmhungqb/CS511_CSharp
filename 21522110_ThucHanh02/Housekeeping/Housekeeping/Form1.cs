@@ -69,7 +69,6 @@ namespace Housekeeping
                 MessagePage.Visible = false;
                 AccountPage.Visible = true;
                 ActivityPage.Visible = false;
-
             }
         }
     }

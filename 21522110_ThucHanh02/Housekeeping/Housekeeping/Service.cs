@@ -20,6 +20,12 @@ namespace Housekeeping
         public Service()
         {
             InitializeComponent();
+            pnl_Cooking.Visible = true;
+            pnl_Laundry.Visible = false;
+            pnl_Cleaning.Visible = false;
+            btn_Cooking.Checked = true;
+            btn_Laundry.Checked = false;
+            btn_Cleaning.Checked = false;
         }
         #region dataPrice
         public Dictionary<string, string> dataPrice = new Dictionary<string, string>()
@@ -113,18 +119,27 @@ namespace Housekeeping
                 pnl_Cooking.Visible = true;
                 pnl_Laundry.Visible = false;
                 pnl_Cleaning.Visible = false;
+                btn_Cooking.Checked = true;
+                btn_Laundry.Checked = false;
+                btn_Cleaning.Checked = false;
             }
             else if(btnService.Name == "btn_Cleaning")
             {
                 pnl_Cooking.Visible = false;
                 pnl_Laundry.Visible = false;
                 pnl_Cleaning.Visible = true;
+                btn_Cooking.Checked = false;
+                btn_Laundry.Checked = false;
+                btn_Cleaning.Checked = true;
             }
             else
             {
                 pnl_Cooking.Visible = false;
                 pnl_Laundry.Visible = true;
                 pnl_Cleaning.Visible = false;
+                btn_Cooking.Checked = false;
+                btn_Laundry.Checked = true;
+                btn_Cleaning.Checked = false;
             }
         }
         #endregion

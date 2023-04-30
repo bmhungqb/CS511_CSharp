@@ -35,8 +35,10 @@ namespace Housekeeping.FormChild
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginSignup));
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.pnl_Signup = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.SU_noti = new System.Windows.Forms.Label();
             this.SU_Gmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SU_Phonenumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,7 +70,6 @@ namespace Housekeeping.FormChild
             this.LI_btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LI_SaveAccount = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.SU_noti = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.pnl_Signup.SuspendLayout();
             this.guna2ContainerControl1.SuspendLayout();
@@ -118,6 +119,17 @@ namespace Housekeeping.FormChild
             this.pnl_Signup.Size = new System.Drawing.Size(403, 533);
             this.pnl_Signup.TabIndex = 10;
             this.pnl_Signup.Visible = false;
+            // 
+            // SU_noti
+            // 
+            this.SU_noti.AutoSize = true;
+            this.SU_noti.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SU_noti.ForeColor = System.Drawing.Color.Red;
+            this.SU_noti.Location = new System.Drawing.Point(119, 377);
+            this.SU_noti.Name = "SU_noti";
+            this.SU_noti.Size = new System.Drawing.Size(0, 17);
+            this.SU_noti.TabIndex = 23;
+            this.SU_noti.Visible = false;
             // 
             // SU_Gmail
             // 
@@ -483,10 +495,11 @@ namespace Housekeeping.FormChild
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(267, 326);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(254, 334);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(47, 48);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(50, 50);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 9;
             this.guna2PictureBox2.TabStop = false;
@@ -494,11 +507,12 @@ namespace Housekeeping.FormChild
             // guna2CirclePictureBox2
             // 
             this.guna2CirclePictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(185, 326);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(161, 335);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(47, 48);
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(48, 48);
             this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox2.TabIndex = 8;
             this.guna2CirclePictureBox2.TabStop = false;
@@ -506,11 +520,12 @@ namespace Housekeeping.FormChild
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(100, 326);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(60, 322);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(47, 48);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(75, 75);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 7;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -627,17 +642,6 @@ namespace Housekeeping.FormChild
             this.LI_SaveAccount.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.LI_SaveAccount.UncheckedState.InnerColor = System.Drawing.Color.White;
             // 
-            // SU_noti
-            // 
-            this.SU_noti.AutoSize = true;
-            this.SU_noti.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SU_noti.ForeColor = System.Drawing.Color.Red;
-            this.SU_noti.Location = new System.Drawing.Point(119, 377);
-            this.SU_noti.Name = "SU_noti";
-            this.SU_noti.Size = new System.Drawing.Size(154, 17);
-            this.SU_noti.TabIndex = 23;
-            this.SU_noti.Text = "Please enter Username..";
-            // 
             // LoginSignup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,9 +696,9 @@ namespace Housekeeping.FormChild
         private Guna.UI2.WinForms.Guna2GradientButton LI_btnLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch LI_SaveAccount;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Label SU_noti;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

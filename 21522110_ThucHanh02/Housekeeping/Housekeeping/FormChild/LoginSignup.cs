@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,18 +22,23 @@ namespace Housekeeping.FormChild
         }
         #region Constants
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataUserInfor.txt";
+        public  string idUser;
         #endregion
         #region Handle button
         private void btn_FormLogin_Click(object sender, EventArgs e)
         {
             pnl_Signup.Visible = false;
             pnl_Login.Visible = true;
+            btn_FormLogin.Checked = true;
+            btn_FormSignup.Checked = false; 
         }
 
         private void btn_FormSignup_Click(object sender, EventArgs e)
         {
             pnl_Signup.Visible = true;
             pnl_Login.Visible = false;
+            btn_FormLogin.Checked = false;
+            btn_FormSignup.Checked = true;
         }
         #endregion
         #region Handle Sign up
@@ -102,15 +108,16 @@ namespace Housekeeping.FormChild
             {
                 InforUser.Add("Gmail", SU_Gmail.Text);
             }
-            return "1Congratulations, your account has been successfully created.";
+            return "1";
         }
         private void saveDataToFile(Dictionary<string,string>InforUser)
         {
-            string inforUser = "";
+            Random rdn= new Random();
+            string inforUser = (rdn.Next()).ToString();
             foreach(KeyValuePair<string,string> infor in InforUser)
             {
-                inforUser += infor.Value;
                 inforUser += "_";
+                inforUser += infor.Value;
             }
             try
             {
@@ -125,20 +132,44 @@ namespace Housekeeping.FormChild
                 MessageBox.Show($"An error occurred while saving information: {ex.Message}");
             }
         }
+        private string IsExistAccount(string Username)
+        {
+            using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
+            {
+                string inforUser;
+                while ((inforUser = reader.ReadLine()) != null)
+                {
+                    string[] infor = inforUser.Split('_');
+                    if (Username == infor[1])
+                    {
+                        return "0This account already exists";
+                    }
+                }
+                return "1Congratulations, your account has been successfully created.";
+            }
+        }
         private void SU_btnSignup_Click(object sender, EventArgs e)
         {
             Dictionary<string,string> InforUser = new Dictionary<string,string>();
             string res = getInfor(InforUser);
-            if (res.Substring(0,1) == "1")
+            if (res == "1")
             {
-                saveDataToFile(InforUser);
-                MessageBox.Show(res);
-                this.Close();
+                res = IsExistAccount(InforUser["Username"]);
+                if(res.Substring(0,1) == "1")
+                {
+                    saveDataToFile(InforUser);
+                    MessageBox.Show(res);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show(res, "Exists Account",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                }
             }
             else
             {
                 SU_noti.Visible = true;
-                SU_noti.Text = res.Substring(1, res.Length);
+                SU_noti.Text = res;
             }
         }
         #endregion

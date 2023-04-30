@@ -179,18 +179,20 @@
             // 
             // Title
             // 
-            this.Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(11)))), ((int)(((byte)(54)))));
+            this.Title.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.Title.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Title.DefaultText = "Make your life easier..";
+            this.Title.DefaultText = "Make your life easier";
             this.Title.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Title.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Title.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Title.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(121)))), ((int)(((byte)(31)))));
+            this.Title.DisabledState.ForeColor = System.Drawing.Color.Blue;
             this.Title.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Title.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.Title.Enabled = false;
+            this.Title.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(121)))), ((int)(((byte)(31)))));
             this.Title.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Title.Font = new System.Drawing.Font("Goudy Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(229)))), ((int)(((byte)(133)))));
+            this.Title.Font = new System.Drawing.Font("Goudy Old Style", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.Color.Blue;
             this.Title.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Title.Location = new System.Drawing.Point(0, 0);
             this.Title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -215,6 +217,10 @@
             // 
             // btn_Laundry
             // 
+            this.btn_Laundry.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(96)))), ((int)(((byte)(195)))));
+            this.btn_Laundry.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(38)))), ((int)(((byte)(193)))));
+            this.btn_Laundry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Laundry.CustomBorderColor = System.Drawing.Color.Navy;
             this.btn_Laundry.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Laundry.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Laundry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -225,6 +231,8 @@
             this.btn_Laundry.FillColor2 = System.Drawing.Color.Empty;
             this.btn_Laundry.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Laundry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
+            this.btn_Laundry.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_Laundry.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Laundry.Image = ((System.Drawing.Image)(resources.GetObject("btn_Laundry.Image")));
             this.btn_Laundry.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Laundry.ImageSize = new System.Drawing.Size(64, 64);
@@ -239,6 +247,10 @@
             // 
             // btn_Cleaning
             // 
+            this.btn_Cleaning.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(96)))), ((int)(((byte)(195)))));
+            this.btn_Cleaning.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(38)))), ((int)(((byte)(193)))));
+            this.btn_Cleaning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cleaning.CustomBorderColor = System.Drawing.Color.Navy;
             this.btn_Cleaning.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Cleaning.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Cleaning.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -249,6 +261,8 @@
             this.btn_Cleaning.FillColor2 = System.Drawing.Color.Empty;
             this.btn_Cleaning.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cleaning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
+            this.btn_Cleaning.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_Cleaning.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Cleaning.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cleaning.Image")));
             this.btn_Cleaning.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Cleaning.ImageSize = new System.Drawing.Size(64, 64);
@@ -263,6 +277,11 @@
             // 
             // btn_Cooking
             // 
+            this.btn_Cooking.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Cooking.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(96)))), ((int)(((byte)(195)))));
+            this.btn_Cooking.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(38)))), ((int)(((byte)(193)))));
+            this.btn_Cooking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cooking.CustomBorderColor = System.Drawing.Color.Navy;
             this.btn_Cooking.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Cooking.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_Cooking.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -273,6 +292,8 @@
             this.btn_Cooking.FillColor2 = System.Drawing.Color.Empty;
             this.btn_Cooking.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cooking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
+            this.btn_Cooking.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_Cooking.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_Cooking.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cooking.Image")));
             this.btn_Cooking.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Cooking.ImageSize = new System.Drawing.Size(64, 64);
@@ -319,17 +340,19 @@
             this.SV_TotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.SV_TotalPrice.DefaultText = "Order total: 0 vnđ";
             this.SV_TotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.SV_TotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.SV_TotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.SV_TotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(254)))), ((int)(((byte)(250)))));
+            this.SV_TotalPrice.DisabledState.ForeColor = System.Drawing.Color.Red;
             this.SV_TotalPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.SV_TotalPrice.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SV_TotalPrice.Enabled = false;
             this.SV_TotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.SV_TotalPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SV_TotalPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SV_TotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.SV_TotalPrice.Location = new System.Drawing.Point(0, 0);
             this.SV_TotalPrice.Name = "SV_TotalPrice";
             this.SV_TotalPrice.PasswordChar = '\0';
             this.SV_TotalPrice.PlaceholderText = "";
+            this.SV_TotalPrice.ReadOnly = true;
             this.SV_TotalPrice.SelectedText = "";
             this.SV_TotalPrice.Size = new System.Drawing.Size(245, 47);
             this.SV_TotalPrice.TabIndex = 0;
@@ -439,6 +462,8 @@
             this.pnl_Cleaning.Controls.Add(this.guna2ContainerControl19);
             this.pnl_Cleaning.Controls.Add(this.guna2ContainerControl20);
             this.pnl_Cleaning.Controls.Add(this.guna2ContainerControl21);
+            this.pnl_Cleaning.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(153)))), ((int)(((byte)(74)))));
+            this.pnl_Cleaning.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(201)))), ((int)(((byte)(76)))));
             this.pnl_Cleaning.Location = new System.Drawing.Point(0, 0);
             this.pnl_Cleaning.Name = "pnl_Cleaning";
             this.pnl_Cleaning.Size = new System.Drawing.Size(450, 416);
@@ -487,6 +512,7 @@
             this.cl4.CheckedState.BorderRadius = 2;
             this.cl4.CheckedState.BorderThickness = 0;
             this.cl4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cl4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cl4.Location = new System.Drawing.Point(17, 167);
             this.cl4.Name = "cl4";
             this.cl4.Size = new System.Drawing.Size(23, 23);
@@ -553,6 +579,7 @@
             this.cl5.CheckedState.BorderRadius = 2;
             this.cl5.CheckedState.BorderThickness = 0;
             this.cl5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cl5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cl5.Location = new System.Drawing.Point(17, 167);
             this.cl5.Name = "cl5";
             this.cl5.Size = new System.Drawing.Size(23, 23);
@@ -619,6 +646,7 @@
             this.cl3.CheckedState.BorderRadius = 2;
             this.cl3.CheckedState.BorderThickness = 0;
             this.cl3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cl3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cl3.Location = new System.Drawing.Point(17, 167);
             this.cl3.Name = "cl3";
             this.cl3.Size = new System.Drawing.Size(23, 23);
@@ -685,6 +713,7 @@
             this.cl2.CheckedState.BorderRadius = 2;
             this.cl2.CheckedState.BorderThickness = 0;
             this.cl2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cl2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cl2.Location = new System.Drawing.Point(17, 167);
             this.cl2.Name = "cl2";
             this.cl2.Size = new System.Drawing.Size(23, 23);
@@ -751,6 +780,7 @@
             this.cl1.CheckedState.BorderRadius = 2;
             this.cl1.CheckedState.BorderThickness = 0;
             this.cl1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cl1.Location = new System.Drawing.Point(17, 167);
             this.cl1.Name = "cl1";
             this.cl1.Size = new System.Drawing.Size(23, 23);
@@ -782,6 +812,9 @@
             this.pnl_Laundry.Controls.Add(this.guna2ContainerControl10);
             this.pnl_Laundry.Controls.Add(this.guna2ContainerControl11);
             this.pnl_Laundry.Controls.Add(this.guna2ContainerControl12);
+            this.pnl_Laundry.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnl_Laundry.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(153)))), ((int)(((byte)(74)))));
+            this.pnl_Laundry.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(201)))), ((int)(((byte)(76)))));
             this.pnl_Laundry.Location = new System.Drawing.Point(0, 0);
             this.pnl_Laundry.Name = "pnl_Laundry";
             this.pnl_Laundry.Size = new System.Drawing.Size(450, 416);
@@ -794,6 +827,7 @@
             this.guna2ContainerControl8.Controls.Add(this.guna2HtmlLabel18);
             this.guna2ContainerControl8.Controls.Add(this.l4);
             this.guna2ContainerControl8.Controls.Add(this.guna2PictureBox8);
+            this.guna2ContainerControl8.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.guna2ContainerControl8.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2ContainerControl8.Location = new System.Drawing.Point(225, 212);
             this.guna2ContainerControl8.Name = "guna2ContainerControl8";
@@ -830,6 +864,7 @@
             this.l4.CheckedState.BorderRadius = 2;
             this.l4.CheckedState.BorderThickness = 0;
             this.l4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.l4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.l4.Location = new System.Drawing.Point(17, 167);
             this.l4.Name = "l4";
             this.l4.Size = new System.Drawing.Size(23, 23);
@@ -843,6 +878,7 @@
             // 
             // guna2PictureBox8
             // 
+            this.guna2PictureBox8.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2PictureBox8.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox8.Image")));
             this.guna2PictureBox8.ImageRotate = 0F;
@@ -860,6 +896,7 @@
             this.guna2ContainerControl9.Controls.Add(this.guna2HtmlLabel20);
             this.guna2ContainerControl9.Controls.Add(this.l5);
             this.guna2ContainerControl9.Controls.Add(this.guna2PictureBox9);
+            this.guna2ContainerControl9.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.guna2ContainerControl9.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2ContainerControl9.Location = new System.Drawing.Point(10, 419);
             this.guna2ContainerControl9.Name = "guna2ContainerControl9";
@@ -896,6 +933,7 @@
             this.l5.CheckedState.BorderRadius = 2;
             this.l5.CheckedState.BorderThickness = 0;
             this.l5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.l5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.l5.Location = new System.Drawing.Point(17, 167);
             this.l5.Name = "l5";
             this.l5.Size = new System.Drawing.Size(23, 23);
@@ -909,6 +947,7 @@
             // 
             // guna2PictureBox9
             // 
+            this.guna2PictureBox9.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2PictureBox9.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox9.Image")));
             this.guna2PictureBox9.ImageRotate = 0F;
@@ -926,6 +965,7 @@
             this.guna2ContainerControl10.Controls.Add(this.guna2HtmlLabel22);
             this.guna2ContainerControl10.Controls.Add(this.l3);
             this.guna2ContainerControl10.Controls.Add(this.guna2PictureBox10);
+            this.guna2ContainerControl10.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.guna2ContainerControl10.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2ContainerControl10.Location = new System.Drawing.Point(10, 212);
             this.guna2ContainerControl10.Name = "guna2ContainerControl10";
@@ -962,6 +1002,7 @@
             this.l3.CheckedState.BorderRadius = 2;
             this.l3.CheckedState.BorderThickness = 0;
             this.l3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.l3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.l3.Location = new System.Drawing.Point(8, 169);
             this.l3.Name = "l3";
             this.l3.Size = new System.Drawing.Size(23, 23);
@@ -975,6 +1016,7 @@
             // 
             // guna2PictureBox10
             // 
+            this.guna2PictureBox10.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2PictureBox10.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox10.Image")));
             this.guna2PictureBox10.ImageRotate = 0F;
@@ -992,6 +1034,7 @@
             this.guna2ContainerControl11.Controls.Add(this.guna2HtmlLabel24);
             this.guna2ContainerControl11.Controls.Add(this.l2);
             this.guna2ContainerControl11.Controls.Add(this.guna2PictureBox11);
+            this.guna2ContainerControl11.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.guna2ContainerControl11.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2ContainerControl11.Location = new System.Drawing.Point(225, 6);
             this.guna2ContainerControl11.Name = "guna2ContainerControl11";
@@ -1028,6 +1071,7 @@
             this.l2.CheckedState.BorderRadius = 2;
             this.l2.CheckedState.BorderThickness = 0;
             this.l2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.l2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.l2.Location = new System.Drawing.Point(17, 167);
             this.l2.Name = "l2";
             this.l2.Size = new System.Drawing.Size(23, 23);
@@ -1041,6 +1085,7 @@
             // 
             // guna2PictureBox11
             // 
+            this.guna2PictureBox11.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2PictureBox11.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox11.Image")));
             this.guna2PictureBox11.ImageRotate = 0F;
@@ -1058,6 +1103,7 @@
             this.guna2ContainerControl12.Controls.Add(this.guna2HtmlLabel26);
             this.guna2ContainerControl12.Controls.Add(this.l1);
             this.guna2ContainerControl12.Controls.Add(this.guna2PictureBox12);
+            this.guna2ContainerControl12.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.guna2ContainerControl12.FillColor = System.Drawing.Color.Gainsboro;
             this.guna2ContainerControl12.Location = new System.Drawing.Point(10, 6);
             this.guna2ContainerControl12.Name = "guna2ContainerControl12";
@@ -1094,6 +1140,7 @@
             this.l1.CheckedState.BorderRadius = 2;
             this.l1.CheckedState.BorderThickness = 0;
             this.l1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.l1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.l1.Location = new System.Drawing.Point(17, 167);
             this.l1.Name = "l1";
             this.l1.Size = new System.Drawing.Size(23, 23);
@@ -1107,6 +1154,7 @@
             // 
             // guna2PictureBox12
             // 
+            this.guna2PictureBox12.Cursor = System.Windows.Forms.Cursors.Default;
             this.guna2PictureBox12.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2PictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox12.Image")));
             this.guna2PictureBox12.ImageRotate = 0F;
@@ -1128,6 +1176,8 @@
             this.pnl_Cooking.Controls.Add(this.guna2ContainerControl3);
             this.pnl_Cooking.Controls.Add(this.guna2ContainerControl1);
             this.pnl_Cooking.Controls.Add(this.guna2ContainerControl2);
+            this.pnl_Cooking.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(153)))), ((int)(((byte)(74)))));
+            this.pnl_Cooking.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(201)))), ((int)(((byte)(76)))));
             this.pnl_Cooking.Location = new System.Drawing.Point(0, 0);
             this.pnl_Cooking.Name = "pnl_Cooking";
             this.pnl_Cooking.Size = new System.Drawing.Size(450, 416);
