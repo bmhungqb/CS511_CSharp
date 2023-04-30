@@ -19,6 +19,7 @@ namespace Housekeeping
             InitializeComponent();
             pnl_Active.Visible = true;
             pnl_Order.Visible = false;
+            LoadSelectOrderId();
             visualizeDataActive();
         }
         #region Define pathfile txt store data
@@ -29,6 +30,8 @@ namespace Housekeeping
         DataTable table = new DataTable();
         public void visualizeDataActive()
         {
+            table.Columns.Clear();
+            table.Rows.Clear();
             table.Columns.Add("Order ID", typeof(string));
             table.Columns.Add("Service", typeof(string));
             table.Columns.Add("Detail Service",typeof(string));
@@ -44,16 +47,20 @@ namespace Housekeeping
                 {
                     string[] infor = inforUser.Split('_');
                     string[] row = new string[5];
-                    row[0] = infor[0].Substring(0,5);
-                    row[1] = infor[2];
-                    row[2] = infor[3];
-                    //row[3] = infor[4];
-                    row[3] = infor[5];
-                    row[4] = infor[6];
-                    table.Rows.Add(row);
+                    if (infor[6] == "Doing")
+                    {
+                        row[0] = infor[0].Substring(0,5);
+                        row[1] = infor[2];
+                        row[2] = infor[3];
+                        //row[3] = infor[4];
+                        row[3] = infor[5];
+                        row[4] = infor[6];
+                        table.Rows.Add(row);
+                    }
 
                 }
             }
+            dataGridActive.ColumnHeadersHeight = 50;
             dataGridActive.Columns[0].Width = 60;
             dataGridActive.Columns[1].Width = 80;
             dataGridActive.Columns[2].Width = 150;
@@ -120,6 +127,7 @@ namespace Housekeeping
                     }
                 }
             }
+            dataGridOrder.ColumnHeadersHeight = 50;
             dataGridOrder.Columns[0].Width = 30;
             dataGridOrder.Columns[1].Width = 80;
             dataGridOrder.Columns[2].Width = 150;
@@ -133,6 +141,7 @@ namespace Housekeeping
             Guna2GradientButton btn = sender as Guna2GradientButton;
             if(btn.Name == "btn_Active")
             {
+                visualizeDataActive();
                 pnl_Active.Visible = true;
                 pnl_Order.Visible = false;
             }
