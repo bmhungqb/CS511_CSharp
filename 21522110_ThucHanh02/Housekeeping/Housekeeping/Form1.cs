@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Housekeeping.FormChild;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,8 @@ namespace Housekeeping
             MessagePage.Visible = false;
             AccountPage.Visible = false;
             ActivityPage.Visible = false;
+            LoginSignup login = new LoginSignup();
+            login.ShowDialog();
         }
         private void btn_Click(object sender, EventArgs e)
         {

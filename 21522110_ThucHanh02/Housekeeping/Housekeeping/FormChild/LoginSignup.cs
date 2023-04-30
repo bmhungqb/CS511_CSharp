@@ -132,7 +132,8 @@ namespace Housekeeping.FormChild
             if (res.Substring(0,1) == "1")
             {
                 saveDataToFile(InforUser);
-                MessageBox.Show("done");
+                MessageBox.Show(res);
+                this.Close();
             }
             else
             {
@@ -186,7 +187,7 @@ namespace Housekeeping.FormChild
             string res = checkInforLogin(LI_Username.Text, LI_Password.Text);
             if (res.Substring(0,1) == "1")
             {
-                MessageBox.Show(res);
+                this.Close();
             }
             else
             {

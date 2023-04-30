@@ -199,7 +199,7 @@
             // 
             this.ActivityPage.Location = new System.Drawing.Point(0, 0);
             this.ActivityPage.Name = "ActivityPage";
-            this.ActivityPage.Size = new System.Drawing.Size(900, 600);
+            this.ActivityPage.Size = new System.Drawing.Size(450, 600);
             this.ActivityPage.TabIndex = 6;
             // 
             // AccountPage
