@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Configuration;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -33,8 +34,10 @@ namespace Housekeeping
             LoginSignup login = new LoginSignup();
             login.ShowDialog();
             updateInfor(login.idUser);
+            id = login.idUser;  
         }
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataUserInfor.txt";
+        private string id = "";
         public void updateInfor(string id)
         {
             using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
@@ -66,6 +69,7 @@ namespace Housekeeping
             Guna2GradientButton button = sender as Guna2GradientButton;
             if (button.Name == "btn_Home")
             {
+                updateInfor(id);
                 HomePage.Visible = true;
                 ServicePage.Visible = false;
                 MessagePage.Visible = false;
