@@ -37,6 +37,7 @@
             this.tb_Address = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btn_SignOut = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -45,6 +46,7 @@
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel1.Controls.Add(this.btn_SignOut);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientButton2);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientButton1);
             this.guna2GradientPanel1.Controls.Add(this.guna2TextBox3);
@@ -53,7 +55,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(433, 187);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(416, 187);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // guna2GradientButton2
@@ -141,6 +143,7 @@
             this.tb_Greeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.tb_Greeting.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Greeting.Location = new System.Drawing.Point(15, 3);
+            this.tb_Greeting.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tb_Greeting.Name = "tb_Greeting";
             this.tb_Greeting.PasswordChar = '\0';
             this.tb_Greeting.PlaceholderText = "";
@@ -168,6 +171,7 @@
             this.tb_Address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tb_Address.IconLeft = ((System.Drawing.Image)(resources.GetObject("tb_Address.IconLeft")));
             this.tb_Address.Location = new System.Drawing.Point(15, 43);
+            this.tb_Address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_Address.Name = "tb_Address";
             this.tb_Address.PasswordChar = '\0';
             this.tb_Address.PlaceholderText = "";
@@ -183,7 +187,7 @@
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 187);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(433, 209);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(416, 209);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
@@ -195,10 +199,30 @@
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(0, 396);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(433, 231);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(416, 231);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
+            // 
+            // btn_SignOut
+            // 
+            this.btn_SignOut.BackColor = System.Drawing.Color.Transparent;
+            this.btn_SignOut.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_SignOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_SignOut.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btn_SignOut.HoverState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_SignOut.Image = ((System.Drawing.Image)(resources.GetObject("btn_SignOut.Image")));
+            this.btn_SignOut.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_SignOut.ImageRotate = 0F;
+            this.btn_SignOut.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_SignOut.Location = new System.Drawing.Point(382, 7);
+            this.btn_SignOut.Name = "btn_SignOut";
+            this.btn_SignOut.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btn_SignOut.PressedState.ImageSize = new System.Drawing.Size(32, 32);
+            this.btn_SignOut.Size = new System.Drawing.Size(32, 32);
+            this.btn_SignOut.TabIndex = 3;
+            this.btn_SignOut.UseTransparentBackground = true;
+            this.btn_SignOut.Click += new System.EventHandler(this.btn_SignOut_Click);
             // 
             // Home
             // 
@@ -210,7 +234,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(433, 600);
+            this.Size = new System.Drawing.Size(416, 600);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -229,5 +253,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_SignOut;
     }
 }

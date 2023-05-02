@@ -27,5 +27,15 @@ namespace Housekeeping
         {
 
         }
+
+        private void btn_SignOut_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show("Are you sure ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(result == System.Windows.Forms.DialogResult.Yes)
+            {
+                ((Form)this.TopLevelControl).Close();
+            }
+        }
     }
 }
