@@ -114,7 +114,7 @@ namespace Housekeeping.FormChild
             this.pnl_Signup.Controls.Add(this.guna2HtmlLabel3);
             this.pnl_Signup.Controls.Add(this.SU_Name);
             this.pnl_Signup.Controls.Add(this.SU_btnSignup);
-            this.pnl_Signup.Location = new System.Drawing.Point(24, 71);
+            this.pnl_Signup.Location = new System.Drawing.Point(24, 104);
             this.pnl_Signup.Name = "pnl_Signup";
             this.pnl_Signup.Size = new System.Drawing.Size(403, 533);
             this.pnl_Signup.TabIndex = 10;
@@ -334,7 +334,7 @@ namespace Housekeeping.FormChild
             this.SU_Birthday.Checked = true;
             this.SU_Birthday.FillColor = System.Drawing.Color.White;
             this.SU_Birthday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SU_Birthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.SU_Birthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.SU_Birthday.Location = new System.Drawing.Point(26, 186);
             this.SU_Birthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.SU_Birthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -417,7 +417,7 @@ namespace Housekeeping.FormChild
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ContainerControl1.Location = new System.Drawing.Point(0, 0);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
-            this.guna2ContainerControl1.Size = new System.Drawing.Size(450, 62);
+            this.guna2ContainerControl1.Size = new System.Drawing.Size(450, 82);
             this.guna2ContainerControl1.TabIndex = 7;
             this.guna2ContainerControl1.Text = "guna2ContainerControl1";
             this.guna2ContainerControl1.UseTransparentBackground = true;
@@ -440,7 +440,7 @@ namespace Housekeeping.FormChild
             this.btn_FormSignup.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_FormSignup.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FormSignup.ForeColor = System.Drawing.Color.Black;
-            this.btn_FormSignup.Location = new System.Drawing.Point(219, 23);
+            this.btn_FormSignup.Location = new System.Drawing.Point(223, 43);
             this.btn_FormSignup.Name = "btn_FormSignup";
             this.btn_FormSignup.Size = new System.Drawing.Size(204, 39);
             this.btn_FormSignup.TabIndex = 1;
@@ -470,7 +470,7 @@ namespace Housekeeping.FormChild
             this.btn_FormLogin.FillColor2 = System.Drawing.Color.Transparent;
             this.btn_FormLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_FormLogin.ForeColor = System.Drawing.Color.Black;
-            this.btn_FormLogin.Location = new System.Drawing.Point(20, 23);
+            this.btn_FormLogin.Location = new System.Drawing.Point(24, 43);
             this.btn_FormLogin.Name = "btn_FormLogin";
             this.btn_FormLogin.Size = new System.Drawing.Size(193, 39);
             this.btn_FormLogin.TabIndex = 0;
@@ -489,7 +489,7 @@ namespace Housekeeping.FormChild
             this.pnl_Login.Controls.Add(this.LI_btnLogin);
             this.pnl_Login.Controls.Add(this.guna2HtmlLabel1);
             this.pnl_Login.Controls.Add(this.LI_SaveAccount);
-            this.pnl_Login.Location = new System.Drawing.Point(34, 68);
+            this.pnl_Login.Location = new System.Drawing.Point(34, 101);
             this.pnl_Login.Name = "pnl_Login";
             this.pnl_Login.Size = new System.Drawing.Size(386, 446);
             this.pnl_Login.TabIndex = 6;

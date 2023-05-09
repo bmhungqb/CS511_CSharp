@@ -100,7 +100,7 @@ namespace Housekeeping.FormChild
             }
             else
             {
-                InforUser.Add("Birthday", SU_Birthday.Text);
+                InforUser.Add("Birthday", SU_Birthday.Value.ToString("yyyy-MM-dd hh:mm tt"));
             }
             if(SU_Sex.Text == "")
             {
@@ -136,45 +136,40 @@ namespace Housekeeping.FormChild
             }
             return "1";
         }
-        private void saveDataToFile(Dictionary<string,string>InforUser)
+        private string saveDataToFile(Dictionary<string,string>InforUser)
         {
+            string path = Constants.dataUser +'/'+InforUser["Username"];
+            if(Directory.Exists(path))
+            {
+                return "null";
+            }
+            Directory.CreateDirectory(path);
+            path = path + "/UserInfor.txt";
+            StreamWriter sw = File.CreateText(path);
             Random rdn= new Random();
             int random = rdn.Next();
             idUser = random.ToString();
-            string inforUser = random.ToString();
+            sw.WriteLine(idUser);
             foreach(KeyValuePair<string,string> infor in InforUser)
             {
-                inforUser += "_";
-                inforUser += infor.Value;
+                sw.WriteLine(infor.Value);
             }
-            try
-            {
-                using (StreamWriter writer = new StreamWriter(filePath,true))
-                {
-                    writer.WriteLine(inforUser);
-                    writer.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred while saving information: {ex.Message}");
-            }
+            sw.Close();
+            return "1";
         }
-        private string IsExistAccount(string Username)
+        private string SaveInforUser(string username)
         {
-            using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
+            string user = "";
+            using (StreamReader reader = new StreamReader(Constants.dataUser+"/"+username+"/UserInfor.txt", Encoding.UTF8))
             {
                 string inforUser;
                 while ((inforUser = reader.ReadLine()) != null)
-                {
-                    string[] infor = inforUser.Split('_');
-                    if (Username == infor[1])
-                    {
-                        return "0This account already exists";
-                    }
+                {   
+                    user += inforUser;
+                    user += "_";
                 }
-                return "1Congratulations, your account has been successfully created.";
             }
+            return user;
         }
         private void SU_btnSignup_Click(object sender, EventArgs e)
         {
@@ -182,16 +177,17 @@ namespace Housekeeping.FormChild
             string res = getInfor(InforUser);
             if (res == "1")
             {
-                res = IsExistAccount(InforUser["Username"]);
-                if(res.Substring(0,1) == "1")
+                string result = saveDataToFile(InforUser);
+                if(result != "null")
                 {
-                    saveDataToFile(InforUser);
-                    MessageBox.Show(res);
-                    this.Close();
+                    string user = SaveInforUser(InforUser["Username"]);
+                    Form1 Home = new Form1(user);
+                    this.Hide();
+                    Home.Show();    
                 }
                 else
                 {
-                    MessageBox.Show(res, "Exists Account",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    MessageBox.Show("Username is exists", "Exists Account",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 }
             }
             else
@@ -212,35 +208,34 @@ namespace Housekeeping.FormChild
             {
                 return "0Please enter Password";
             }
-            try
+            string path = Constants.dataUser + "/" + Username;
+            if (Directory.Exists(path))
             {
-                using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
+                string User = "";
+                using (StreamReader reader = new StreamReader(path+"/UserInfor.txt", Encoding.UTF8))
                 {
                     string inforUser;
-                    while((inforUser = reader.ReadLine()) != null)
+                    while ((inforUser = reader.ReadLine()) != null)
                     {
-                        string[] infor = inforUser.Split('_');
-                        if(Username == infor[1] && Password == infor[2]) 
-                        {
-                            idUser = infor[0];
-                            return "1Login Success";
-                        }
-                        if(Username == infor[1] && Password != infor[2])
-                        {
-                            return "0Wrong Password";
-                        }
-
+                        User += inforUser;
+                        User += "_";
+                        
                     }
-                    return "0Account doesn't exists";
+                    string RealPass = User.Split('_')[2];
+                    if (Password == RealPass)
+                    {
+                        return "1Login Success";
+                    }
+                    else
+                    {
+                        return "0Wrong Password";
+                    }
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred while saving information: {ex.Message}");
+                return "0Account doesn't exists";
             }
-
-
-            return "1Login success";
         }
         private void LI_btnLogin_Click(object sender, EventArgs e)
         {
@@ -248,7 +243,10 @@ namespace Housekeeping.FormChild
             if (res.Substring(0,1) == "1")
             {
                 HandleRemember(0);
-                this.Close();
+                string user = SaveInforUser(LI_Username.Text);
+                Form1 Home = new Form1(user);
+                this.Hide();
+                Home.Show();
             }
             else
             {
@@ -256,5 +254,6 @@ namespace Housekeeping.FormChild
             }
         }
         #endregion
+
     }
 }

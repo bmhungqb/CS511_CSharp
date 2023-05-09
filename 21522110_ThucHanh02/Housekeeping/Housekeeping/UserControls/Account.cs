@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Housekeeping
@@ -39,14 +43,24 @@ namespace Housekeeping
             {"Doing", 0},
         };
         #endregion
-        public void UpdateAcount(string name,string phone,string gmail,string sex,string address,string Userid)
+        string USER = "";
+        public void UpdateAcount(string userInfor)
         {
-            tb_Name.Text = name;
-            tb_Phone.Text = phone;
-            tb_Gmail.Text = gmail;
-            tb_Sex.SelectedValue = sex;
-            tb_Address.Text = address;
-            UserId = Userid;
+            USER= userInfor;
+            string[] user = userInfor.Split('_');
+            tb_Name.Text = user[3];
+            tb_Phone.Text = user[7];
+            tb_Gmail.Text = user[8];
+            tb_Sex.SelectedValue = user[5];
+            tb_Address.Text = user[6];
+            DateTime dateTime = DateTime.Parse(user[4].ToString());
+            tb_Birthday.Value = dateTime.ToUniversalTime();
+            UserId = user[0];
+            string pathImg = Constants.dataUser + "/" + user[1] + "/avatar.png";
+            if(File.Exists(pathImg))
+            {
+                avatar.Image = Image.FromFile(pathImg);
+            }
         }
         // Format store data
         //OrderId_Id_NameService_DetailService_Price_DayOrder_Status_Adress_ModePayment
@@ -59,7 +73,7 @@ namespace Housekeeping
             table.Columns.Add("Service", typeof(string));
             table.Columns.Add("Detail Service", typeof(string));
             table.Columns.Add("Price", typeof(string));
-            table.Columns.Add("Date of order", typeof(string));
+            table.Columns.Add("Implementation Date", typeof(string));
             table.Columns.Add("Status", typeof(string));
             AC_dataHistoryView.DataSource = table;
 
@@ -160,42 +174,63 @@ namespace Housekeeping
             }
 
         }
+        string savePath = "";
         private void btn_Click_ChangeImage(object sender,EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
+            avatar.Image.Dispose();
+            savePath = Constants.dataUser + "/" + USER.Split('_')[1] + "/avatar.png";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 avatar.Image = Image.FromFile(openFileDialog.FileName);
+                avatar.Image.Save(savePath, System.Drawing.Imaging.ImageFormat.Png);
+            }
+            else
+            {
+                avatar.Image = Image.FromFile(savePath);
             }
         }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            string lineReplace="";
-            int lineNumber = 0;
-            using (StreamReader reader = new StreamReader(filePathData, Encoding.UTF8))
+            string[] infor = USER.Split('_');
+            if (tb_OldPass.Text != "")
             {
-                string inforUser;
-                while ((inforUser = reader.ReadLine()) != null)
+                if(tb_NewPass.Text == "")
                 {
-                    string[] infor = inforUser.Split('_');
-                    if(UserId == infor[0])
-                    {
-                        lineReplace = UserId + "_" + infor[1]+"_"+infor[2]+"_"+tb_Name.Text.ToString()+"_"+tb_Birthday.Text.ToString()+"_"+tb_Sex.Text.ToString()+"_"+tb_Address.Text.ToString()+"_"+tb_Phone.Text.ToString()+"_"+tb_Gmail.Text.ToString();
-                        
-                        break;
-                    }
-                    else
-                    {
-                        lineNumber++;
-                    }
+                    MessageBox.Show("Please type new password!!");
+                    return;
+                }
+                else if(tb_OldPass.Text != infor[2])
+                {
+                    MessageBox.Show(infor[2]);
+                    MessageBox.Show("Wrong old password !");
+                    return;
+                }
+                else
+                {
+                    infor[2] = tb_NewPass.Text;
                 }
             }
-            string[] lines = File.ReadAllLines(filePathData);
-            lines[lineNumber] = lineReplace;
-            File.WriteAllLines(filePathData, lines);
-            MessageBox.Show("Save infor success", "Noti", MessageBoxButtons.OK, MessageBoxIcon.None);
+            string pathFile = Constants.dataUser + "/" + USER.Split('_')[1] + "/UserInfor.txt";
+            if(File.Exists(pathFile))
+            {
+                File.Delete(pathFile);
+            }
+            StreamWriter sw = File.CreateText(pathFile);
+            sw.WriteLine(infor[0]);
+            sw.WriteLine(infor[1]);
+            sw.WriteLine(infor[2]);
+            sw.WriteLine(tb_Name.Text);
+            sw.WriteLine(tb_Birthday.Value.ToString("yyyy-MM-dd hh:mm tt"));
+            sw.WriteLine(tb_Sex.Text);
+            sw.WriteLine(tb_Address.Text);
+            sw.WriteLine(tb_Phone.Text);
+            sw.WriteLine(tb_Gmail.Text);
+            sw.Close();
+            tb_OldPass.Text = "";
+            tb_NewPass.Text = "";
         }
     }
 }

@@ -28,9 +28,10 @@ namespace Housekeeping
             btn_Cleaning.Checked = false;
         }
         public string CurrentAddress;
-        public void GetCurrentAddress(string addrress)
+        public void GetCurrentAddress(string userInfor)
         {
-            CurrentAddress = addrress;
+            string[] user = userInfor.Split('_');
+            CurrentAddress = user[6];
         }
         #region dataPrice
         public Dictionary<string, string> dataPrice = new Dictionary<string, string>()
@@ -163,6 +164,7 @@ namespace Housekeeping
                 if(dialogResult == DialogResult.OK)
                 {
                     ClearChecked();
+                    SV_TotalPrice.Text = "Order total: 0 vnđ";
                 }
             }
         }

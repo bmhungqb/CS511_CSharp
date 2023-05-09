@@ -21,6 +21,8 @@ namespace Housekeeping
         #region Define Path file
         private const string filePathData = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataCart.txt";
         #endregion
+        #region
+        #endregion
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -59,13 +61,13 @@ namespace Housekeeping
                     {
                         modePayment = "Smart Banking";
                     }
-                    foreach (DataRow service in table.Rows)
+                    foreach (DataRow service in datatableCart.Rows)
                     {
                         string inforOrder;
                         inforOrder =  OrderId+ "_"
                             + service["ID"].ToString() + "_" + service["Service"].ToString() + "_"
                             + service["Service Detail"].ToString() + "_" + service["Price"].ToString() + "_"
-                            + dateTime.ToString("dd/MM/yyyy") + "_" + "Doing" +"_"+ address + "_" +modePayment;
+                            + date_do.Value.ToString("dd/MM/yyyy") + "_" + "Doing" +"_"+ address + "_" +modePayment;
                         writer.WriteLine(inforOrder);
                     }
                     writer.Close();
@@ -75,17 +77,17 @@ namespace Housekeeping
                 }
             }
         }
-        DataTable table = new DataTable();
+        DataTable datatableCart = new DataTable();
         public void VisualizeData(List<string> elChecked, Dictionary<string, string> dataPrice, Dictionary<string, string> dataPropertyService,string address)
         {
+            datatableCart.Clear();
+            datatableCart.Columns.Clear();
+            datatableCart.Columns.Add("ID", typeof(string));
+            datatableCart.Columns.Add("Service", typeof(string));
+            datatableCart.Columns.Add("Service Detail", typeof(string));
+            datatableCart.Columns.Add("Price", typeof(string));
             txt_CurrentAddress.Text = address;
-            table.Columns.Clear();
-            table.Rows.Clear();
-            table.Columns.Add("ID", typeof(string));
-            table.Columns.Add("Service", typeof(string));
-            table.Columns.Add("Service Detail", typeof(string));
-            table.Columns.Add("Price", typeof(string));
-            dataTable.DataSource = table;
+            dataTable.DataSource = datatableCart;
            for(int i=0;i<elChecked.Count;i++)
             {
                 string[] row = new string[4];
@@ -108,7 +110,7 @@ namespace Housekeeping
                 }
                 row[2] = dataPropertyService[elChecked[i]];
                 row[3] = dataPrice[elChecked[i]];   
-                table.Rows.Add(row);
+                datatableCart.Rows.Add(row);
             }
         }
         private void btn_Check_Address(object sender, EventArgs e)
@@ -138,6 +140,18 @@ namespace Housekeeping
                 check_banking.Checked = true;
                 check_cash.Checked = false;
             }
+        }
+
+        private void btn_removeItem_Click(object sender, EventArgs e)
+        {
+            if (dataTable.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataTable.SelectedRows)
+                {
+                    dataTable.Rows.RemoveAt(row.Index);
+                }
+            }
+
         }
     }
 }

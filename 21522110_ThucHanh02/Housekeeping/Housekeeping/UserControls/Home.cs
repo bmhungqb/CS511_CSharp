@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Housekeeping.FormChild;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,25 +18,27 @@ namespace Housekeeping
             InitializeComponent();
         }
 
-        public void updateHome(string name,string address)
+        public void updateHome(string userInfor)
         {
-            tb_Greeting.Text = "Welcome " + name;
-            tb_Address.Text = address;
+            string[] user = userInfor.Split('_');
+            tb_Greeting.Text = "Welcome " + user[3];
+            tb_Address.Text = user[6];
         }
-
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_SignOut_Click(object sender, EventArgs e)
         {
             DialogResult result;
             result = MessageBox.Show("Are you sure ?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(result == System.Windows.Forms.DialogResult.Yes)
             {
-                ((Form)this.TopLevelControl).Close();
+                ((Form1)this.TopLevelControl).HandleLogout();
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            LoginSignup login = new LoginSignup();
+            login.ShowDialog();
+            //((Form)this.TopLevelControl).Close();
         }
     }
 }

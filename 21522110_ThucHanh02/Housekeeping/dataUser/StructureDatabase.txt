@@ -1,0 +1,8 @@
+STRUCTURE OF DATABASE:
+----------------------------------
+-DATABASE
+	-DataUser
+		-username
+			+Userinfor.txt
+			+dataCart.txt
+	+DataRemember.txt

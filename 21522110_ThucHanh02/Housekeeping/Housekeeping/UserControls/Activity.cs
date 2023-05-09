@@ -38,7 +38,7 @@ namespace Housekeeping
             table.Columns.Add("Service", typeof(string));
             table.Columns.Add("Detail Service",typeof(string));
             //table.Columns.Add("Price", typeof(string));
-            table.Columns.Add("Date of order", typeof(string));
+            table.Columns.Add("Implementation date", typeof(string));
             table.Columns.Add("Status", typeof(string));
             dataGridActive.DataSource = table;
 
@@ -106,7 +106,7 @@ namespace Housekeeping
             tableOrder.Columns.Add("Service", typeof(string));
             tableOrder.Columns.Add("Detail Service", typeof(string));
             tableOrder.Columns.Add("Price", typeof(string));
-            tableOrder.Columns.Add("Date of order", typeof(string));
+            tableOrder.Columns.Add("Implementation Date", typeof(string));
             tableOrder.Columns.Add("Status", typeof(string));
             dataGridOrder.DataSource = tableOrder;
 
