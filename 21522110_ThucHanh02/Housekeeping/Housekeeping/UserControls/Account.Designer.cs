@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.A_btnStatistics = new Guna.UI2.WinForms.Guna2GradientButton();
             this.A_btnHistory = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -67,17 +66,15 @@
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.AC_dataHistoryView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnl_Statistics = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.AC_ChartViewStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cb_settings = new Guna.UI2.WinForms.Guna2ComboBox();
             this.AC_ChartViewService = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             this.pnl_account.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.pnl_History.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AC_dataHistoryView)).BeginInit();
             this.pnl_Statistics.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewService)).BeginInit();
             this.SuspendLayout();
             // 
@@ -546,25 +543,25 @@
             this.AC_dataHistoryView.AllowUserToDeleteRows = false;
             this.AC_dataHistoryView.AllowUserToResizeColumns = false;
             this.AC_dataHistoryView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.AC_dataHistoryView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AC_dataHistoryView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.AC_dataHistoryView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AC_dataHistoryView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.AC_dataHistoryView.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.AC_dataHistoryView.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.AC_dataHistoryView.DefaultCellStyle = dataGridViewCellStyle3;
             this.AC_dataHistoryView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AC_dataHistoryView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.AC_dataHistoryView.Location = new System.Drawing.Point(0, 72);
@@ -598,11 +595,10 @@
             // pnl_Statistics
             // 
             this.pnl_Statistics.AutoScroll = true;
-            this.pnl_Statistics.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pnl_Statistics.Controls.Add(this.AC_ChartViewStatus);
-            this.pnl_Statistics.Controls.Add(this.guna2TextBox8);
+            this.pnl_Statistics.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_Statistics.Controls.Add(this.guna2HtmlLabel12);
+            this.pnl_Statistics.Controls.Add(this.cb_settings);
             this.pnl_Statistics.Controls.Add(this.AC_ChartViewService);
-            this.pnl_Statistics.Controls.Add(this.guna2TextBox7);
             this.pnl_Statistics.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.pnl_Statistics.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.pnl_Statistics.Location = new System.Drawing.Point(0, 40);
@@ -610,80 +606,57 @@
             this.pnl_Statistics.Size = new System.Drawing.Size(450, 560);
             this.pnl_Statistics.TabIndex = 3;
             // 
-            // AC_ChartViewStatus
+            // guna2HtmlLabel12
             // 
-            chartArea9.Name = "ChartArea1";
-            this.AC_ChartViewStatus.ChartAreas.Add(chartArea9);
-            this.AC_ChartViewStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            legend9.Name = "Legend1";
-            this.AC_ChartViewStatus.Legends.Add(legend9);
-            this.AC_ChartViewStatus.Location = new System.Drawing.Point(0, 497);
-            this.AC_ChartViewStatus.Name = "AC_ChartViewStatus";
-            this.AC_ChartViewStatus.Size = new System.Drawing.Size(433, 364);
-            this.AC_ChartViewStatus.TabIndex = 5;
-            this.AC_ChartViewStatus.Text = "chart2";
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(16, 14);
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(147, 22);
+            this.guna2HtmlLabel12.TabIndex = 5;
+            this.guna2HtmlLabel12.Text = "Statistics settings";
             // 
-            // guna2TextBox8
+            // cb_settings
             // 
-            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox8.DefaultText = "The graph shows the quantity of each order status";
-            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.SystemColors.Control;
-            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.Blue;
-            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.SystemColors.Control;
-            this.guna2TextBox8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2TextBox8.Enabled = false;
-            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Location = new System.Drawing.Point(0, 430);
-            this.guna2TextBox8.Name = "guna2TextBox8";
-            this.guna2TextBox8.PasswordChar = '\0';
-            this.guna2TextBox8.PlaceholderText = "";
-            this.guna2TextBox8.ReadOnly = true;
-            this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(433, 67);
-            this.guna2TextBox8.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox8.TabIndex = 4;
-            this.guna2TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cb_settings.BackColor = System.Drawing.Color.Transparent;
+            this.cb_settings.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_settings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_settings.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_settings.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cb_settings.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.cb_settings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cb_settings.ItemHeight = 30;
+            this.cb_settings.Items.AddRange(new object[] {
+            "Services",
+            "Status",
+            "Price",
+            "Date"});
+            this.cb_settings.Location = new System.Drawing.Point(41, 42);
+            this.cb_settings.Name = "cb_settings";
+            this.cb_settings.Size = new System.Drawing.Size(154, 36);
+            this.cb_settings.StartIndex = 0;
+            this.cb_settings.TabIndex = 4;
+            this.cb_settings.SelectedIndexChanged += new System.EventHandler(this.cb_settings_SelectedIndexChanged);
+            this.cb_settings.SelectedValueChanged += new System.EventHandler(this.guna2ComboBox3_SelectedValueChanged);
             // 
             // AC_ChartViewService
             // 
-            chartArea10.Name = "ChartArea1";
-            this.AC_ChartViewService.ChartAreas.Add(chartArea10);
-            this.AC_ChartViewService.Dock = System.Windows.Forms.DockStyle.Top;
-            legend10.Name = "Legend1";
-            this.AC_ChartViewService.Legends.Add(legend10);
-            this.AC_ChartViewService.Location = new System.Drawing.Point(0, 66);
+            chartArea1.Name = "ChartArea1";
+            this.AC_ChartViewService.ChartAreas.Add(chartArea1);
+            this.AC_ChartViewService.Dock = System.Windows.Forms.DockStyle.Bottom;
+            legend1.Name = "Legend1";
+            this.AC_ChartViewService.Legends.Add(legend1);
+            this.AC_ChartViewService.Location = new System.Drawing.Point(0, 108);
             this.AC_ChartViewService.Name = "AC_ChartViewService";
-            this.AC_ChartViewService.Size = new System.Drawing.Size(433, 364);
+            this.AC_ChartViewService.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.AC_ChartViewService.Series.Add(series1);
+            this.AC_ChartViewService.Size = new System.Drawing.Size(450, 452);
             this.AC_ChartViewService.TabIndex = 3;
             this.AC_ChartViewService.Text = "chart2";
-            // 
-            // guna2TextBox7
-            // 
-            this.guna2TextBox7.AutoScroll = true;
-            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "The graph shows the number of orders for each type of service";
-            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.SystemColors.Control;
-            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.Blue;
-            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2TextBox7.Enabled = false;
-            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox7.Location = new System.Drawing.Point(0, 0);
-            this.guna2TextBox7.Multiline = true;
-            this.guna2TextBox7.Name = "guna2TextBox7";
-            this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderText = "";
-            this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.Size = new System.Drawing.Size(433, 66);
-            this.guna2TextBox7.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox7.TabIndex = 1;
-            this.guna2TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Account
             // 
@@ -703,7 +676,7 @@
             this.pnl_History.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AC_dataHistoryView)).EndInit();
             this.pnl_Statistics.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewStatus)).EndInit();
+            this.pnl_Statistics.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AC_ChartViewService)).EndInit();
             this.ResumeLayout(false);
 
@@ -741,10 +714,9 @@
         private Guna.UI2.WinForms.Guna2GradientPanel pnl_Statistics;
         private Guna.UI2.WinForms.Guna2DataGridView AC_dataHistoryView;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private System.Windows.Forms.DataVisualization.Charting.Chart AC_ChartViewStatus;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
         private System.Windows.Forms.DataVisualization.Charting.Chart AC_ChartViewService;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2ComboBox cb_settings;
     }
 }

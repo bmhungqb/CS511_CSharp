@@ -38,6 +38,7 @@
             this.btn_Order = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Active = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnl_Active = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btn_Cancel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dataGridActive = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pnl_Order = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -112,12 +113,29 @@
             // 
             // pnl_Active
             // 
+            this.pnl_Active.Controls.Add(this.btn_Cancel);
             this.pnl_Active.Controls.Add(this.guna2HtmlLabel1);
             this.pnl_Active.Controls.Add(this.dataGridActive);
             this.pnl_Active.Location = new System.Drawing.Point(0, 50);
             this.pnl_Active.Name = "pnl_Active";
             this.pnl_Active.Size = new System.Drawing.Size(450, 550);
             this.pnl_Active.TabIndex = 2;
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Cancel.FillColor = System.Drawing.Color.Red;
+            this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancel.Location = new System.Drawing.Point(159, 493);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(120, 45);
+            this.btn_Cancel.TabIndex = 2;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -154,13 +172,12 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridActive.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridActive.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridActive.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridActive.Location = new System.Drawing.Point(0, 46);
             this.dataGridActive.Name = "dataGridActive";
             this.dataGridActive.ReadOnly = true;
             this.dataGridActive.RowHeadersVisible = false;
-            this.dataGridActive.Size = new System.Drawing.Size(450, 504);
+            this.dataGridActive.Size = new System.Drawing.Size(450, 441);
             this.dataGridActive.TabIndex = 0;
             this.dataGridActive.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridActive.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -322,5 +339,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView dataGridOrder;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxID;
+        private Guna.UI2.WinForms.Guna2Button btn_Cancel;
     }
 }

@@ -168,6 +168,7 @@ namespace Housekeeping.FormChild
                     user += inforUser;
                     user += "_";
                 }
+                reader.Close();
             }
             return user;
         }
@@ -221,6 +222,7 @@ namespace Housekeeping.FormChild
                         User += "_";
                         
                     }
+                    reader.Close();
                     string RealPass = User.Split('_')[2];
                     if (Password == RealPass)
                     {

@@ -58,10 +58,9 @@
             this.pnl_function.CustomBorderColor = System.Drawing.Color.Black;
             this.pnl_function.CustomBorderThickness = new System.Windows.Forms.Padding(1);
             this.pnl_function.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_function.Location = new System.Drawing.Point(0, 739);
-            this.pnl_function.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_function.Location = new System.Drawing.Point(0, 600);
             this.pnl_function.Name = "pnl_function";
-            this.pnl_function.Size = new System.Drawing.Size(600, 86);
+            this.pnl_function.Size = new System.Drawing.Size(450, 70);
             this.pnl_function.TabIndex = 0;
             // 
             // btn_Account
@@ -87,10 +86,9 @@
             this.btn_Account.Image = ((System.Drawing.Image)(resources.GetObject("btn_Account.Image")));
             this.btn_Account.ImageOffset = new System.Drawing.Point(0, 10);
             this.btn_Account.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_Account.Location = new System.Drawing.Point(480, 0);
-            this.btn_Account.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Account.Location = new System.Drawing.Point(360, 0);
             this.btn_Account.Name = "btn_Account";
-            this.btn_Account.Size = new System.Drawing.Size(120, 86);
+            this.btn_Account.Size = new System.Drawing.Size(90, 70);
             this.btn_Account.TabIndex = 4;
             this.btn_Account.Text = "Account";
             this.btn_Account.TextOffset = new System.Drawing.Point(0, 2);
@@ -120,10 +118,9 @@
             this.btn_Message.Image = ((System.Drawing.Image)(resources.GetObject("btn_Message.Image")));
             this.btn_Message.ImageOffset = new System.Drawing.Point(0, 15);
             this.btn_Message.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_Message.Location = new System.Drawing.Point(360, 0);
-            this.btn_Message.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Message.Location = new System.Drawing.Point(270, 0);
             this.btn_Message.Name = "btn_Message";
-            this.btn_Message.Size = new System.Drawing.Size(120, 86);
+            this.btn_Message.Size = new System.Drawing.Size(90, 70);
             this.btn_Message.TabIndex = 3;
             this.btn_Message.Text = "Message";
             this.btn_Message.TextOffset = new System.Drawing.Point(0, -4);
@@ -153,10 +150,9 @@
             this.btn_Activity.Image = ((System.Drawing.Image)(resources.GetObject("btn_Activity.Image")));
             this.btn_Activity.ImageOffset = new System.Drawing.Point(0, 8);
             this.btn_Activity.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_Activity.Location = new System.Drawing.Point(240, 0);
-            this.btn_Activity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Activity.Location = new System.Drawing.Point(180, 0);
             this.btn_Activity.Name = "btn_Activity";
-            this.btn_Activity.Size = new System.Drawing.Size(120, 86);
+            this.btn_Activity.Size = new System.Drawing.Size(90, 70);
             this.btn_Activity.TabIndex = 2;
             this.btn_Activity.Text = "Activity";
             this.btn_Activity.TextOffset = new System.Drawing.Point(0, 2);
@@ -186,10 +182,9 @@
             this.btn_Service.Image = ((System.Drawing.Image)(resources.GetObject("btn_Service.Image")));
             this.btn_Service.ImageOffset = new System.Drawing.Point(0, 10);
             this.btn_Service.ImageSize = new System.Drawing.Size(37, 37);
-            this.btn_Service.Location = new System.Drawing.Point(120, 0);
-            this.btn_Service.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Service.Location = new System.Drawing.Point(90, 0);
             this.btn_Service.Name = "btn_Service";
-            this.btn_Service.Size = new System.Drawing.Size(120, 86);
+            this.btn_Service.Size = new System.Drawing.Size(90, 70);
             this.btn_Service.TabIndex = 1;
             this.btn_Service.Text = "Service";
             this.btn_Service.Tile = true;
@@ -221,7 +216,7 @@
             this.btn_Home.Location = new System.Drawing.Point(0, 0);
             this.btn_Home.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Home.Name = "btn_Home";
-            this.btn_Home.Size = new System.Drawing.Size(120, 86);
+            this.btn_Home.Size = new System.Drawing.Size(90, 70);
             this.btn_Home.TabIndex = 0;
             this.btn_Home.Text = "Home";
             this.btn_Home.Tile = true;
@@ -236,61 +231,60 @@
             this.guna2Panel1.Controls.Add(this.MessagePage);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(600, 739);
+            this.guna2Panel1.Size = new System.Drawing.Size(450, 600);
             this.guna2Panel1.TabIndex = 1;
             // 
             // ActivityPage
             // 
             this.ActivityPage.Location = new System.Drawing.Point(0, 0);
-            this.ActivityPage.Margin = new System.Windows.Forms.Padding(5);
+            this.ActivityPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ActivityPage.Name = "ActivityPage";
-            this.ActivityPage.Size = new System.Drawing.Size(600, 738);
+            this.ActivityPage.Size = new System.Drawing.Size(450, 600);
             this.ActivityPage.TabIndex = 6;
+            this.ActivityPage.Load += new System.EventHandler(this.ActivityPage_Load);
             // 
             // AccountPage
             // 
             this.AccountPage.Location = new System.Drawing.Point(0, 0);
-            this.AccountPage.Margin = new System.Windows.Forms.Padding(5);
+            this.AccountPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AccountPage.Name = "AccountPage";
-            this.AccountPage.Size = new System.Drawing.Size(600, 738);
+            this.AccountPage.Size = new System.Drawing.Size(450, 600);
             this.AccountPage.TabIndex = 5;
             // 
             // HomePage
             // 
             this.HomePage.AutoScroll = true;
             this.HomePage.Location = new System.Drawing.Point(0, 0);
-            this.HomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 6);
+            this.HomePage.Margin = new System.Windows.Forms.Padding(3, 3, 3, 5);
             this.HomePage.Name = "HomePage";
-            this.HomePage.Size = new System.Drawing.Size(600, 738);
+            this.HomePage.Size = new System.Drawing.Size(450, 600);
             this.HomePage.TabIndex = 5;
             // 
             // ServicePage
             // 
             this.ServicePage.Location = new System.Drawing.Point(0, 0);
-            this.ServicePage.Margin = new System.Windows.Forms.Padding(5);
+            this.ServicePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ServicePage.Name = "ServicePage";
-            this.ServicePage.Size = new System.Drawing.Size(600, 738);
+            this.ServicePage.Size = new System.Drawing.Size(450, 600);
             this.ServicePage.TabIndex = 1;
             // 
             // MessagePage
             // 
             this.MessagePage.Location = new System.Drawing.Point(0, 0);
-            this.MessagePage.Margin = new System.Windows.Forms.Padding(5);
+            this.MessagePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MessagePage.Name = "MessagePage";
-            this.MessagePage.Size = new System.Drawing.Size(600, 738);
+            this.MessagePage.Size = new System.Drawing.Size(450, 600);
             this.MessagePage.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 825);
+            this.ClientSize = new System.Drawing.Size(450, 670);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnl_function);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

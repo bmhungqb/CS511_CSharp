@@ -19,6 +19,7 @@ namespace Housekeeping
 {
     public partial class Form1 : Form
     {
+        public string UserInfor = "";
         public Form1(string userInfor)
         {
             InitializeComponent();
@@ -33,12 +34,18 @@ namespace Housekeeping
             btn_Message.Checked = false;
             btn_Service.Checked = false;
             updateInfor(userInfor);
+            UserInfor = userInfor;
+        }
+        public string getDataUser()
+        {
+            return UserInfor;
         }
         public void updateInfor(string userInfor)
         {
             HomePage.updateHome(userInfor);
             AccountPage.UpdateAcount(userInfor);
             ServicePage.GetCurrentAddress(userInfor);
+            ActivityPage.GetInforUserFromParent(userInfor);
         }
         private void btn_Click(object sender, EventArgs e)
         {
@@ -82,6 +89,7 @@ namespace Housekeeping
                 btn_Activity.Checked = true;
                 btn_Message.Checked = false;
                 btn_Service.Checked = false;
+                ActivityPage.updateActivity();
 
             }
             else if (button.Name == "btn_Message")
@@ -119,6 +127,11 @@ namespace Housekeeping
             LoginSignup loginSignup = new LoginSignup();
             loginSignup.Show();
             this.Hide();
+        }
+
+        private void ActivityPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

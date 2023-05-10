@@ -38,7 +38,11 @@ namespace Housekeeping
         {
             LoginSignup login = new LoginSignup();
             login.ShowDialog();
-            //((Form)this.TopLevelControl).Close();
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            ((Form)this.TopLevelControl).Close();
         }
     }
 }

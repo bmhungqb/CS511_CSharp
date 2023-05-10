@@ -28,8 +28,10 @@ namespace Housekeeping
             btn_Cleaning.Checked = false;
         }
         public string CurrentAddress;
+        public string InforUser;
         public void GetCurrentAddress(string userInfor)
         {
+            InforUser = userInfor;
             string[] user = userInfor.Split('_');
             CurrentAddress = user[6];
         }
@@ -159,7 +161,7 @@ namespace Housekeeping
             else
             {
                 AboutBox1 Aboutbox= new AboutBox1();
-                Aboutbox.VisualizeData(elChecked, dataPrice, dataPropertyService,CurrentAddress);
+                Aboutbox.VisualizeData(elChecked, dataPrice, dataPropertyService,CurrentAddress,InforUser);
                 DialogResult dialogResult = Aboutbox.ShowDialog();
                 if(dialogResult == DialogResult.OK)
                 {

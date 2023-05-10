@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -33,15 +36,6 @@ namespace Housekeeping
         private const string filePath = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataCart.txt";
         private const string filePathData = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataUserInfor.txt";
         private string UserId = "";
-        Dictionary<string, int> dataC = new Dictionary<string, int>()
-        {
-            {"Cleaning", 0},
-            {"Laundry", 0},
-            {"Cooking", 0},
-            {"Done", 0},
-            {"Cancel", 0},
-            {"Doing", 0},
-        };
         #endregion
         string USER = "";
         public void UpdateAcount(string userInfor)
@@ -67,77 +61,179 @@ namespace Housekeeping
         DataTable table = new DataTable();
         private void Load_history()
         {
+            table.Clear();
             table.Columns.Clear();
-            table.Rows.Clear();
             table.Columns.Add("Order ID", typeof(string));
             table.Columns.Add("Service", typeof(string));
             table.Columns.Add("Detail Service", typeof(string));
             table.Columns.Add("Price", typeof(string));
             table.Columns.Add("Implementation Date", typeof(string));
+            table.Columns.Add("Implementation Time", typeof(string));
             table.Columns.Add("Status", typeof(string));
             AC_dataHistoryView.DataSource = table;
-
+            string filePath = Constants.dataUser + "/" + USER.Split('_')[1] + "/DataCart.txt";
+            if (!File.Exists(filePath)) return;
             using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
             {
                 string inforUser;
                 while ((inforUser = reader.ReadLine()) != null)
                 {
                     string[] infor = inforUser.Split('_');
-                    string[] row = new string[6];
+                    string[] row = new string[7];
                     if (infor[6] != "Doing")
                     {
-                        row[0] = infor[0].Substring(0, 5);
+                        row[0] = infor[0];
                         row[1] = infor[2];
                         row[2] = infor[3];
                         row[3] = infor[4];
                         row[4] = infor[5];
                         row[5] = infor[6];
+                        row[6] = infor[8];
                         table.Rows.Add(row);
                     }
 
                 }
             }
             AC_dataHistoryView.ColumnHeadersHeight = 50;
-            AC_dataHistoryView.Columns[0].Width = 40;
-            AC_dataHistoryView.Columns[1].Width = 50;
-            AC_dataHistoryView.Columns[2].Width = 150;
+            AC_dataHistoryView.Columns[0].Width = 30;
+            AC_dataHistoryView.Columns[1].Width = 60;
+            AC_dataHistoryView.Columns[2].Width = 70;
             AC_dataHistoryView.Columns[3].Width = 50;
-            AC_dataHistoryView.Columns[4].Width = 100;
+            AC_dataHistoryView.Columns[4].Width = 80;
         }
         // Format store data
-        //OrderId_Id_NameService_DetailService_Price_DayOrder_Status_Adress_ModePayment
-        DataTable dataChart = new DataTable();
         private void Load_Statistics_Service()
         {
-            AC_ChartViewService.DataSource = dataChart;
-            AC_ChartViewStatus.DataSource = dataChart;
-            using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
-            {
-                string inforUser;
-                while ((inforUser = reader.ReadLine()) != null)
-                {
-                    string[] infor = inforUser.Split('_');
-                    dataC[infor[2]]++;
-                    dataC[infor[6]]++;
-                }
-            }
             AC_ChartViewService.Series.Clear();
             AC_ChartViewService.Titles.Clear();
-            AC_ChartViewService.Series.Add("Quantity");
-            AC_ChartViewService.Series["Quantity"].Points.AddXY("Cleaning", dataC["Cleaning"]);
-            AC_ChartViewService.Series["Quantity"].Points.AddXY("Cooking", dataC["Cooking"]);
-            AC_ChartViewService.Series["Quantity"].Points.AddXY("Laundry", dataC["Laundry"]);
-            AC_ChartViewService.Titles.Add("Number of job you ordered");
+            string filePath = Constants.dataUser + "/" + USER.Split('_')[1] + "/DataCart.txt";
+            if (!File.Exists(filePath)) return;
+            string setting = cb_settings.SelectedItem.ToString() ;
+            if (setting == "Status")
+            {
+                Series Series_Status = new Series("Status");
+                using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
+                {
+                    string inforUser;
+                    int Done = 0;
+                    int Cancel = 0;
+                    int Doing = 0;
+                    while ((inforUser = reader.ReadLine()) != null)
+                    {
+                        string[] infor = inforUser.Split('_');
+                        if (infor[8] == "Doing")
+                        {
+                            Doing++;
+                        }
+                        else if (infor[8] == "Done")
+                        {
+                            Done++;
+                        }
+                        else
+                        {
+                            Cancel++;
+                        }
 
-            AC_ChartViewStatus.Series.Clear(); 
-            AC_ChartViewStatus.Titles.Clear();  
-            AC_ChartViewStatus.Series.Add("Status");
-            AC_ChartViewStatus.Series["Status"].Points.AddXY("Done", dataC["Done"]);
-            AC_ChartViewStatus.Series["Status"].Points.AddXY("Doing", dataC["Doing"]);
-            AC_ChartViewStatus.Series["Status"].Points.AddXY("Cancel", dataC["Cancel"]);
-            AC_ChartViewStatus.Titles.Add("Status of your job");
+                    }
+                    Series_Status.ChartType = SeriesChartType.Pie;
+                    Series_Status.IsValueShownAsLabel = true;
+                    float done = ((float)Done*100 / (Done + Doing + Cancel));
+                    float doing = ((float)Doing*100 / (Doing + Cancel + Done));
+                    float cancel = 100 - done - doing;
+                    Series_Status.Points.AddXY("Done", done.ToString("0.00"));
+                    Series_Status.Points.AddXY("Doing", doing.ToString("0.00"));
+                    Series_Status.Points.AddXY("Cancel", cancel.ToString("0.00"));
+                }
+                AC_ChartViewService.Titles.Add("Statictis by Status");
+                AC_ChartViewService.Series.Add(Series_Status);
+                AC_ChartViewService.Show();
+            }
+            if (setting == "Services")
+            {
+                int max = 0;
+                Series Series_Services = new Series("Services");
+                if (!File.Exists(filePath)) return;
+                using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
+                {
+                    string inforUser;
+                    int Cooking = 0;
+                    int Laundrying = 0;
+                    int Cleaning = 0;
+                    while ((inforUser = reader.ReadLine()) != null)
+                    {
+                        string[] infor = inforUser.Split('_');
+                        if (infor[2] == "Cooking")
+                        {
+                            Cooking++;
+                        }
+                        else if (infor[2] == "Cleaning")
+                        {
+                            Cleaning++;
+                        }
+                        else
+                        {
+                            Laundrying++;
+                        }
 
-
+                    }
+                    int[] y = { Cooking, Cleaning, Laundrying };
+                    max = y.Max();
+                    Series_Services.ChartType = SeriesChartType.Column;
+                    Series_Services.Palette = ChartColorPalette.EarthTones;
+                    Series_Services.IsValueShownAsLabel = true;
+                    Series_Services.Points.AddXY("Cooking", Cooking);
+                    Series_Services.Points.AddXY("Cleaning", Cleaning);
+                    Series_Services.Points.AddXY("Laundrying", Laundrying);
+                }
+                AC_ChartViewService.Series.Add(Series_Services);
+                AC_ChartViewService.ChartAreas[0].AxisY.Maximum = max * 1.1;
+                AC_ChartViewService.Titles.Add("Statictis by Services");
+                AC_ChartViewService.Show();
+            }
+            if (setting == "Price")
+            {
+                Series Series_Price = new Series("Price");
+                int max = 0;
+                using (StreamReader reader = new StreamReader(filePath, Encoding.UTF8))
+                {
+                    string inforUser;
+                    int Cooking = 0;
+                    int Laundrying = 0;
+                    int Cleaning = 0;
+                    while ((inforUser = reader.ReadLine()) != null)
+                    {
+                        string[] infor = inforUser.Split('_');
+                        if(infor[8] == "Doing")
+                        {
+                            if (infor[2] == "Cooking")
+                            {
+                                Cooking += int.Parse(infor[4]);
+                            }
+                            else if (infor[2] == "Cleaning")
+                            {
+                                Cleaning += int.Parse(infor[4]);
+                            }
+                            else
+                            {
+                                Laundrying += int.Parse(infor[4]);
+                            }
+                        }
+                        int[] y = { Cooking, Cleaning, Laundrying };
+                        max = y.Max();
+                    }
+                    Series_Price.ChartType = SeriesChartType.Column;
+                    Series_Price.Palette = ChartColorPalette.EarthTones;
+                    Series_Price.IsValueShownAsLabel = true;
+                    Series_Price.Points.AddXY("Cooking", Cooking);
+                    Series_Price.Points.AddXY("Cleaning", Cleaning);
+                    Series_Price.Points.AddXY("Laundrying", Laundrying);
+                }
+                AC_ChartViewService.Series.Add(Series_Price);
+                AC_ChartViewService.Titles.Add("Statictis by Services");
+                AC_ChartViewService.ChartAreas[0].AxisY.Maximum = max * 1.1;
+                AC_ChartViewService.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                AC_ChartViewService.Show();
+            }
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -231,6 +327,15 @@ namespace Housekeeping
             sw.Close();
             tb_OldPass.Text = "";
             tb_NewPass.Text = "";
+        }
+
+        private void guna2ComboBox3_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Load_Statistics_Service();
+        }
+
+        private void cb_settings_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

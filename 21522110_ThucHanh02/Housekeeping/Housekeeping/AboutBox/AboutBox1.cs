@@ -18,11 +18,6 @@ namespace Housekeeping
         {
             InitializeComponent();
         }
-        #region Define Path file
-        private const string filePathData = @"C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh02\Housekeeping\dataUser\DataCart.txt";
-        #endregion
-        #region
-        #endregion
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -37,49 +32,56 @@ namespace Housekeeping
                 MessageBox.Show("Please Fill Your Address", "Empty Address", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-            {
+            { 
                 Random rdn = new Random();
                 DateTime dateTime = DateTime.UtcNow.Date;
-                using (StreamWriter writer = new StreamWriter(filePathData, true))
+                string filePathData = Constants.dataUser + "/" + userInfor.Split('_')[1] + "/DataCart.txt";
+                string address;
+                string modePayment;
+                string OrderId = rdn.Next(0,9999).ToString("0000");
+                if(check_NewAddress.Checked)
                 {
-                    string address;
-                    string modePayment;
-                    string OrderId = "#"+rdn.Next().ToString();
-                    if(check_NewAddress.Checked)
-                    {
-                        address = txt_NewAddress.Text;
-                    }
-                    else
-                    {
-                        address = txt_CurrentAddress.Text;
-                    }
-                    if(check_cash.Checked)
-                    {
-                        modePayment = "Cash";
-                    }
-                    else
-                    {
-                        modePayment = "Smart Banking";
-                    }
+                    address = txt_NewAddress.Text;
+                }
+                else
+                {
+                    address = txt_CurrentAddress.Text;
+                }
+                if(check_cash.Checked)
+                {
+                    modePayment = "Cash";
+                }
+                else
+                {
+                    modePayment = "Smart Banking";
+                }
+                int idx = 0;
+                using (StreamWriter streamWriter = new StreamWriter(filePathData,true))
+                {
                     foreach (DataRow service in datatableCart.Rows)
                     {
                         string inforOrder;
-                        inforOrder =  OrderId+ "_"
-                            + service["ID"].ToString() + "_" + service["Service"].ToString() + "_"
+                        inforOrder = OrderId + "_"
+                            + idx.ToString() + "_" + service["Service"].ToString() + "_"
                             + service["Service Detail"].ToString() + "_" + service["Price"].ToString() + "_"
-                            + date_do.Value.ToString("dd/MM/yyyy") + "_" + "Doing" +"_"+ address + "_" +modePayment;
-                        writer.WriteLine(inforOrder);
+                            + date_do.Value.ToString("dd/MM/yyyy") + "_" + time_do.Value.ToString("HH:mm:ss") +
+                            "_" + dateTime.ToString("dd/MM/yyyy") +
+                            "_" + "Doing" + "_" + address + "_" + modePayment;
+                        streamWriter.WriteLine(inforOrder);
+                        idx++;
                     }
-                    writer.Close();
-                    //After confirm the order => Clear box checked of service
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    streamWriter.Close();
                 }
-            }
+                //After confirm the order => Clear box checked of service
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+                }
         }
         DataTable datatableCart = new DataTable();
-        public void VisualizeData(List<string> elChecked, Dictionary<string, string> dataPrice, Dictionary<string, string> dataPropertyService,string address)
+        public string userInfor;
+        public void VisualizeData(List<string> elChecked, Dictionary<string, string> dataPrice, Dictionary<string, string> dataPropertyService,string address,string user)
         {
+            userInfor = user;
             datatableCart.Clear();
             datatableCart.Columns.Clear();
             datatableCart.Columns.Add("ID", typeof(string));
