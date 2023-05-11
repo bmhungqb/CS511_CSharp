@@ -10,8 +10,8 @@
 1585_1_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 1585_2_Cooking_4 Dishes_300000_09/05/2023_19:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 0692_0_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
-6039_0_Cooking_2 Dishes_150000_26/05/2023_01:24:00_10/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
-6039_1_Cooking_3 Dishes_200000_26/05/2023_01:24:00_10/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6039_0_Cooking_2 Dishes_150000_26/05/2023_01:24:00_10/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6039_1_Cooking_3 Dishes_200000_26/05/2023_01:24:00_10/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 6039_2_Cleaning_Living room_200000_26/05/2023_01:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 6039_3_Cleaning_Living room_300000_26/05/2023_01:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 6039_4_Laundry_Laundrying_100000_26/05/2023_01:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
@@ -20,6 +20,19 @@
 6039_7_Laundry_Laundrying & Ironing_200000_26/05/2023_01:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 2323_0_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 2323_1_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
-4635_0_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+4635_0_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
 4635_1_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
-5489_0_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+5489_0_Cooking_3 Dishes_200000_09/05/2023_19:24:00_10/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+5811_0_Cleaning_Living room_200000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+5811_1_Cleaning_Living room_300000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+5855_0_Laundry_Laundrying_100000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+5855_1_Laundry_Laundrying & Ironing_200000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_0_Cooking_3 Dishes_200000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_1_Cooking_2 Dishes_150000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_2_Cleaning_Living room_150000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_3_Cleaning_Living & Chicken room_500000_09/05/2023_19:24:00_11/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_4_Cleaning_Living room_300000_09/05/2023_19:24:00_11/05/2023_Cancel_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_5_Laundry_Laundrying_100000_09/05/2023_19:24:00_11/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_6_Laundry_Laundrying & Ironing_200000_09/05/2023_19:24:00_11/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_7_Laundry_Laundrying & Ironing & Folding_300000_09/05/2023_19:24:00_11/05/2023_Done_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash
+6567_8_Laundry_Laundrying & Ironing_200000_09/05/2023_19:24:00_11/05/2023_Doing_Đức Ninh Đông - Đồng Hới - Quảng Bình_Cash

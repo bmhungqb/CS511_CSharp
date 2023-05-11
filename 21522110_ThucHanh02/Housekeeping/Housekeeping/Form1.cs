@@ -42,6 +42,7 @@ namespace Housekeeping
         }
         public void updateInfor(string userInfor)
         {
+            UserInfor = userInfor;
             HomePage.updateHome(userInfor);
             AccountPage.UpdateAcount(userInfor);
             ServicePage.GetCurrentAddress(userInfor);
@@ -120,6 +121,8 @@ namespace Housekeeping
                 btn_Activity.Checked = false;
                 btn_Message.Checked = false;
                 btn_Service.Checked = false;
+                AccountPage.Load_history();
+                AccountPage.Load_Statistics_Service();
             }
         }
         public void HandleLogout()

@@ -208,5 +208,28 @@ namespace Housekeeping
                 }
             }
         }
+
+        private void btn_Done_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Confirm ?", "Confirm done services", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (res == DialogResult.Yes)
+            {
+                if (dataGridActive.SelectedRows.Count == 0) return;
+                string filePathData = Constants.dataUser + "/" + userInfor.Split('_')[1] + "/DataCart.txt";
+                if (!File.Exists(filePathData)) return;
+                string[] lines = File.ReadAllLines(filePathData);
+                foreach (DataGridViewRow row in dataGridActive.SelectedRows)
+                {
+                    int lineNumber = Array.FindIndex(lines, line => line.Contains(row.Cells[0].Value.ToString()));
+                    if (lineNumber >= 0)
+                    {
+                        lines[lineNumber] = lines[lineNumber].Replace("Doing", "Done");
+                        dataGridActive.Rows.RemoveAt(row.Index);
+                        File.WriteAllLines(filePathData, lines);
+                    }
+
+                }
+            }
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace Housekeeping
         // Format store data
         //OrderId_Id_NameService_DetailService_Price_DayOrder_Status_Adress_ModePayment
         DataTable table = new DataTable();
-        private void Load_history()
+        public void Load_history()
         {
             table.Clear();
             table.Columns.Clear();
@@ -89,7 +89,11 @@ namespace Housekeeping
                         row[4] = infor[5];
                         row[5] = infor[6];
                         row[6] = infor[8];
-                        table.Rows.Add(row);
+                        try
+                        {
+                            table.Rows.Add(row);
+                        }
+                        catch { }
                     }
 
                 }
@@ -102,7 +106,7 @@ namespace Housekeeping
             AC_dataHistoryView.Columns[4].Width = 80;
         }
         // Format store data
-        private void Load_Statistics_Service()
+        public void Load_Statistics_Service()
         {
             AC_ChartViewService.Series.Clear();
             AC_ChartViewService.Titles.Clear();
@@ -275,16 +279,12 @@ namespace Housekeeping
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
-            avatar.Image.Dispose();
             savePath = Constants.dataUser + "/" + USER.Split('_')[1] + "/avatar.png";
+            avatar.Image.Dispose();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 avatar.Image = Image.FromFile(openFileDialog.FileName);
                 avatar.Image.Save(savePath, System.Drawing.Imaging.ImageFormat.Png);
-            }
-            else
-            {
-                avatar.Image = Image.FromFile(savePath);
             }
         }
 
@@ -325,10 +325,13 @@ namespace Housekeeping
             sw.WriteLine(tb_Phone.Text);
             sw.WriteLine(tb_Gmail.Text);
             sw.Close();
+            string userinfor = infor[0] + "_" + infor[1] + "_" + infor[2] + "_" + tb_Name.Text + "_" + tb_Birthday.Value.ToString("yyyy-MM-dd hh:mm tt") +
+                "_" + tb_Sex.Text + "_" + tb_Address.Text + "_" + tb_Phone.Text + "_" + tb_Gmail.Text+"_";
             tb_OldPass.Text = "";
             tb_NewPass.Text = "";
+            var mainForm = Application.OpenForms.OfType<Form1>().Single();
+            mainForm.updateInfor(userinfor);
         }
-
         private void guna2ComboBox3_SelectedValueChanged(object sender, EventArgs e)
         {
             Load_Statistics_Service();
