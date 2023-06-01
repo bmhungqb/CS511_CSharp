@@ -17,3 +17,5 @@ C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\bin\Debug\Interop.WMPLib.dll
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\obj\Debug\GameMini.UserControls.game.resources
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\obj\Debug\GameMini.AboutBox.AboutBox1.resources
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\obj\Debug\GameMini.UserControls.GameBoard.resources
