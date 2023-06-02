@@ -45433,7 +45433,7 @@
   <data name="speaker_hint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAABENJREFUaEPNWktrE1EY7cLnPxBduBHUzPisi7ZJja0uFEHRhY9FS+ujoDZBQa0T
+        DQAACw0B7QfALAAABENJREFUaEPNWktrE1EY7cLnPxBduBHUzPisi7ZJja0uFEHRhY9FS+ujoDZBQa0T
         U4uCBesDpW6UolRx0aco1YW2oLZFK2jVtKK29VEViqILHzvh+t30G3Pv551pkpk8Dhwaer977vkmJ3Nn
         MslJN/w1/km+kLbbZ+jd3pD2C15/94b0Hp+h7eJjWJad8Ibna2A44gvpzIKPCw7MnYnl2YXC0IIyOMq/
         FaYleg29z18zexpOyzzy9uVNB+MXVGYtaXh24vTMgkcG8j2oMhmsK2e3L7eyW5fb2M7azdIYvAu9KJE5
@@ -45454,10 +45454,10 @@
         /nObBRWwZ9yDZr5zwqn3Prw7SfzcJifnL09tKy056RcQAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2CirclePictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_submit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAABIFJREFUaEPtmf1vU1UYx7tf+jwl0HPODD/wo4J/CoURNTqrtmsimsgvZjiUGJRk
+        DQAACw0B7QfALAAABIFJREFUaEPtmf1vU1UYx7tf+jwl0HPODD/wo4J/CoURNTqrtmsimsgvZjiUGJRk
         cYljgyUkkiwjECUSzBZYJNMRnFOEZerAuhcqrGvXjZeESORla91LS5Trc7oT262n771tNXxvPsnZPd/n
         Od/b7d7ee2d5ov+F3t643vqO2AGN/CDuFv3YyKdgt3hI40eSlTH3Y6P4msbt1kZRJ2tUdcVUY20SdbCH
         n8E9IkoYedHEl6GJn4Z3xXbZa6VlmWR7r/YV3Ct8hFEiJmx7Wb1qb56s7294FveJ7wnDHPggfGDfopYr

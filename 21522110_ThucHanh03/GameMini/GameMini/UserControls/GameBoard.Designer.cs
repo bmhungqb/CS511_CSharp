@@ -36,10 +36,10 @@
             this.btn_stop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_finish = new Guna.UI2.WinForms.Guna2GradientButton();
             this.speaker_hint = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.tb_typeRes = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_submit = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lb_questionview = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lb_scoreview = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_game = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -47,7 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_bg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speaker_hint)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_game)).BeginInit();
             this.SuspendLayout();
@@ -86,13 +86,14 @@
             this.timer_show.AutoSize = false;
             this.timer_show.BackColor = System.Drawing.Color.Transparent;
             this.timer_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.timer_show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timer_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timer_show.Location = new System.Drawing.Point(506, 76);
             this.timer_show.Name = "timer_show";
-            this.timer_show.Size = new System.Drawing.Size(57, 57);
+            this.timer_show.Size = new System.Drawing.Size(57, 53);
             this.timer_show.TabIndex = 2;
-            this.timer_show.Text = "10";
-            this.timer_show.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timer_show.Text = null;
+            this.timer_show.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btn_stop
             // 
@@ -105,9 +106,9 @@
             this.btn_stop.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_stop.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stop.ForeColor = System.Drawing.Color.White;
-            this.btn_stop.Location = new System.Drawing.Point(838, 12);
+            this.btn_stop.Location = new System.Drawing.Point(806, 12);
             this.btn_stop.Name = "btn_stop";
-            this.btn_stop.Size = new System.Drawing.Size(120, 45);
+            this.btn_stop.Size = new System.Drawing.Size(130, 45);
             this.btn_stop.TabIndex = 3;
             this.btn_stop.Text = "STOP";
             this.btn_stop.UseTransparentBackground = true;
@@ -124,9 +125,9 @@
             this.btn_finish.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_finish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_finish.ForeColor = System.Drawing.Color.White;
-            this.btn_finish.Location = new System.Drawing.Point(973, 12);
+            this.btn_finish.Location = new System.Drawing.Point(950, 12);
             this.btn_finish.Name = "btn_finish";
-            this.btn_finish.Size = new System.Drawing.Size(120, 45);
+            this.btn_finish.Size = new System.Drawing.Size(130, 45);
             this.btn_finish.TabIndex = 4;
             this.btn_finish.Text = "FINISH";
             this.btn_finish.UseTransparentBackground = true;
@@ -145,62 +146,66 @@
             this.speaker_hint.TabIndex = 5;
             this.speaker_hint.TabStop = false;
             this.speaker_hint.UseTransparentBackground = true;
+            this.speaker_hint.Click += new System.EventHandler(this.speaker_hint_Click);
             // 
-            // guna2TextBox1
+            // tb_typeRes
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(376, 402);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(312, 48);
-            this.guna2TextBox1.TabIndex = 6;
+            this.tb_typeRes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tb_typeRes.DefaultText = "";
+            this.tb_typeRes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tb_typeRes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tb_typeRes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_typeRes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tb_typeRes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_typeRes.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_typeRes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tb_typeRes.Location = new System.Drawing.Point(376, 402);
+            this.tb_typeRes.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tb_typeRes.Name = "tb_typeRes";
+            this.tb_typeRes.PasswordChar = '\0';
+            this.tb_typeRes.PlaceholderText = "";
+            this.tb_typeRes.SelectedText = "";
+            this.tb_typeRes.Size = new System.Drawing.Size(312, 48);
+            this.tb_typeRes.TabIndex = 6;
             // 
-            // guna2CirclePictureBox2
+            // btn_submit
             // 
-            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(694, 402);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.guna2CirclePictureBox2.TabIndex = 7;
-            this.guna2CirclePictureBox2.TabStop = false;
-            this.guna2CirclePictureBox2.UseTransparentBackground = true;
+            this.btn_submit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_submit.Image = ((System.Drawing.Image)(resources.GetObject("btn_submit.Image")));
+            this.btn_submit.ImageRotate = 0F;
+            this.btn_submit.Location = new System.Drawing.Point(694, 402);
+            this.btn_submit.Name = "btn_submit";
+            this.btn_submit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_submit.Size = new System.Drawing.Size(48, 48);
+            this.btn_submit.TabIndex = 7;
+            this.btn_submit.TabStop = false;
+            this.btn_submit.UseTransparentBackground = true;
+            this.btn_submit.Click += new System.EventHandler(this.submit_click);
             // 
-            // guna2HtmlLabel2
+            // lb_questionview
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(28, 70);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(127, 26);
-            this.guna2HtmlLabel2.TabIndex = 8;
-            this.guna2HtmlLabel2.Text = "Question: 1/5";
+            this.lb_questionview.BackColor = System.Drawing.Color.Transparent;
+            this.lb_questionview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lb_questionview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lb_questionview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_questionview.Location = new System.Drawing.Point(28, 70);
+            this.lb_questionview.Name = "lb_questionview";
+            this.lb_questionview.Size = new System.Drawing.Size(131, 30);
+            this.lb_questionview.TabIndex = 8;
+            this.lb_questionview.Text = "Question: 1/5";
             // 
-            // guna2HtmlLabel3
+            // lb_scoreview
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(28, 126);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(81, 26);
-            this.guna2HtmlLabel3.TabIndex = 9;
-            this.guna2HtmlLabel3.Text = "Score: 0";
+            this.lb_scoreview.BackColor = System.Drawing.Color.Transparent;
+            this.lb_scoreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lb_scoreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lb_scoreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_scoreview.Location = new System.Drawing.Point(28, 126);
+            this.lb_scoreview.Name = "lb_scoreview";
+            this.lb_scoreview.Size = new System.Drawing.Size(85, 30);
+            this.lb_scoreview.TabIndex = 9;
+            this.lb_scoreview.Text = "Score: 0";
             // 
             // guna2CirclePictureBox3
             // 
@@ -247,10 +252,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.img_game);
             this.Controls.Add(this.guna2CirclePictureBox3);
-            this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2CirclePictureBox2);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.lb_scoreview);
+            this.Controls.Add(this.lb_questionview);
+            this.Controls.Add(this.btn_submit);
+            this.Controls.Add(this.tb_typeRes);
             this.Controls.Add(this.speaker_hint);
             this.Controls.Add(this.btn_finish);
             this.Controls.Add(this.btn_stop);
@@ -262,7 +267,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_bg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.speaker_hint)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_game)).EndInit();
             this.ResumeLayout(false);
@@ -278,10 +283,10 @@
         private Guna.UI2.WinForms.Guna2GradientButton btn_stop;
         private Guna.UI2.WinForms.Guna2GradientButton btn_finish;
         private Guna.UI2.WinForms.Guna2PictureBox speaker_hint;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2TextBox tb_typeRes;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox btn_submit;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lb_questionview;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lb_scoreview;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox img_game;
         private System.Windows.Forms.Timer timer1;

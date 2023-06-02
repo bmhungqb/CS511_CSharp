@@ -16,7 +16,8 @@ using System.Threading;
 using System.Diagnostics;
 using GameMini.AboutBox;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-
+using System.Collections;
+using System.Speech.Synthesis;
 namespace GameMini.UserControls
 {
     public partial class GameBoard : UserControl
@@ -26,25 +27,42 @@ namespace GameMini.UserControls
             InitializeComponent();
             CreateGame(data);
             setupGame();
+            dataGame = data;
         }
         #region Define const path
         const string path_bgGame = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/BackgroundGame";
         const string path_dataGame = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/Game";
         #endregion
         #region Define data game
+        Dictionary<string, string> resultFinal = new Dictionary<string, string>();
         string[] Images;
+        List<string> ExactResult = new List<string>();
         List<int> OrderImage = new List<int>();
         int timer = 0;
         int timerCurrent = 0;
+        int currentQuestion = 0;
+        int resPoint = 0;
+        int resTime = 0;
+        Dictionary<string, string> dataGame;
+        #endregion
+        #region define speaker
+        SpeechSynthesizer synthesizer = new SpeechSynthesizer();
         #endregion
         private void setupGame()
         {
-            img_game.Image = Image.FromFile(Images[OrderImage[0]]);
+            updateResView();
+            img_game.Image = Image.FromFile(Images[OrderImage[currentQuestion]]);
+            timer1.Start();
         }
         private void CreateGame(Dictionary<string, string> data)
         {
             string path_data = path_dataGame + "/" + data["Topic"] + "/" + data["Level"];
             Images = Directory.GetFiles(path_data);
+            foreach(string i in  Images)
+            {
+                string res = i.Split('/')[15].Split('\\')[1].Split('.')[0];
+                ExactResult.Add(res);
+            }
             if (data["NewGame"] == "True")
             {
                 Random random = new Random();
@@ -80,7 +98,38 @@ namespace GameMini.UserControls
                 speaker_hint.Visible = false;
             }
             timerCurrent = timer;
-            timer1.Start();
+        }
+        private void updateResView()
+        {
+            lb_questionview.Text = "Question: " + (currentQuestion+1).ToString() + "/5";
+            lb_scoreview.Text = "Score: " + resPoint.ToString();
+        }
+        private void submit_result()
+        {
+            timer1.Stop();
+            //Check result and update point
+            if(tb_typeRes.Text.ToLower() == ExactResult[OrderImage[currentQuestion]].ToLower())
+            {
+                resPoint += 10;
+            }
+            else
+            {
+                resPoint += 0;
+            }
+            // update update result time
+            resTime += timer - timerCurrent;
+            // check: continue or finish
+            tb_typeRes.Text = "";
+            if (currentQuestion < 4)
+            {
+                timerCurrent = timer;
+                currentQuestion++;
+                setupGame();
+            }
+            else
+            {
+                EndGame();
+            }
         }
         private void timer_tick(object sender, EventArgs e)
         {
@@ -89,28 +138,36 @@ namespace GameMini.UserControls
                 timerCurrent--;
                 timer_show.Text = timerCurrent.ToString();
             }
-            else if(OrderImage.Count > 0)
+            else if(timerCurrent == 0)
             {
-                timer1.Stop();
-                OrderImage.RemoveAt(0);
-                timerCurrent = timer;
-                setupGame();
-                timer1.Start();
+                submit_result();
             }
-            else if(OrderImage.Count == 0)
-            {
-                timer1.Stop();
-                EndGame();
-            }
+        }
+        private void resetGame()
+        {
+            ExactResult.Clear();
+            OrderImage.Clear();
+            timer = 0;
+            timerCurrent = 0;
+            currentQuestion = 0;
+            resPoint = 0;
+            resTime = 0;
+            CreateGame(dataGame);
+            setupGame();
         }
         private void EndGame()
         {
-            ViewResult viewResult = new ViewResult();
-            DialogResult result = viewResult.ShowDialog();
+            resultFinal.Clear();
+            resultFinal.Add("Point", resPoint.ToString());
+            resultFinal.Add("Time", resTime.ToString());
+            resultFinal.Add("Topic", dataGame["Topic"]);
+            resultFinal.Add("Level", dataGame["Level"]);
             Control parentControl = this.Parent;
+            ViewResult viewResult = new ViewResult(resultFinal);
+            DialogResult result = viewResult.ShowDialog();
             if (result == DialogResult.OK)
             {
-                parentControl.Controls.Remove(this);
+                resetGame();
             }
             else
             {
@@ -120,6 +177,7 @@ namespace GameMini.UserControls
 
         private void btn_click(object sender, EventArgs e)
         {
+            timer1.Stop();
             Guna2GradientButton btn = sender as Guna2GradientButton;    
             if(btn.Name == "btn_stop")
             {
@@ -133,6 +191,23 @@ namespace GameMini.UserControls
             {
                 EndGame();
             }
+        }
+
+        private void submit_click(object sender, EventArgs e)
+        {
+            submit_result();
+        }
+
+        private void speaker_hint_Click(object sender, EventArgs e)
+        {
+            synthesizer.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Adult);
+
+            // Set the rate of speech
+            synthesizer.Rate = 0; // Default value is 0, range: -10 to 10
+
+            // Set the volume
+            synthesizer.Volume = 100; // Default value is 100, range: 0 to 100
+            synthesizer.Speak(ExactResult[OrderImage[currentQuestion]]);
         }
     }
 }

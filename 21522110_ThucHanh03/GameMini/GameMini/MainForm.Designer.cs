@@ -73,6 +73,7 @@
             this.pnl_Home.Name = "pnl_Home";
             this.pnl_Home.Size = new System.Drawing.Size(1100, 600);
             this.pnl_Home.TabIndex = 2;
+            this.pnl_Home.UseTransparentBackground = true;
             // 
             // speaker_bg
             // 
@@ -93,6 +94,7 @@
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.BorderRadius = 25;
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_exit);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton4);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2TextBox1);
@@ -101,10 +103,10 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton3);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton2);
             this.guna2CustomGradientPanel1.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(81)))), ((int)(((byte)(121)))));
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(176)))), ((int)(((byte)(218)))));
-            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(212)))), ((int)(((byte)(255)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Black;
             this.guna2CustomGradientPanel1.ForeColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(324, 59);
@@ -248,6 +250,7 @@
             // gamePage
             // 
             this.gamePage.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.gamePage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gamePage.BackgroundImage")));
             this.gamePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gamePage.Location = new System.Drawing.Point(0, 0);
             this.gamePage.Name = "gamePage";
