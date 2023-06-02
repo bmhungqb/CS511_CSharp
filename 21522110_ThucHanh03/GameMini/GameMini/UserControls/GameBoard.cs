@@ -18,6 +18,7 @@ using GameMini.AboutBox;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Collections;
 using System.Speech.Synthesis;
+using WMPLib;
 namespace GameMini.UserControls
 {
     public partial class GameBoard : UserControl
@@ -108,13 +109,19 @@ namespace GameMini.UserControls
         {
             timer1.Stop();
             //Check result and update point
+
             if(tb_typeRes.Text.ToLower() == ExactResult[OrderImage[currentQuestion]].ToLower())
             {
                 resPoint += 10;
+                media_sound_res.URL = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/drive-download-20230529T014147Z-001/correct_Sound.mp3";
+                media_sound_res.settings.volume = 100;
+                media_sound_res.Visible = false;
             }
             else
             {
                 resPoint += 0;
+                media_sound_res.URL = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/drive-download-20230529T014147Z-001/wrong_Sound.mp3"; ;
+                media_sound_res.Visible = false;
             }
             // update update result time
             resTime += timer - timerCurrent;

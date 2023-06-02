@@ -59,6 +59,12 @@
     <Compile Include="AboutBox\AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="AboutBox\AddNewWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox\AddNewWord.Designer.cs">
+      <DependentUpon>AddNewWord.cs</DependentUpon>
+    </Compile>
     <Compile Include="AboutBox\ViewResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Dictionary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Dictionary.Designer.cs">
+      <DependentUpon>Dictionary.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\game.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,8 +97,17 @@
     <Compile Include="UserControls\GameBoard.Designer.cs">
       <DependentUpon>GameBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ScoreBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ScoreBoard.Designer.cs">
+      <DependentUpon>ScoreBoard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutBox\AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox\AddNewWord.resx">
+      <DependentUpon>AddNewWord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AboutBox\ViewResult.resx">
       <DependentUpon>ViewResult.cs</DependentUpon>
@@ -99,11 +120,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Dictionary.resx">
+      <DependentUpon>Dictionary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\game.resx">
       <DependentUpon>game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GameBoard.resx">
       <DependentUpon>GameBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ScoreBoard.resx">
+      <DependentUpon>ScoreBoard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

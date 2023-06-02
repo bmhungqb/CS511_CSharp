@@ -102,7 +102,7 @@ namespace GameMini.AboutBox
         Dictionary<string, string> data;
         private void SaveGame(Dictionary<string, string> result)
         {
-            string res = result["Level"] + '_' + result["Topic"] + '_' + result["Point"] + '_' + result["Time"] + '_' + tb_name.Text;
+            string res = result["Level"] + '_' + result["Topic"] + '_' + result["Point"] + '_' + result["Time"] + '_' + tb_name.Text + '_' + DateTime.Now.ToString("yyyy-MM-dd");
             string path = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/Ranking/SaveGame.txt";
             using (StreamWriter streamWriter = new StreamWriter(path, true))
             {

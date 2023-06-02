@@ -44,12 +44,14 @@
             this.img_game = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.media_sound_res = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pic_bg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.speaker_hint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_game)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.media_sound_res)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_bg
@@ -246,10 +248,21 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // media_sound_res
+            // 
+            this.media_sound_res.Enabled = true;
+            this.media_sound_res.Location = new System.Drawing.Point(28, 162);
+            this.media_sound_res.Name = "media_sound_res";
+            this.media_sound_res.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("media_sound_res.OcxState")));
+            this.media_sound_res.Size = new System.Drawing.Size(75, 23);
+            this.media_sound_res.TabIndex = 14;
+            this.media_sound_res.Visible = false;
+            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.media_sound_res);
             this.Controls.Add(this.img_game);
             this.Controls.Add(this.guna2CirclePictureBox3);
             this.Controls.Add(this.lb_scoreview);
@@ -270,6 +283,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_submit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_game)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.media_sound_res)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,5 +305,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox img_game;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private AxWMPLib.AxWindowsMediaPlayer media_sound_res;
     }
 }
