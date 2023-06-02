@@ -35,7 +35,7 @@
             this.timer_show = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_stop = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_finish = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.speaker_hint = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -46,7 +46,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pic_bg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speaker_hint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_game)).BeginInit();
@@ -62,7 +62,6 @@
             this.pic_bg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_bg.TabIndex = 0;
             this.pic_bg.TabStop = false;
-            this.pic_bg.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -81,13 +80,19 @@
             // 
             // timer_show
             // 
+            this.timer_show.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.timer_show.AutoSize = false;
             this.timer_show.BackColor = System.Drawing.Color.Transparent;
+            this.timer_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.timer_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timer_show.Location = new System.Drawing.Point(506, 76);
             this.timer_show.Name = "timer_show";
             this.timer_show.Size = new System.Drawing.Size(57, 57);
             this.timer_show.TabIndex = 2;
             this.timer_show.Text = "10";
+            this.timer_show.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_stop
             // 
@@ -127,19 +132,19 @@
             this.btn_finish.UseTransparentBackground = true;
             this.btn_finish.Click += new System.EventHandler(this.btn_click);
             // 
-            // guna2PictureBox2
+            // speaker_hint
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(694, 302);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.guna2PictureBox2.TabIndex = 5;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
+            this.speaker_hint.BackColor = System.Drawing.Color.Transparent;
+            this.speaker_hint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.speaker_hint.FillColor = System.Drawing.Color.Transparent;
+            this.speaker_hint.Image = ((System.Drawing.Image)(resources.GetObject("speaker_hint.Image")));
+            this.speaker_hint.ImageRotate = 0F;
+            this.speaker_hint.Location = new System.Drawing.Point(694, 302);
+            this.speaker_hint.Name = "speaker_hint";
+            this.speaker_hint.Size = new System.Drawing.Size(48, 48);
+            this.speaker_hint.TabIndex = 5;
+            this.speaker_hint.TabStop = false;
+            this.speaker_hint.UseTransparentBackground = true;
             // 
             // guna2TextBox1
             // 
@@ -153,6 +158,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(376, 402);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -245,7 +251,7 @@
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2CirclePictureBox2);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.speaker_hint);
             this.Controls.Add(this.btn_finish);
             this.Controls.Add(this.btn_stop);
             this.Controls.Add(this.timer_show);
@@ -255,7 +261,7 @@
             this.Size = new System.Drawing.Size(1100, 600);
             ((System.ComponentModel.ISupportInitialize)(this.pic_bg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speaker_hint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img_game)).EndInit();
@@ -271,7 +277,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel timer_show;
         private Guna.UI2.WinForms.Guna2GradientButton btn_stop;
         private Guna.UI2.WinForms.Guna2GradientButton btn_finish;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox speaker_hint;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;

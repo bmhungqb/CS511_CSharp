@@ -14,6 +14,9 @@ using System.IO;
 using System.Timers;
 using System.Threading;
 using System.Diagnostics;
+using GameMini.AboutBox;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+
 namespace GameMini.UserControls
 {
     public partial class GameBoard : UserControl
@@ -22,33 +25,38 @@ namespace GameMini.UserControls
         {
             InitializeComponent();
             CreateGame(data);
+            setupGame();
         }
-        #region
+        #region Define const path
         const string path_bgGame = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/BackgroundGame";
         const string path_dataGame = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/Game";
-        int time = 10;
         #endregion
-        private void setupGame(string path)
+        #region Define data game
+        string[] Images;
+        List<int> OrderImage = new List<int>();
+        int timer = 0;
+        int timerCurrent = 0;
+        #endregion
+        private void setupGame()
         {
-            img_game.Image = Image.FromFile(path);
+            img_game.Image = Image.FromFile(Images[OrderImage[0]]);
         }
         private void CreateGame(Dictionary<string, string> data)
         {
             string path_data = path_dataGame + "/" + data["Topic"] + "/" + data["Level"];
-            string[] images = Directory.GetFiles(path_data);
-            List<int> listGame = new List<int>();
+            Images = Directory.GetFiles(path_data);
             if (data["NewGame"] == "True")
             {
                 Random random = new Random();
                 int idx_background = random.Next(1, 7);
                 string path_bg = path_bgGame + '/' + idx_background.ToString() + ".jpg";
                 pic_bg.Image = Image.FromFile(path_bg);
-                while(listGame.Count != 5)
+                while(OrderImage.Count != 5)
                 {
-                    int rdn = random.Next(0,images.Length-1);
-                    if(!listGame.Contains(rdn))
+                    int rdn = random.Next(0,Images.Length-1);
+                    if(!OrderImage.Contains(rdn))
                     {
-                        listGame.Add(rdn);  
+                        OrderImage.Add(rdn);  
                     }
                 }
             }
@@ -56,27 +64,58 @@ namespace GameMini.UserControls
             {
 
             }
-                setupGame(images[listGame[0]]);
-            //for (int i = 0; i < listGame.Count; i++)
-            //{
-            //    Stopwatch stopwatch = new Stopwatch();
-            //    stopwatch.Start();
-
-            //    while (stopwatch.Elapsed.TotalSeconds < 10)
-            //    {
-            //    }
-
-            //    stopwatch.Stop();
-            //}
+            if (data["Level"] == "easy")
+            {
+                timer = 20;
+                speaker_hint.Visible = true;
+            }
+            else if (data["Level"] == "medium")
+            {
+                timer = 10;
+                speaker_hint.Visible= false;
+            }
+            else if (data["Level"] == "hard")
+            {
+                timer = 5;
+                speaker_hint.Visible = false;
+            }
+            timerCurrent = timer;
+            timer1.Start();
         }
         private void timer_tick(object sender, EventArgs e)
         {
-            time--;
-            timer_show.Text = time.ToString(); 
+            if (timerCurrent > 0)
+            {
+                timerCurrent--;
+                timer_show.Text = timerCurrent.ToString();
+            }
+            else if(OrderImage.Count > 0)
+            {
+                timer1.Stop();
+                OrderImage.RemoveAt(0);
+                timerCurrent = timer;
+                setupGame();
+                timer1.Start();
+            }
+            else if(OrderImage.Count == 0)
+            {
+                timer1.Stop();
+                EndGame();
+            }
         }
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void EndGame()
         {
-
+            ViewResult viewResult = new ViewResult();
+            DialogResult result = viewResult.ShowDialog();
+            Control parentControl = this.Parent;
+            if (result == DialogResult.OK)
+            {
+                parentControl.Controls.Remove(this);
+            }
+            else
+            {
+                parentControl.Controls.Remove(this);
+            }
         }
 
         private void btn_click(object sender, EventArgs e)
@@ -92,11 +131,7 @@ namespace GameMini.UserControls
             }
             else if(btn.Name == "btn_finish")
             {
-                Control parentControl = this.Parent;
-                if(parentControl != null)
-                {
-                    parentControl.Controls.Remove(this);
-                }
+                EndGame();
             }
         }
     }
