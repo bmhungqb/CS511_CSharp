@@ -73,16 +73,27 @@ namespace GameMini.UserControls
 
         private void dataGridDictionary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int targetColumnIndex = 3; // Specify the column index where the action should be performed
-
-            if (e.RowIndex >= 0 && e.ColumnIndex == targetColumnIndex)
+            string txt = dataGridDictionary.Rows[e.RowIndex].Cells["Text"].Value?.ToString();
+            string path_image = path_dic + '/' + cb_topic.SelectedItem.ToString() + "/" + txt + ".png";
+            if (e.RowIndex >= 0 && e.ColumnIndex == 3)
             {
-                // Perform the desired action here for the clicked row and column
-                // For example, delete the row:
                 DialogResult res =  MessageBox.Show("Are you sure ?", "Delete", MessageBoxButtons.YesNo);
-                if(res == DialogResult.Yes)
+                if (res == DialogResult.Yes)
                 {
+                    DataGridViewRow row = dataGridDictionary.Rows[e.RowIndex];
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value is IDisposable disposableValue)
+                        {
+                            disposableValue.Dispose();
+                        }
+                    }
+                    row.Dispose();
                     dataGridDictionary.Rows.RemoveAt(e.RowIndex);
+                    if(File.Exists(path_image))
+                    {
+                        File.Delete(path_image);    
+                    }
                 }
             }
             else if(e.RowIndex >=0 && e.ColumnIndex == 2)
@@ -94,7 +105,6 @@ namespace GameMini.UserControls
 
                 // Set the volume
                 synthesizer.Volume = 100; // Default value is 100, range: 0 to 100
-                string txt = dataGridDictionary.Rows[e.RowIndex].Cells["Text"].Value?.ToString();
                 synthesizer.Speak(txt);
             }
         }
