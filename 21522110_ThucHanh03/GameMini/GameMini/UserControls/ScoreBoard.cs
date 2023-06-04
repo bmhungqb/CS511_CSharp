@@ -132,6 +132,7 @@ namespace GameMini.UserControls
             string[] row = new string[5];   
             if (option == "easy")
             {
+                data.Rows.Clear();
                 for (int i =0;i < sc_easy.Count;i++)
                 {
                     if (i > 4) return;
@@ -145,6 +146,7 @@ namespace GameMini.UserControls
             }
             else if (option == "medium")
             {
+                data.Rows.Clear();
                 for (int i = 0; i < sc_medium.Count; i++)
                 {
                     if (i > 4) return;
@@ -158,6 +160,7 @@ namespace GameMini.UserControls
             }
             else
             {
+                data.Rows.Clear();
                 for (int i = 0; i < sc_hard.Count; i++)
                 {
                     if (i > 4) return;

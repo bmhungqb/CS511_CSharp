@@ -55,10 +55,12 @@ namespace GameMini
             if (media.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
                 media.Ctlcontrols.pause();
+                speaker_bg.Image = Image.FromFile("C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/icons/2203527_mute_sound_speaker_volume_icon.png");
             }
             else
             {
                 media.Ctlcontrols.play();
+                speaker_bg.Image = Image.FromFile("C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/icons/2203528_lound_sound_speaker_volume_icon (1).png");
             }
         }
 

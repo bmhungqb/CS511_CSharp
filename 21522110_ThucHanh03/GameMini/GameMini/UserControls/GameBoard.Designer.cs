@@ -43,7 +43,6 @@
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.img_game = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.media_sound_res = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pic_bg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -86,7 +85,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.timer_show.AutoSize = false;
-            this.timer_show.BackColor = System.Drawing.Color.Transparent;
+            this.timer_show.BackColor = System.Drawing.Color.White;
             this.timer_show.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.timer_show.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timer_show.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,6 +168,7 @@
             this.tb_typeRes.SelectedText = "";
             this.tb_typeRes.Size = new System.Drawing.Size(312, 48);
             this.tb_typeRes.TabIndex = 6;
+            this.tb_typeRes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_typeRes_KeyDown);
             // 
             // btn_submit
             // 
@@ -187,7 +187,7 @@
             // 
             // lb_questionview
             // 
-            this.lb_questionview.BackColor = System.Drawing.Color.Transparent;
+            this.lb_questionview.BackColor = System.Drawing.Color.White;
             this.lb_questionview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.lb_questionview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lb_questionview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,7 +199,7 @@
             // 
             // lb_scoreview
             // 
-            this.lb_scoreview.BackColor = System.Drawing.Color.Transparent;
+            this.lb_scoreview.BackColor = System.Drawing.Color.White;
             this.lb_scoreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.lb_scoreview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lb_scoreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,12 +241,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer_tick);
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // media_sound_res
             // 
@@ -304,7 +298,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox img_game;
         private System.Windows.Forms.Timer timer1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private AxWMPLib.AxWindowsMediaPlayer media_sound_res;
     }
 }

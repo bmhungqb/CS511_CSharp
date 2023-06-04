@@ -31,6 +31,7 @@ namespace GameMini.UserControls
             dataGame = data;
         }
         #region Define const path
+        string path_ContinueGame = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/Information/GameContinue.txt";
         const string path_bgGame = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/BackgroundGame";
         const string path_dataGame = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/Dataset/Game";
         #endregion
@@ -44,7 +45,7 @@ namespace GameMini.UserControls
         int currentQuestion = 0;
         int resPoint = 0;
         int resTime = 0;
-        Dictionary<string, string> dataGame;
+        Dictionary<string, string> dataGame = new Dictionary<string, string>();
         #endregion
         #region define speaker
         SpeechSynthesizer synthesizer = new SpeechSynthesizer();
@@ -57,6 +58,10 @@ namespace GameMini.UserControls
         }
         private void CreateGame(Dictionary<string, string> data)
         {
+            Random random = new Random();
+            int idx_background = random.Next(1, 7);
+            string path_bg = path_bgGame + '/' + idx_background.ToString() + ".jpg";
+            pic_bg.Image = Image.FromFile(path_bg);
             string path_data = path_dataGame + "/" + data["Topic"] + "/" + data["Level"];
             Images = Directory.GetFiles(path_data);
             foreach(string i in  Images)
@@ -66,10 +71,6 @@ namespace GameMini.UserControls
             }
             if (data["NewGame"] == "True")
             {
-                Random random = new Random();
-                int idx_background = random.Next(1, 7);
-                string path_bg = path_bgGame + '/' + idx_background.ToString() + ".jpg";
-                pic_bg.Image = Image.FromFile(path_bg);
                 while(OrderImage.Count != 5)
                 {
                     int rdn = random.Next(0,Images.Length-1);
@@ -81,7 +82,51 @@ namespace GameMini.UserControls
             }
             else
             {
-
+                
+                using (StreamReader reader = new StreamReader(path_ContinueGame)) 
+                {
+                    string res;
+                    int OrderRow = 0;
+                    while((res = reader.ReadLine()) != null)
+                    {
+                        switch(OrderRow)
+                        {
+                            case 0:
+                                Images = res.Split('#');
+                                break;
+                            case 1:
+                                ExactResult.Clear();
+                                for (int i = 0;i< res.Split('#').Length -1;i++)
+                                {
+                                    ExactResult.Add(res.Split('#')[i]);
+                                }
+                                break;
+                            case 2:
+                                dataGame["Topic"] = res;
+                                break;
+                            case 3:
+                                dataGame["Level"] = res;
+                                break;
+                            case 4:
+                                currentQuestion = int.Parse(res);
+                                break;
+                            case 5:
+                                timerCurrent = int.Parse(res);
+                                break;
+                            case 6:
+                                resPoint = int.Parse(res);
+                                break;
+                            case 7:
+                                OrderImage.Clear();
+                                for (int i = 0; i < res.Split('#').Length - 1; i++)
+                                {
+                                    OrderImage.Add(int.Parse(res.Split('#')[i]));
+                                }
+                                break;
+                        }
+                        OrderRow++;
+                    }
+                }
             }
             if (data["Level"] == "easy")
             {
@@ -188,6 +233,7 @@ namespace GameMini.UserControls
             Guna2GradientButton btn = sender as Guna2GradientButton;    
             if(btn.Name == "btn_stop")
             {
+                SaveGame();
                 Control parentControl = this.Parent;
                 if (parentControl != null)
                 {
@@ -199,7 +245,41 @@ namespace GameMini.UserControls
                 EndGame();
             }
         }
-
+        private void SaveGame()
+        {
+            string images="";
+            for(int i = 0;i<Images.Length;i++)
+            {
+                images +=Images[i]+ "#";
+            }
+            string Exactres = "";
+            for(int i  =0;i<ExactResult.Count;i++)
+            {
+                Exactres += ExactResult[i]+ "#";
+            }
+            string orderImage = "";
+            for (int i = 0; i < OrderImage.Count; i++)
+            {
+                orderImage += OrderImage[i] + "#";
+            }
+            string topic = dataGame["Topic"];
+            string level = dataGame["Level"];
+            string currentQ = currentQuestion.ToString();
+            string currentT = timerCurrent.ToString();
+            string currentS = resPoint.ToString();
+            using (StreamWriter streamWriter = new StreamWriter(path_ContinueGame,false))
+            {
+                streamWriter.WriteLine(images);
+                streamWriter.WriteLine(Exactres);
+                streamWriter.WriteLine(topic);
+                streamWriter.WriteLine(level);
+                streamWriter.WriteLine(currentQ);
+                streamWriter.WriteLine(currentT);
+                streamWriter.WriteLine(currentS);
+                streamWriter.WriteLine(orderImage);
+                streamWriter.Close();
+            }
+        }
         private void submit_click(object sender, EventArgs e)
         {
             submit_result();
@@ -215,6 +295,14 @@ namespace GameMini.UserControls
             // Set the volume
             synthesizer.Volume = 100; // Default value is 100, range: 0 to 100
             synthesizer.Speak(ExactResult[OrderImage[currentQuestion]]);
+        }
+
+        private void tb_typeRes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                submit_result();
+            }
         }
     }
 }

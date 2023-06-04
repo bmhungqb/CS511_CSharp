@@ -70,7 +70,6 @@
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2CustomGradientPanel1.BorderRadius = 25;
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_exit);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_Ranking);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_playGame);

@@ -45433,7 +45433,7 @@
   <data name="speaker_hint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABENJREFUaEPNWktrE1EY7cLnPxBduBHUzPisi7ZJja0uFEHRhY9FS+ujoDZBQa0T
+        DAAACwwBP0AiyAAABENJREFUaEPNWktrE1EY7cLnPxBduBHUzPisi7ZJja0uFEHRhY9FS+ujoDZBQa0T
         U4uCBesDpW6UolRx0aco1YW2oLZFK2jVtKK29VEViqILHzvh+t30G3Pv551pkpk8Dhwaer977vkmJ3Nn
         MslJN/w1/km+kLbbZ+jd3pD2C15/94b0Hp+h7eJjWJad8Ibna2A44gvpzIKPCw7MnYnl2YXC0IIyOMq/
         FaYleg29z18zexpOyzzy9uVNB+MXVGYtaXh24vTMgkcG8j2oMhmsK2e3L7eyW5fb2M7azdIYvAu9KJE5
@@ -45457,7 +45457,7 @@
   <data name="btn_submit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABIFJREFUaEPtmf1vU1UYx7tf+jwl0HPODD/wo4J/CoURNTqrtmsimsgvZjiUGJRk
+        DAAACwwBP0AiyAAABIFJREFUaEPtmf1vU1UYx7tf+jwl0HPODD/wo4J/CoURNTqrtmsimsgvZjiUGJRk
         cYljgyUkkiwjECUSzBZYJNMRnFOEZerAuhcqrGvXjZeESORla91LS5Trc7oT262n771tNXxvPsnZPd/n
         Od/b7d7ee2d5ov+F3t643vqO2AGN/CDuFv3YyKdgt3hI40eSlTH3Y6P4msbt1kZRJ2tUdcVUY20SdbCH
         n8E9IkoYedHEl6GJn4Z3xXbZa6VlmWR7r/YV3Ct8hFEiJmx7Wb1qb56s7294FveJ7wnDHPggfGDfopYr
@@ -46450,9 +46450,6 @@
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>104, 17</value>
   </metadata>
   <data name="media_sound_res.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
