@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnl_Home = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btn_setting = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_exit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Ranking = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_playGame = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -70,6 +71,7 @@
             // 
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.Controls.Add(this.btn_setting);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_exit);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_Ranking);
             this.guna2CustomGradientPanel1.Controls.Add(this.btn_playGame);
@@ -83,8 +85,26 @@
             this.guna2CustomGradientPanel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(352, 131);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(373, 327);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(373, 373);
             this.guna2CustomGradientPanel1.TabIndex = 13;
+            // 
+            // btn_setting
+            // 
+            this.btn_setting.BorderRadius = 25;
+            this.btn_setting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_setting.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_setting.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_setting.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_setting.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_setting.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_setting.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_setting.ForeColor = System.Drawing.Color.White;
+            this.btn_setting.Location = new System.Drawing.Point(65, 238);
+            this.btn_setting.Name = "btn_setting";
+            this.btn_setting.Size = new System.Drawing.Size(250, 50);
+            this.btn_setting.TabIndex = 10;
+            this.btn_setting.Text = "Setting";
+            this.btn_setting.Click += new System.EventHandler(this.btn_gameBoard);
             // 
             // btn_exit
             // 
@@ -97,7 +117,7 @@
             this.btn_exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.ForeColor = System.Drawing.Color.White;
-            this.btn_exit.Location = new System.Drawing.Point(65, 237);
+            this.btn_exit.Location = new System.Drawing.Point(65, 306);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(250, 50);
             this.btn_exit.TabIndex = 9;
@@ -194,7 +214,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 14;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // scoreBoard
             // 
@@ -260,6 +279,7 @@
         private UserControls.game gamePage;
         private UserControls.ScoreBoard scoreBoard;
         private UserControls.Dictionary dictionary;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_setting;
     }
 }
 

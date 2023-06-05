@@ -128,7 +128,6 @@ namespace GameMini.UserControls
             data.Columns.Add("Date", typeof(string));
             data.Rows.Clear();
             dataGridScore.DataSource = data;
-            dataGridScore.ColumnHeadersHeight = 50;
             string[] row = new string[5];   
             if (option == "easy")
             {

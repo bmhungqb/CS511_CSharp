@@ -1,4 +1,5 @@
 ﻿using AxWMPLib;
+using GameMini.AboutBox;
 using GameMini.UserControls;
 using Guna.UI2.WinForms;
 using System;
@@ -89,15 +90,26 @@ namespace GameMini
                 dictionary.BringToFront();
 
             }
+            else if(btn.Name == "btn_setting")
+            {
+                SettingBoard settingBoard = new SettingBoard(media.settings.volume);
+                settingBoard.FunctionCalled += SettingBoard_FunctionCalled;
+                settingBoard.BringToFront();
+                settingBoard.Show();
+            }
             else if(btn.Name == "btn_exit")
             {
                 this.Close();
             }
         }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        private void SettingBoard_FunctionCalled(int argument)
         {
+            HanldeChangeVolumeFromParent(argument); // Call the desired function in the parent form with the provided argument
+        }
 
+        public void HanldeChangeVolumeFromParent(int argument)
+        {
+            media.settings.volume = argument;
         }
     }
 }

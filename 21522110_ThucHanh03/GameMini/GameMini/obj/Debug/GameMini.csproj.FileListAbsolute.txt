@@ -23,3 +23,4 @@ C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\obj\Debug\GameMini.UserControls.ScoreBoard.resources
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\obj\Debug\GameMini.UserControls.Dictionary.resources
 C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\obj\Debug\GameMini.AboutBox.AddNewWord.resources
+C:\Users\bmhun\Documents\TaiLieuHocTapDaiHoc\Year2\HK_II\UIT\C-Sharp\ThucHanh\21522110_ThucHanh03\GameMini\GameMini\obj\Debug\GameMini.AboutBox.SettingBoard.resources
