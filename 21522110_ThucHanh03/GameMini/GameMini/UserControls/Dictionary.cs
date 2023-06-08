@@ -51,11 +51,14 @@ namespace GameMini.UserControls
             string path_topic = path_dic + '/' + topic;
             string[] Images = Directory.GetFiles(path_topic);
             string path_sound = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/icons/2203528_lound_sound_speaker_volume_icon.png";
-            string path_delete = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/icons/9004715_cross_delete_remove_cancel_icon.png";
+            string path_delete = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/icons/delete.png";
+            string path_edit = "C:/Users/bmhun/Documents/TaiLieuHocTapDaiHoc/Year2/HK_II/UIT/C-Sharp/ThucHanh/21522110_ThucHanh03/GameMini/GameMini/Resources/icons/edit.png";
             foreach (string image in Images)
             {
                 string text = image.Split('/')[14].Split('\\')[1].Split('.')[0];
-                dataGridDictionary.Rows.Add(Image.FromFile(image),text, Image.FromFile(path_sound), Image.FromFile(path_delete));
+                string en = text.Split('_')[0];
+                string vi = text.Split('_')[1];
+                dataGridDictionary.Rows.Add(Image.FromFile(image),en,vi, Image.FromFile(path_sound), Image.FromFile(path_edit), Image.FromFile(path_delete));
             }
             dataGridDictionary.ColumnHeadersHeight = 40;
             dataGridDictionary.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -73,9 +76,10 @@ namespace GameMini.UserControls
 
         private void dataGridDictionary_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string txt = dataGridDictionary.Rows[e.RowIndex].Cells["Text"].Value?.ToString();
-            string path_image = path_dic + '/' + cb_topic.SelectedItem.ToString() + "/" + txt + ".png";
-            if (e.RowIndex >= 0 && e.ColumnIndex == 3)
+            string txt = dataGridDictionary.Rows[e.RowIndex].Cells["English"].Value?.ToString();
+            string txt1 = dataGridDictionary.Rows[e.RowIndex].Cells["Vietnamese"].Value?.ToString();
+            string path_image = path_dic + '/' + cb_topic.SelectedItem.ToString() + "/" + txt +"_"+ txt1+ ".png";
+            if (e.RowIndex >= 0 && e.ColumnIndex == 5)
             {
                 DialogResult res =  MessageBox.Show("Are you sure ?", "Delete", MessageBoxButtons.YesNo);
                 if (res == DialogResult.Yes)
@@ -96,7 +100,7 @@ namespace GameMini.UserControls
                     }
                 }
             }
-            else if(e.RowIndex >=0 && e.ColumnIndex == 2)
+            else if(e.RowIndex >=0 && e.ColumnIndex == 3)
             {
                 synthesizer.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Adult);
 
@@ -106,6 +110,30 @@ namespace GameMini.UserControls
                 // Set the volume
                 synthesizer.Volume = 100; // Default value is 100, range: 0 to 100
                 synthesizer.Speak(txt);
+            }
+            else if(e.RowIndex >=0 && e.ColumnIndex == 4)
+            {
+                Image img = (Image)dataGridDictionary.Rows[e.RowIndex].Cells[0].Value;
+                AddNewWord add = new AddNewWord(cb_topic.SelectedItem.ToString(), txt, txt1, img);
+                DialogResult res = add.ShowDialog();
+                if(res == DialogResult.OK)
+                {
+                    DataGridViewRow row = dataGridDictionary.Rows[e.RowIndex];
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value is IDisposable disposableValue)
+                        {
+                            disposableValue.Dispose();
+                        }
+                    }
+                    row.Dispose();
+                    dataGridDictionary.Rows.RemoveAt(e.RowIndex);
+                    if (File.Exists(path_image))
+                    {
+                        File.Delete(path_image);
+                    }
+                }
+                ViewDictionary(cb_topic.SelectedItem.ToString());
             }
         }
 
